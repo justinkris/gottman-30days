@@ -1,0 +1,190 @@
+30 Days to a Better Relationship — Image Generation Prompts
+============================================================
+All images should be generated at a 16:5 (3.2:1) wide banner aspect ratio.
+Place generated PNGs in the images/ folder alongside gottman-30-days.html.
+
+------------------------------------------------------------
+FILE: images/day-0.png
+DAY: Welcome — "Welcome to the Challenge"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a couple seated side by side at a desk, each writing in their own open journal under warm lamplight, a wall calendar behind them marking 30 days, a small ribbon of commitment between them, warm cream and deep rose palette, clean geometric shapes, sense of shared purpose and quiet determination, no text
+
+------------------------------------------------------------
+FILE: images/day-1.png
+DAY: Day 1 — "What Is Positive Perspective?"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a balance scale centered in the wide frame, the left pan overflowing with glowing golden orbs and small heart and sun icons, the right pan nearly empty with a single grey cloud, warm golden light radiating from the heavier positive side, two silhouettes standing together on the bright side, cream and rose palette, symbolizing more good than bad tipping the scale of a relationship, no text
+
+------------------------------------------------------------
+FILE: images/day-2.png
+DAY: Day 2 — "Shifting Positive"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — split scene across the wide frame: left half shows a figure wearing grey glasses frowning at scattered pans on a stove, right half shows the same figure wearing rose-tinted glasses seeing their partner making breakfast with care and a small heart above — a soft vertical dividing line between the two perspectives, dusty rose and cream palette, geometric style, showing that perspective is a daily choice, no text
+
+------------------------------------------------------------
+FILE: images/day-3.png
+DAY: Day 3 — "First Impressions"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a horizontal timeline of a couple's early story stretching across the frame: two figures meeting under a streetlamp with a small spark between them, a shared coffee at a first date, a moment of decision marked by a glowing heart, finally two figures choosing each other — connected by a soft dotted line, warm cream and rose tones, nostalgic and tender mood, no text
+
+------------------------------------------------------------
+FILE: images/day-4.png
+DAY: Day 4 — "Everyday Positivity"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a morning commute panorama: on the left a grey exhaust cloud and a frown, on the right a warm coffee cup with steam, sunbeams through a window casting a heart-shaped shadow, a kind hand holding a door open, and an open horizon glowing gold — the scene shifting left-to-right from negative to positive, golden and cream palette, depicting how the more beauty you seek the more appears, no text
+
+------------------------------------------------------------
+FILE: images/day-5.png
+DAY: Day 5 — "Under Our Nose"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a figure in the center looking right with a furrowed brow focused on a clock showing lateness, while to their left an unwrapped gift, a yogurt carton, and a warm mug sit glowing softly on a table — 50% of the frame filled with unnoticed positive acts, sage and cream palette, split-focus composition showing how negative perspective blinds us to what partners already do, no text
+
+------------------------------------------------------------
+FILE: images/day-6.png
+DAY: Day 6 — "Summary Please"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — an open journal spread across the wide frame with three illustrated Week 1 recap panels inside: a glowing balance scale, a pair of rose-tinted glasses, and two figures facing each other — gold ruled lines between panels, small checkmarks in the margins, cream and warm gold palette, tidy and reflective mood, no text
+
+------------------------------------------------------------
+FILE: images/day-7.png
+DAY: Day 7 — "Small Wins!"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a horizontal celebration banner: a small golden trophy on the left, then a row of seven checkmarks each paired with a small icon (a journal, two figures, a child, a friend, a breath wave, a briefcase, a heart) — confetti dots scattered wide across a cream background, warm rose and gold palette, encouraging and self-compassionate mood, no text
+
+------------------------------------------------------------
+FILE: images/day-8.png
+DAY: Day 8 — "Best Buds"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — two figures side by side on a park bench laughing, small shared-interest icons floating above them in a wide arc — a game board piece, a leaf, a music note, a shared book — suggesting the richness of friendship within a relationship, sage green and warm cream palette, relaxed and joyful, geometric style, no text
+
+------------------------------------------------------------
+FILE: images/day-9.png
+DAY: Day 9 — "Know Your Partner"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a large unfolded map filling the wide frame, shaped loosely like a heart with compass rose in the corner, dotted with labeled icons across its surface: a favorite food bowl, a hobby bicycle, a star for dreams, a worry cloud, a friend silhouette — map fold creases visible, rose and warm tan palette, intimate cartographic style representing the Love Map concept from the Sound Relationship House, no text
+
+------------------------------------------------------------
+FILE: images/day-10.png
+DAY: Day 10 — "Keep It Current"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide smartphone-style map interface, with a central location pin and circular refresh arrows, new detail icons appearing across the map surface (a new food icon updating, a hobby symbol changing, a friend's location pin appearing) — suggesting the Love Map being constantly updated like Google Maps, soft rose and cream palette, clean tech-meets-warmth aesthetic, no text
+
+------------------------------------------------------------
+FILE: images/day-11.png
+DAY: Day 11 — "Open-Ended Questions"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — left third: a small closed door with a single tight question mark and a one-word answer bubble ('Yes.') — right two-thirds: a wide open doorway with warm golden light pouring through, a winding path beyond, and expansive speech bubbles with open-ended questions shown as flowing ellipses (...) — the contrast showing how open questions invite connection, cream and rose palette, no text
+
+------------------------------------------------------------
+FILE: images/day-12.png
+DAY: Day 12 — "Small Things Often"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a horizontal sequence of small everyday bid moments spaced evenly across the frame: a figure saying good morning with a wave, two hands passing a bowl, a figure sending a quick text, a brief shoulder touch, a figure asking for help with a speech bubble — each scene small and simple, reinforcing that small things often matter most in a relationship, rose and cream palette, no text
+
+------------------------------------------------------------
+FILE: images/day-13.png
+DAY: Day 13 — "Turning Towards"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — three side-by-side panels spanning the wide frame: left panel (muted grey) shows a figure turning away absorbed in their phone while partner speaks; center panel (muted) shows a figure snapping at their partner; right panel (largest, warmest, glowing rose) shows two figures fully facing each other, one reaching an open hand — a bold 86% vs 33% visual weight difference in brightness pulling the eye toward connection, the Gottman research made visual, no text
+
+------------------------------------------------------------
+FILE: images/day-14.png
+DAY: Day 14 — "A Look Back"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a winding path stretching left to right across the full frame with four milestone markers along it: a heart-shaped map, an open speech bubble, a small coffee cup bid, and two figures turning toward each other — two small figures walking forward together at the far right, looking back at what they've built, cream and rose palette, sense of journey and relational progress, no text
+
+------------------------------------------------------------
+FILE: images/day-15.png
+DAY: Day 15 — "Checkpoint!"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide path with a clear midpoint marker at the center: left half receding into the past with small milestone icons (a scale, a map, a trophy, a coffee cup), right half opening bright and wide into possibility — a figure stands at the center marker with arms gently raised, surrounded by a soft celebratory glow and a halfway milestone flag, rose and gold palette, no text
+
+------------------------------------------------------------
+FILE: images/day-16.png
+DAY: Day 16 — "Saying Thanks"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — three warm domestic vignettes in a horizontal row: left scene shows a figure smiling and gesturing to a recycling bin as their partner waves back; center scene shows two adults at a table helping a child with schoolbooks; right scene shows two figures sharing a candlelit dinner — each scene connected by a small floating thank-you card, cream and soft gold palette, showing gratitude for the ordinary moments, no text
+
+------------------------------------------------------------
+FILE: images/day-17.png
+DAY: Day 17 — "Let's Get Specific"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a large heart outline spanning the wide frame, divided into three inner panels each illustrating a specific story of a partner's strength: left panel shows one figure steadying the other; center panel shows a figure calmly managing logistics with a checklist while their partner rests; right panel shows a figure standing like a rock in a symbolic storm — each panel anchored by a trait icon (a shield, a star, a steady hand), rose and cream palette, intimate and specific, no text
+
+------------------------------------------------------------
+FILE: images/day-18.png
+DAY: Day 18 — "Getting Curious"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — wide split composition: left third shows a figure with arms crossed reacting to their partner grumbling in a kitchen, assumption-mode posture; right two-thirds shows a large soft magnifying glass lens overlaying the same scene, now revealing the partner surrounded by stress symbols (a briefcase, a clock, a sleepless thought cloud) — the lens reframing irritation as exhaustion with compassion, rose and sage palette, no text
+
+------------------------------------------------------------
+FILE: images/day-19.png
+DAY: Day 19 — "Being a Good Listener"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide scene of two figures seated close together: the right figure speaking with a small emotion cloud above them (a wavy stress line, a raindrop, a tiny flame), the left figure leaning forward in an open listening posture with no phone, no crossed arms — between them soft concentric sound waves carrying the words, and small empathy phrases floating as thought bubbles ('I hear you', 'That makes sense') — warm cream and rose tones, no text
+
+------------------------------------------------------------
+FILE: images/day-20.png
+DAY: Day 20 — "How Was Your Day, Dear?"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a dusk living room scene spanning the width: on the left a figure arriving home with small stress icons still trailing them (a briefcase, a clock, a tangled line), on the right their partner turning toward them fully — phone face-down, open posture, warm amber light behind — between them a soft icon pairing an ear before a lightbulb (understanding before advice), cream and warm tan palette, showing the safe harbor of a truly listening partner, no text
+
+------------------------------------------------------------
+FILE: images/day-21.png
+DAY: Day 21 — "Let's Recap"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — an open journal spread wide with four Week 3 recap icons arranged across the pages: a floating thank-you card, a heart with story panels inside, a magnifying glass with a compassionate eye, and a large ear with concentric sound waves — gold ruled lines between them, small checkmarks beside each, cream and warm gold palette, reflective and organized mood, no text
+
+------------------------------------------------------------
+FILE: images/day-22.png
+DAY: Day 22 — "Time to Celebrate!"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a joyful wide celebration scene: two champagne flutes clinking at center, surrounded by floating Gottman learning resource icons (a nail with an X through it for 'It's Not About The Nail', a piggy bank for Emotional Bank Account, two figures turning toward each other, two wedding rings) — confetti and soft stars scattered across the full width, rose and gold palette, sense of accomplishment and shared learning, no text
+
+------------------------------------------------------------
+FILE: images/day-23.png
+DAY: Day 23 — "Big Dreams"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a panoramic night-sky scene: two figures lying side by side on a wide hillside gazing up at a vast deep star field, one large glowing star centered above — below them three wide dream-thought clouds floating side by side containing: a mountain peak, an open book, and a small home with a garden — deep indigo sky fading to rose and cream at the horizon edges, sense of shared wonder and life purpose, no text
+
+------------------------------------------------------------
+FILE: images/day-24.png
+DAY: Day 24 — "Shared Meaning"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide Venn diagram: left circle contains one partner's solo symbols (a mountain, a solo book, a bicycle), right circle contains the other's (a star, a paint palette), the overlapping center glowing warmly and larger than both — inside the shared center: a garden pot, a board game, a shared map pin, a business sprout — two figures standing together inside the glowing overlap, sage and cream palette, the 'we' identity of shared meaning made visible, no text
+
+------------------------------------------------------------
+FILE: images/day-25.png
+DAY: Day 25 — "Creating Rituals"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide four-panel seasonal calendar view: autumn panel shows two figures carving a pumpkin; winter panel shows a birthday cake with candles; spring panel shows a family gathered around a Sunday dinner table; summer panel shows two figures on a morning walk with coffee — each panel marked with a recurring ritual icon, warm and domestic, cream and gold palette, the rhythm of cherished traditions across a year, no text
+
+------------------------------------------------------------
+FILE: images/day-26.png
+DAY: Day 26 — "Rituals of Appreciation"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — three ritual vignettes in a horizontal row: left panel shows a glowing phone screen with a warm appreciation text message and a heart; center panel shows an open gratitude journal with three checkmarks beside a bedside lamp at night; right panel shows two figures in a kitchen, one gesturing to a tidied fridge while the other smiles with a thank-you — small hearts floating between all three panels, cream and rose palette, cozy intentional mood, no text
+
+------------------------------------------------------------
+FILE: images/day-27.png
+DAY: Day 27 — "Magic Question"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — centered large glowing question mark with a heart nestled in its curve, on the left a figure leaning toward their partner with an open asking posture and a speech bubble containing the question — on the right the partner's response shown as a wide spread of love language icons: a cup of tea, a held hand, a quiet evening together, a kind note — soft rose and gold palette, sense of relief and ease when guesswork is removed from love, no text
+
+------------------------------------------------------------
+FILE: images/day-28.png
+DAY: Day 28 — "A Look Back"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a long panoramic timeline stretching the full width with eight milestone icons evenly spaced: a balance scale, a heart-shaped map, an open speech bubble, a small coffee cup bid, two figures turning toward each other, a thank-you card, a magnifying glass of curiosity, and a lit ritual candle — two small figures at the far right looking back along the full arc of 28 days, cream and rose palette, sense of deep accomplishment, no text
+
+------------------------------------------------------------
+FILE: images/day-29.png
+DAY: Day 29 — "Reflections"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide tranquil pond scene: a lone figure seated at the bank, the still water below reflecting their silhouette — surrounding the reflection in the water, small icons of the full 30-day journey float as ripples: a heart, a map, an ear, a candle, a trophy — gentle concentric ripples spreading outward, soft cream and sage green palette, introspective and peaceful mood of self-compassion and reflection, no text
+
+------------------------------------------------------------
+FILE: images/day-30.png
+DAY: Day 30 — "You Did It!"
+PROMPT:
+Wide banner flat minimalist illustration, 16:5 aspect ratio — two figures center-frame holding hands stepping forward through a glowing finish-line ribbon, behind them a wide panoramic arc of all 30 journey icons compressed into a flowing path (scales, maps, ears, hearts, candles, stars, coffee cups, question marks) — ahead of them a bright open horizon, confetti raining across the full width, warm rose and gold palette, triumphant and forward-looking, the beginning of a new chapter not an ending, no text

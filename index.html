@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30 Days to a Better Relationship · Gottman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F9F4EC;
+    --parchment: #EDE4D3;
+    --rose: #9B4E63;
+    --rose-dark: #6E2E42;
+    --rose-light: #C8899A;
+    --sage: #5E7F6B;
+    --brown: #2A1A12;
+    --tan: #B89A7A;
+    --gold: #C4933F;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--brown);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ─────────────────────────────────── */
+  header {
+    background: var(--rose-dark);
+    color: var(--cream);
+    padding: 3rem 2rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; right: -40px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.035);
+  }
+
+  header .eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--rose-light);
+    margin-bottom: 0.75rem;
+  }
+
+  header h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  header h1 em {
+    font-style: italic;
+    color: var(--rose-light);
+  }
+
+  header .subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-top: 1rem;
+    color: rgba(249,244,236,0.65);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── GRID VIEW ───────────────────────────────── */
+  #grid-view {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+  }
+
+  .welcome-card {
+    background: var(--parchment);
+    border-left: 3px solid var(--gold);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 2px;
+  }
+
+  .welcome-card h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--rose-dark);
+  }
+
+  .welcome-card p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--brown);
+    opacity: 0.85;
+  }
+
+  .welcome-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--rose-dark);
+    background: transparent;
+    border: 1.5px solid var(--rose-dark);
+    border-radius: 20px;
+    padding: 0.5rem 1.35rem;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  }
+  .welcome-btn:hover {
+    background: var(--rose-dark);
+    color: var(--cream);
+    transform: translateY(-1px);
+  }
+
+  .section-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 1.25rem;
+  }
+
+  .weeks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .week-section h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--parchment);
+  }
+
+  .day-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.65rem;
+  }
+
+  .day-btn {
+    background: white;
+    border: 1px solid var(--parchment);
+    border-radius: 3px;
+    padding: 1rem 0.75rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.18s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .day-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--rose);
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+  }
+
+  .day-btn:hover {
+    border-color: var(--rose-light);
+    box-shadow: 0 2px 12px rgba(155,78,99,0.12);
+    transform: translateY(-1px);
+  }
+
+  .day-btn:hover::before { transform: scaleX(1); }
+
+  .day-btn .day-num {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 0.3rem;
+  }
+
+  .day-btn .day-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--brown);
+  }
+
+  /* ── DETAIL VIEW ─────────────────────────────── */
+  #detail-view {
+    display: none;
+    min-height: 100vh;
+    animation: fadeIn 0.35s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .detail-nav {
+    background: white;
+    border-bottom: 1px solid var(--parchment);
+    padding: 0.85rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .back-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--rose-dark);
+    background: transparent;
+    border: 1.5px solid var(--parchment);
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 1rem;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  }
+
+  .back-btn:hover {
+    border-color: var(--rose-dark);
+    color: var(--rose);
+    transform: translateY(-1px);
+  }
+
+  .nav-prev, .nav-next {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--tan);
+    background: transparent;
+    border: 1.5px solid var(--parchment);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 0.4rem 1rem;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  }
+  .nav-prev:hover, .nav-next:hover {
+    border-color: var(--tan);
+    color: var(--brown);
+    transform: translateY(-1px);
+  }
+  .nav-next { margin-left: auto; }
+
+  .detail-body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem 5rem;
+  }
+
+  .detail-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--rose-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .detail-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--rose-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .detail-date {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    color: var(--tan);
+    margin-bottom: 1rem;
+  }
+
+  .detail-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 2.5rem;
+  }
+
+  .detail-content {
+    font-size: 1.12rem;
+    line-height: 1.85;
+    color: var(--brown);
+  }
+
+  .detail-content p {
+    margin-bottom: 1.4rem;
+  }
+
+  .detail-content .task-box {
+    background: var(--parchment);
+    border-left: 3px solid var(--rose);
+    padding: 1.25rem 1.5rem;
+    margin: 1.75rem 0;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .detail-content .task-box .task-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 0.65rem;
+    display: block;
+  }
+
+  .detail-content .task-box p {
+    margin-bottom: 0.65rem;
+    font-size: 1.05rem;
+  }
+
+  .detail-content .task-box p:last-child { margin-bottom: 0; }
+
+  .detail-content ul {
+    list-style: none;
+    margin: 0.75rem 0 1.4rem 0;
+  }
+
+  .detail-content ul li {
+    padding: 0.35rem 0 0.35rem 1.4rem;
+    position: relative;
+    font-style: italic;
+  }
+
+  .detail-content ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--rose-light);
+  }
+
+  .detail-content .or-divider {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    color: var(--rose-light);
+    padding: 0.75rem 0;
+  }
+
+  .detail-content .bonus {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--parchment);
+    border-radius: 3px;
+    background: white;
+  }
+
+  .detail-content .bonus .bonus-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.4rem;
+    display: block;
+  }
+
+  .detail-content .bonus p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: var(--brown);
+    opacity: 0.8;
+  }
+
+  .detail-content strong { font-weight: 600; color: var(--rose-dark); }
+
+  /* ── RESPONSE SECTION ───────────────────────── */
+  .response-section {
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--parchment);
+  }
+
+  .response-section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Per-column photo placeholder */
+  .col-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 1.5px dashed var(--parchment);
+    border-radius: 4px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .col-photo:hover { border-color: var(--rose-light); background: #fdf9f6; }
+
+  .col-photo input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%; height: 100%;
+  }
+
+  .col-photo .cp-icon {
+    width: 28px; height: 28px;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .col-photo .cp-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--tan);
+    pointer-events: none;
+  }
+
+  .col-photo img.cp-preview {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  .col-photo.has-image .cp-icon,
+  .col-photo.has-image .cp-text { display: none; }
+  .col-photo.has-image input[type="file"] { display: none; }
+  .col-photo.has-image { cursor: default; pointer-events: none; }
+
+  .response-section-title {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--tan);
+  }
+
+  .response-section-hint {
+    font-size: 0.88rem;
+    color: var(--tan);
+    font-style: italic;
+    opacity: 0.75;
+  }
+
+  .response-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .response-col label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+
+  .response-col.him label { color: var(--rose-dark); }
+  .response-col.her label { color: var(--sage); }
+
+  .response-col label .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .response-col.him label .dot { background: var(--rose-dark); }
+  .response-col.her label .dot { background: var(--sage); }
+
+  .response-col textarea {
+    width: 100%;
+    min-height: 160px;
+    padding: 1rem 1.1rem;
+    background: white;
+    border: 1px solid var(--parchment);
+    border-radius: 3px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--brown);
+    resize: vertical;
+    transition: border-color 0.18s;
+    outline: none;
+  }
+
+  .response-col.him textarea:focus { border-color: var(--rose-light); }
+  .response-col.her textarea:focus { border-color: var(--sage); }
+
+  .response-col textarea::placeholder {
+    color: var(--tan);
+    opacity: 0.6;
+    font-style: italic;
+  }
+
+  .response-col-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.6rem;
+    gap: 0.5rem;
+    min-height: 2rem;
+  }
+
+  .save-confirm-inline {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--sage);
+    opacity: 0;
+    transition: opacity 0.35s;
+    font-style: italic;
+  }
+  .save-confirm-inline.show { opacity: 1; }
+
+  .save-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.35rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .save-btn.him {
+    background: transparent;
+    border: 1.5px solid var(--rose-dark);
+    color: var(--rose-dark);
+  }
+  .save-btn.him:hover {
+    background: var(--rose-dark);
+    color: var(--cream);
+    transform: translateY(-1px);
+  }
+
+  .save-btn.her {
+    background: transparent;
+    border: 1.5px solid var(--sage);
+    color: var(--sage);
+  }
+  .save-btn.her:hover {
+    background: var(--sage);
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  .textarea-wrap {
+    position: relative;
+  }
+
+  .response-col textarea {
+    transition: opacity 0.4s ease;
+  }
+  .response-col textarea.clearing {
+    opacity: 0;
+  }
+
+  /* ── FONT SIZE CONTROLS ─────────────────────── */
+  .font-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .font-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--tan);
+    background: transparent;
+    border: 1.5px solid var(--parchment);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 0.4rem 0.75rem;
+    line-height: 1;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  }
+  .font-btn:hover {
+    border-color: var(--tan);
+    color: var(--brown);
+    transform: translateY(-1px);
+  }
+  .font-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+    transform: none;
+  }
+
+/* ── DAY ILLUSTRATION ───────────────────────── */
+  .day-illustration-wrap {
+    margin: 0 0 1.25rem;
+    text-align: center;
+  }
+
+  .day-illustration-frame {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 5;
+    background: white;
+    border: 1.5px dashed var(--parchment);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .day-illustration {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .day-illustration-prompt {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    color: var(--tan);
+    font-style: italic;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    opacity: 0.75;
+  }
+
+/* ── LANG TOGGLE ────────────────────────────── */
+  .lang-toggle {
+    display: flex;
+    border: 1.5px solid var(--parchment);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .lang-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--tan);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem 0.85rem;
+    line-height: 1;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .lang-btn.active {
+    background: var(--rose-dark);
+    color: var(--cream);
+  }
+
+/* ── RESPONSIVE ─────────────────────────────── */
+  @media (max-width: 600px) {
+    .day-grid { grid-template-columns: repeat(3, 1fr); }
+    header { padding: 2rem 1.25rem 2rem; }
+    .detail-body { padding: 2.5rem 1.25rem 4rem; }
+    .response-columns { grid-template-columns: 1fr; }
+    .save-btn { width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">The Gottman Institute</div>
+  <h1>30 Days to a<br><em>Better Relationship</em></h1>
+  <p class="subtitle">A daily guide to deepening your connection</p>
+</header>
+
+<!-- ═══ GRID VIEW ═══════════════════════════════ -->
+<div id="grid-view">
+
+  <div class="welcome-card">
+    <h2>Welcome to the Challenge</h2>
+    <p>Congratulations on taking the first step! Each day features a simple activity or reflection designed to help you stack small wins into profound results. Most activities take less than three minutes.</p>
+    <button class="welcome-btn" onclick="showDay(0)">Read the Welcome Email →</button>
+  </div>
+
+  <div class="weeks-container">
+    <div class="week-section">
+      <h3>Week One · Positive Perspective</h3>
+      <div class="day-grid">
+        <button class="day-btn" onclick="showDay(1)"><div class="day-num">Day 1</div><div class="day-title">What Is Positive Perspective?</div></button>
+        <button class="day-btn" onclick="showDay(2)"><div class="day-num">Day 2</div><div class="day-title">Shifting Positive</div></button>
+        <button class="day-btn" onclick="showDay(3)"><div class="day-num">Day 3</div><div class="day-title">First Impressions</div></button>
+        <button class="day-btn" onclick="showDay(4)"><div class="day-num">Day 4</div><div class="day-title">Everyday Positivity</div></button>
+        <button class="day-btn" onclick="showDay(5)"><div class="day-num">Day 5</div><div class="day-title">Under Our Nose</div></button>
+        <button class="day-btn" onclick="showDay(6)"><div class="day-num">Day 6</div><div class="day-title">Summary Please</div></button>
+        <button class="day-btn" onclick="showDay(7)"><div class="day-num">Day 7</div><div class="day-title">Small Wins!</div></button>
+      </div>
+    </div>
+
+    <div class="week-section">
+      <h3>Week Two · Friendship & Connection</h3>
+      <div class="day-grid">
+        <button class="day-btn" onclick="showDay(8)"><div class="day-num">Day 8</div><div class="day-title">Best Buds</div></button>
+        <button class="day-btn" onclick="showDay(9)"><div class="day-num">Day 9</div><div class="day-title">Know Your Partner</div></button>
+        <button class="day-btn" onclick="showDay(10)"><div class="day-num">Day 10</div><div class="day-title">Keep It Current</div></button>
+        <button class="day-btn" onclick="showDay(11)"><div class="day-num">Day 11</div><div class="day-title">Open-Ended Questions</div></button>
+        <button class="day-btn" onclick="showDay(12)"><div class="day-num">Day 12</div><div class="day-title">Small Things Often</div></button>
+        <button class="day-btn" onclick="showDay(13)"><div class="day-num">Day 13</div><div class="day-title">Turning Towards</div></button>
+        <button class="day-btn" onclick="showDay(14)"><div class="day-num">Day 14</div><div class="day-title">A Look Back</div></button>
+        <button class="day-btn" onclick="showDay(15)"><div class="day-num">Day 15</div><div class="day-title">Checkpoint!</div></button>
+      </div>
+    </div>
+
+    <div class="week-section">
+      <h3>Week Three · Appreciation & Listening</h3>
+      <div class="day-grid">
+        <button class="day-btn" onclick="showDay(16)"><div class="day-num">Day 16</div><div class="day-title">Saying Thanks</div></button>
+        <button class="day-btn" onclick="showDay(17)"><div class="day-num">Day 17</div><div class="day-title">Let's Get Specific</div></button>
+        <button class="day-btn" onclick="showDay(18)"><div class="day-num">Day 18</div><div class="day-title">Getting Curious</div></button>
+        <button class="day-btn" onclick="showDay(19)"><div class="day-num">Day 19</div><div class="day-title">Being a Good Listener</div></button>
+        <button class="day-btn" onclick="showDay(20)"><div class="day-num">Day 20</div><div class="day-title">How Was Your Day?</div></button>
+        <button class="day-btn" onclick="showDay(21)"><div class="day-num">Day 21</div><div class="day-title">Let's Recap</div></button>
+        <button class="day-btn" onclick="showDay(22)"><div class="day-num">Day 22</div><div class="day-title">Time to Celebrate!</div></button>
+      </div>
+    </div>
+
+    <div class="week-section">
+      <h3>Week Four · Meaning & Rituals</h3>
+      <div class="day-grid">
+        <button class="day-btn" onclick="showDay(23)"><div class="day-num">Day 23</div><div class="day-title">Big Dreams</div></button>
+        <button class="day-btn" onclick="showDay(24)"><div class="day-num">Day 24</div><div class="day-title">Shared Meaning</div></button>
+        <button class="day-btn" onclick="showDay(25)"><div class="day-num">Day 25</div><div class="day-title">Creating Rituals</div></button>
+        <button class="day-btn" onclick="showDay(26)"><div class="day-num">Day 26</div><div class="day-title">Rituals of Appreciation</div></button>
+        <button class="day-btn" onclick="showDay(27)"><div class="day-num">Day 27</div><div class="day-title">Magic Question</div></button>
+        <button class="day-btn" onclick="showDay(28)"><div class="day-num">Day 28</div><div class="day-title">A Look Back</div></button>
+        <button class="day-btn" onclick="showDay(29)"><div class="day-num">Day 29</div><div class="day-title">Reflections</div></button>
+        <button class="day-btn" onclick="showDay(30)"><div class="day-num">Day 30</div><div class="day-title">You Did It!</div></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DETAIL VIEW ══════════════════════════════ -->
+<div id="detail-view">
+  <nav class="detail-nav">
+    <button class="back-btn" onclick="showGrid()">← All Days</button>
+    <button class="nav-prev" onclick="prevDay()" id="btn-prev">← Prev</button>
+    <div class="font-controls">
+      <button class="font-btn" id="nav-font-down" onclick="adjustFontSize(-1)" title="Decrease font size">A−</button>
+      <button class="font-btn" id="nav-font-up" onclick="adjustFontSize(1)" title="Increase font size">A+</button>
+    </div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btn-bis" onclick="setLang('bis')">BIS</button>
+    </div>
+    <button class="nav-next" onclick="nextDay()" id="btn-next">Next →</button>
+  </nav>
+  <div class="detail-body" id="detail-body"></div>
+</div>
+
+<script>
+const bisayaTranslations = [
+  // 0: Welcome
+  {
+    title: "Maayong Pag-abot sa Hagit",
+    content: `<p>Congratulations sa pagkuha sa unang lakang ngadto sa mas lig-on nga relasyon!</p>
+<p>Matag adlaw sulod sa sunod 30 ka adlaw makadawat ka og mubo nga buluhaton o paghunahuna, nga gidisenyo aron mahuman sa imong kaugalingon. Bisan wala maapil ang imong partner, basin mas daghan kag makuha gikan sa hagit kung magbahin ka sa pipila sa mga sulat o sa imong mga tubag sa regular nga paagi.</p>
+<p>Kadaghanan sa mga buluhaton molugway og dili kapin sa tulo ka minuto, busa walay rason nga mag-preno bisan usa ka adlaw. Magbuhat kami og usa ka buod matag semana aron adunay kahigayonan ka nga maghunahuna ug makaabot kung kinahanglan.</p>
+<div class="task-box"><span class="task-label">Ang Imong Pangako</span><p>Pilia ang usa ka oras matag adlaw aron maphinaw, hunahunaon, ug ipatuman ang imong mabasa. Pagkonsistente. Ang usa ka importanteng bahin sa bisan unsang hagit mao ang pagbuot sa imong kaugalingon nga manubag — ang pipila ka tawo nakita nga mapuslanon ang pagsulti sa ilang partner nga nagsugod sila sa hagit, o paghanyo sa usa ka higala aron magsali ug magpauswag kamo sa inyong mga relasyon sa samang higayon.</p></div>
+<div class="bonus"><span class="bonus-label">Maayo nga Suwerte!</span><p>Bantayi ang unang mensahe sa imong inbox karon.</p></div>`
+  },
+  // 1: Positive Perspective
+  {
+    title: "Unsa ang Positibong Panan-aw?",
+    content: `<p>Maayong pag-abot sa Adlaw 1 sa 30 Adlaw ngadto sa Mas Maayong Relasyon! Usa sa mga tumong niini nga serye mao ang pagmugna og <strong>positibong panan-aw</strong> sa imong relasyon pinaagi sa pagmatikod sa maayo, kaysa sa dili maayo.</p>
+<p>Sugdan ta sa usa ka pangutana nga basin magpakita og kawang: unsa man gyud ang kahulogan sa positibong panan-aw?</p>
+<p>Hunahunaa kini isip matematika: kung adunay ka og mas daghang maayo kaysa daotan, adunay ka og positibo. Kung adunay ka og mas daghang daotan kaysa maayo, adunay ka og negatibo. Sa teorya, ang tanang relasyon nahulog bisan diin sa usa ka espektrum tali sa labihang positibo ug labihang negatibo.</p>
+<p>Kung nagbarog ka sa positibong bahin sa linya, mas lagmit kang mohatag sa imong partner og benepisyo sa pagduda. Ang mga butang mosalun kanimo nga dali ug dili kaayo imong gitagad ang dili malikayan nga gagmayng iritasyon. Nagpakahulugan ka nga ang imong partner adunay labing maayong tuyo ug nagtuo nga sila naglihok sa labing mahigugmaong paagi nga posible.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Basaha ang pagpamatuod sa ubos ug isulat ang usa ka tubag. Kining gagmayng mga pangutana adunay dakong gahum sa pagtabang kanimo sa pagmatikod sa positibidad nga naglungtad na sa imong relasyon ug pagtukod sa maayong mga pagbati nga anaa kanimo ug sa imong partner sa usag-usa.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 2: Shifting Positive
+  {
+    title: "Pagbalhin sa Positibo",
+    content: `<p>Nagsugod na kita kagahapon sa paghisgot sa kahulogan sa positibong panan-aw. Sa positibong panan-aw, ang gagmayng mga butang mosalun kanimo nga dali. Dili ka nagpunting sa pagpangita og mga sayop ug nagpakahulugan ka sa labing maayo.</p>
+<p>Ang mga tawo nga adunay negatibong panan-aw labi nga sensitibo ug nagmatikod sa mga sayop sa ilang partner. Sila usab adunay tendensya nga ang mga natural nga aksyon gitan-aw nga negatibo. Bisan ang mga positibong aksyon mahimong mawad-an og kusog.</p>
+<p><strong>Ug ikaw ang makapili kung unsang klase sa salamin ang imong "isul-ob" matag adlaw.</strong></p>
+<p>Pananglitan… ang imong partner basin magpakita og layo usa ka buntag, naghatag og mubo nga mga tubag, ug nagpang-bangga og mga kaldero samtang nagluto og pamahaw. Basin matental kang maghunahuna nga nalagot sila kanimo ug magsugod sa pagkalagot.</p>
+<div class="or-divider">— O KAYA —</div>
+<p>Gikan sa positibong panan-aw — mahimo kang mahinumdom nga ang imong partner mahigugmaon ug adunay maayong tuyo. Basin dili sila maayo og tulog o naka-stress sa ilang dakong presentasyon sa trabaho. Basin ang ilang gikinahanglan mao lang og yakap.</p>
+<p>Busa unsaon man pagbalhin sa panan-aw? Nagsugod kini sa pagmatikod sa mga butang nga <strong>gihimo nga tama</strong> sa imong partner kaysa sa ilang mga sayop.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Bantayi ang ilang labing maayong mga kalidad ug "dakpa" sila nga naghimo og butang nga tama. Sulayi ang paghimo og listahan sa gagmayng mga butang nga imong mapansin nga gihimo o giingon sa imong partner sa tibuok adlaw — ingon nga nagsubay ka sa ilang maayong mga gawi.</p><p><em>Pananglitan: naghimo og kape karon sa buntag, nagsukod sa labing maayong tindahan para sa atong sakyanan, nagpadala og matahum nga mensahe karong hapon.</em></p><p>Ang kahibalo sa kining gagmayng mga higayon nagtukod sa gawi sa hunahuna sa pagtan-aw sa imong partner sa positibong panan-aw.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 3: First Impressions
+  {
+    title: "Unang Impresyon",
+    content: `<p>Kining semanaha nagpunting kita sa pagpasalamat sa imong partner ug pagmugna og positibong panan-aw sa imong relasyon.</p>
+<p>Usa ka pangunahong timaan sa kahimtang sa usa ka mag-asawa sa ilang relasyon mao kung giunsa nila paghinumdom ang ilang unang mga higayon nga magkauban. Ang among panukiduki nagpakita nga ang mga mag-asawa nga makahimo sa positibong paghunahuna sa ilang unang impresyon sa usag-usa ug ang istorya kung giunsa sila nagkahiusa mas maayo ang kahimtang sa ilang relasyon.</p>
+<p>Adunay rason nga nahigugma kamo. Nagpili nga magpabilin nga magkauban. Nagpili nga malaban sa mga lisod nga panahon. Nagpili nga moapil sa usa ka 30-adlaw nga hagit. Kining mga rason kabahin sa gitawag nato nga <strong>"Ang Atong Istorya."</strong></p>
+<p>Kung ang istorya mahitungod sa imong relasyon positibo, adunay ka og buffer batok sa mga isyo nga motumaw ug mas sayon ang pagpunting sa mga positibong kalidad sa imong partner. Sa sukwahi, ang negatibong "Atong Istorya" nagpreparar sa imong hunahuna sa pagtan-aw sa imong relasyon sa negatibong panan-aw.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pukaon ang pipila sa mga positibong handumanan gikan sa unang higayon nga nagkita mo. Gamiti ang pipila ka minuto sa paghunahuna niining mga pangutana ug isulat ang imong nahinumdom:</p>
+<ul>
+  <li>Unsa man ang nahitabo sa unang higayon nga nagkita mo?</li>
+  <li>Unsa man ang imong unang petsa?</li>
+  <li>Unsa man ang usa sa mga unang butang nga imong napansin sa imong partner?</li>
+  <li>Unsa ang nakapahinulog kanimo sa pagdesisyon nga kini ang tawo nga gusto mong makauban?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 4: Everyday Positivity
+  {
+    title: "Positibidad sa Adlaw-adlaw",
+    content: `<p>Namatikdan ba nimo kung unsa kagayud ang pagmatikod og katahum? Pagpahayag og pasalamat? Pagsaulog sa kaayo?</p>
+<p>Ang pagpangita og positibong panan-aw naghatag og suod nga pagbati sa imong partner, apan aduna kini usab og dakong epekto sa imong kalag ug kinabuhi.</p>
+<p>Hunahunaa ang imong inadlaw nga biyahe. Mahimo kang mopili nga mapansin ang sakyanan nga adunay daghan kaayo nga aso sa atubangan nimo, magbagulbol mahitungod sa kahaw-ang sa gawas, ug ang gilay-on sa imong biyahe.</p>
+<div class="or-divider">— O KAYA —</div>
+<p>Mahimo usab kang mahinumdom sa matamis nga yakap nga gihatag sa imong partner kanimo sa dili pa kamo mobulag, ang kaayo sa tawo nga nagpugnong sa pinto sa kapehan, ug ang matahum nga talan-awon sa abot-sabot.</p>
+<p>Ug ang cool nga butang mahitungod sa positibidad mao nga <strong>ang mas daghan mong makita, mas daghan pa ang motumaw.</strong> Kung imong baguhin ang imong panan-aw aron makita mo ang katahum, kahilwayan, ug kaayo, mas daghan pa gyud kini ang motumaw.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Adto sa layo sa pagsalamat sa mga butang nga maayo sa imong kalibutan. Isulti gyud ang mga pulong nga "salamat" sa imong partner, sa uniberso, o sa kawanangan lang. Tan-awa kung dili kini makapamaayo sa imong pagbati.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 5: Under Our Nose
+  {
+    title: "Sa Ilalom sa Atong Ilong",
+    content: `<p>Karon, nahibal-an na nimo ang kahinungdanon sa positibong panan-aw. Ug kining semanaha, naningkamot ka sa pagtukod niini sa imong relasyon. Tan-awon nato ang pikas bahin. <strong>Unsa man ang gasto sa negatibong panan-aw?</strong></p>
+<p>Pananglitan, ang imong partner basin moadto sa post office ug kuhaon ang pakete nga imong gihulat ug makuha usab ang imong paboritong yogurt sa tindahan nga wala ka mangayo. Kung naa ka sa negatibong panan-aw, basin hingpit mong mapasagdan kining mga butang ug mag-focus hinuon sa kamatuoran nga baynte minuto ug-anay miabot ang imong partner.</p>
+<p>Gipakita sa panukiduki nga <strong>ang mga mag-asawa nga adunay negatibong panan-aw nakalingaw og hangtod sa 50% sa mga positibong butang nga gihimo na sa ilang mga partner.</strong> Tungod kay ang ilang mga ulo naglingi aron mapunting ang sayop, nawala sila sa tanang maayo.</p>
+<p>Ug labaw pa, ang mga mag-asawa nga adunay negatibong panan-aw usahay nakita ang mga natural nga batasan isip negatibo. Nagpasabot kini nga ang pagbarog sa negatibong panan-aw mahimong literal nga makatuis sa reyalidad. Karon mao kana og maayong rason aron magpositibo.</p>
+<p>Samtang nagsugod kang magbalhin sa imong panan-aw ngadto sa positibo, usa ka makahibulong nga butang ang magsugod nga mahitabo. Magsugod kang mamatikod sa tanang positibong butang nga nahitabo na. Magsugod kang makakita og mga butang nga mas duul sa tinuod nga hitsura niini. Naa kini sa ilalom sa imong ilong — kinahanglan lang nimo nga isul-ob ang husto nga salamin.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>I-inventory ang mga negatibong butang nga imong ginasugnod sa tibuok adlaw ug ibutang kini sa laray. Unsa ang imong mapunting hinuon? Pagdangop sa imong partner, unsa ang positibong reyalidad nga basin imong gisasaw?</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 6: Summary Please
+  {
+    title: "Buod Palihug",
+    content: `<p>Ibuod nato ang atong nakat-unan! Karon usab ang maayong panahon aron makuha ang bisan unsang adlaw nga imong napasagdan. Ang maayong balita mao nga mahimo nimong buhaton kini sa bisan unsang oras — ug mahimo usab nimong pilion ang imong mga paborito ug buhaton kini og labaw sa usa ka beses!</p>
+<p>Ania ang imong nakat-unan kining semanaha:</p>
+<ul>
+  <li>Nahinumdom ka sa maayong mga handumanan mahitungod sa kung giunsa mo pagpili nga magkauban.</li>
+  <li>Nakat-unan mo ang kahinungdanon sa positibong panan-aw sa imong relasyon ug sa paagi nga imong ginatan-aw ang kalibutan.</li>
+  <li>Nakat-unan mo nga ang pagbalhin ngadto sa positibong panan-aw nagtabang kanimo sa pagmatikod sa kaayo nga naglungtad na ug nagpalig-on sa bugkos tali kanimo ug sa imong partner.</li>
+</ul>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Maghunahuna sa mosunod nga mga pangutana:</p>
+<ul>
+  <li>Unsa ang pipila sa mga pagbag-o nga imong namatikdan kining semanaha?</li>
+  <li>Sa unsang mga paagi ang pagpraktis sa positibong panan-aw nakaaapekto sa imong relasyon kining semanaha?</li>
+  <li>Unsa ang labing importante nga nahinumduman gikan kining semanaha?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 7: Small Wins
+  {
+    title: "Gagmayng Tagumpay!",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang Semana 1 — Positibong Panan-aw!</strong></p>
+<p>Maayo kaayo! Naabot na ka sa Adlaw 7 sa imong 30-adlaw nga hagit — usa ka bug-os nga semana! Ug importante ang pagsaulog sa imong mga tagumpay. Kung dili kini naka-perpekto, susama usab nga importante ang pagkalumo sa imong kaugalingon ug pagpalig-on sa imong determinasyon para sa sunod semana.</p>
+<p>Gamiti ang pipila ka minuto karon sa pagsulat og mubo nga listahan sa tanang butang nga imong gihimo og maayo kining semanaha nga imong gipagmatan. Ang tagumpay usa ka tagumpay. Ug ang pag-pile sa mga tagumpay usa ka kritikal nga kahanas sa kinabuhi ug mga relasyon.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Isulat bisan unsa ang tinuod alang kanimo! Ania ang pipila ka mga pananglitan aron makasulay:</p>
+<ul>
+  <li>Pagpadayon sa hagit nga ito</li>
+  <li>Pagbahin og mga pagpamatuod sa imong partner</li>
+  <li>Pagkonektar og matamis nga higayon sa imong mga anak</li>
+  <li>Pagkonektar sa usa ka higala</li>
+  <li>Pagkuha og lawom nga mga gininhawa</li>
+  <li>Pagpadayon sa usa ka proyekto sa trabaho</li>
+  <li>Pagkuha og oras alang sa pag-atiman sa kaugalingon</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 8: Best Buds
+  {
+    title: "Pinakamayong mga Higala",
+    content: `<p>Maayong pag-abot sa Adlaw 8! Karon magpunting kita sa <strong>pagkahigala</strong> ug kung unsa ang kahulogan nga mahimong higala sa imong partner.</p>
+<p>Unsa ang hitsura sa pagkahigala alang kanimo? Unsa ang naghimo sa usa ka tawo nga maayong higala? Gamiti ang usa ka higayon sa paghunahuna sa imong pinaka-suod nga mga higala. Unsaon nimo pagpili niining mga tawhana aron mahimong bahin sa imong palibot? Unsa ang nagpalig-on sa mga pagkahigala?</p>
+<p>Ug kung adunay ka mga anak, unsa ang imong gitudlo kanila mahitungod sa pagtrato sa ilang mga higala ug mga klasmate? Unsa ang ilang isulti nga ang usa ka maayong higala?</p>
+<p>Sa kinatibuk-an, ang mga higala nagpakita og interes sa kinabuhi sa usag-usa ug nakat-unan ang mga kagustuhan ug opinyon sa usag-usa. Naningkamot sila sa pagtrato sa usag-usa nga may pagtahud ug nagpakita alang sa usag-usa. Nagbantay sila sa usag-usa. Nagkatawa ug naglaro sila nga magkauban ug kanunay adunay managsama nga interes.</p>
+<p>Sama sa bisan unsang pagkahigala, ang imong pagkahigala sa imong partner usa ka bugkos nga kinahanglan nga alagaran ug prioridad-hon. Ang pagpakita og tinuod nga interes sa usag-usa, paglaro nga magkauban ug pagbarog sa iisang team mga paagi sa pagpalig-on sa imong relasyon.</p>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 9: Know Your Partner
+  {
+    title: "Kilala ang Imong Partner",
+    content: `<p>Aron mahigugma sa usa ka tawo, kinahanglan nimong <strong>tinuod nga</strong> makilala sila.</p>
+<p>Kagahapon, nakat-unan nato ang kahinungdanon sa pagmugna og lig-on nga pagkahigala sa imong relasyon. Ug usa ka dakong bahin sa pagkahigala mao ang pagkilala sa imong partner.</p>
+<p>Ang kapin sa 50 ka tuig nga panukiduki sa mga mag-asawa nga gihimo sa mga Dr. John ug Julie Gottman nakapatunghag pipila ka makahibulong nga mga nahibal-an. Gitawag namo kini nga <strong>Sound Relationship House Theory</strong> — usa ka maayo nga gipanukiduki nga resipe sa kalampusan nga gipakita sa mga mag-asawa ang paagi sa pagtukod.</p>
+<p>Ang <strong>Love Maps</strong> ang unang lebel. Hunahunaa kini isip pundasyon, nagtabang sa pagpalig-on sa ubang mga lebel. Ang imong Love Map sa kinatibuk-an mao ang mapa sa paagi sa imong partner sa pagtan-aw sa kalibutan — ang ilang mga kagustuhan, mga paglaum ug mga kabalaka, ang ilang hunahuna ug kalag.</p>
+<p>Sa unang higayon nga imong masugat ang imong partner, ang imong Love Map lagmit magpakita og pipila ka mga basic nga detalye nga gisulat sa usa ka serbet. Sa sayo pa sa relasyon, handa kitang mapuno ang daghang mga detalye kutob sa mahimo, busa nangutana kita og daghan kaayo. Samtang nagpadayon ang relasyon, magsugod kitang magpakahulugan kaysa magpangutana. Apan mahinungdanon nga dili nimo lingawan ang pundasyon sa imong balay.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Kuhaon kining simpleng pagsulay. Tan-awa kung nahibal-an nimo ang tubag sa kining mga pangutana, unya susayan ang imong mga tubag sa imong partner:</p>
+<ul>
+  <li>Unsang mga pagkaon ang dili ganahan sa imong partner?</li>
+  <li>Unsang klase sa mga hobby ang ilang kinaugali?</li>
+  <li>Unsa ang usa sa ilang mga damgo alang sa umaabot?</li>
+  <li>Unsa ang ilang gikabalak-an?</li>
+</ul><p>Kining mga pangutana gagmay lang nga bahin sa imong mapa. Ugma, maghisgot kita mahitungod sa pagpadayon sa pagdugang og detalye.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 10: Keep It Current
+  {
+    title: "Ipadayon ang Pag-update",
+    content: `<p>Kagahapon, nakat-unan nimo nga ang usa ka importanteng bahin sa imong relasyon mao ang klaro nga Love Map sa sulod nga kalibutan sa imong partner.</p>
+<p>Ug ang kahibulongan sa Love Maps mao nga <strong>kanunay kini nagbabag-o.</strong> Ang imong partner nagbabag-o ug nagdako sa bag-ong mga paagi sa tanan nga higayon. Ang kamatuoran nga nangutana ka sa imong partner mahitungod sa ilang paboritong pagkaon o hobby 10 ka tuig na ang milabay dili nagpasabot nga irekord mo kini ug dili na manggutana pag-usab. Kinahanglan natong buhaton ang atong bahin sa pag-update sa atong Love Maps ug regular nga pagpangutana.</p>
+<p>Kung ang imong unang mapa gisulat sa serbet, ang imong ideal nga mapa mas sama sa paggamit og Google Maps sa imong smartphone — labi ka detalyado ug kanunay nga gi-update, bisan nagbabag-o samtang nagmaneho ka tungod sa bag-ong impormasyon.</p>
+<p>Ang bili niining mga mapa mao nga naghatag kini kanimo og kumpiyansa ug pagkamaaasahan. Kinahanglan nimo kini sa imong personal nga mga relasyon usab.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>I-refresh ang imong Love Map gamit ang pipila o tanan sa mosunod nga mga pangutana:</p>
+<ul>
+  <li>Unsang mga tumong ang imong partner alang niining tuiga?</li>
+  <li>Unsaon sa imong partner ang pag-atiman kanimo kung masakiton ka?</li>
+  <li>Kinsa ang pinaka-suod nga mga higala sa imong partner?</li>
+  <li>Unsa ang paboritong paagi sa imong partner sa paggugol og gabii?</li>
+</ul></div>`
+  },
+  // 11: Open-Ended Questions
+  {
+    title: "Mga Bukas nga Pangutana",
+    content: `<p>Nakat-unan nato kagahapon nga ang usa ka importanteng bahin sa pag-ugmad ug pagpadayon sa pagkahigala mao ang pagmugna og Love Maps sa kung unsa ang imong nahibal-an sa usa ka tawo, sa sulod sa ilang hunahuna ug kasingkasing.</p>
+<p>Aron mapalakas ang Love Maps, pangutana lang og <strong>mga bukas nga pangutana!</strong></p>
+<p>Ang mga bukas nga pangutana kabaliktaran sa mga saradong pangutana, nga dili nagdapit og panaghisgutan — kasagarang masagubanan og usa ka pulong lang nga tubag:</p>
+<p><em>"Maayo ba ang imong adlaw?" "Oo."<br>"Natawagan nimo ang repairman?" "Dili."<br>"Gusto ka og panihapon?" "Oo."</em></p>
+<p>Sa sukwahi, ang mga bukas nga pangutana nagdapit og mahunahunaong tubag. Nagbukas kini sa kasingkasing. Nagsugod kini og panaghisgutan:</p>
+<ul>
+  <li>Unsa ang nakapamatuud kanimo sa imong trabaho karon?</li>
+  <li>Kung mahimo nimong baguhin ang usa ka butang mahitungod sa atong pisikal nga balay, unsa ang imong pilion ug ngano?</li>
+  <li>Unsa ang imong gusto nga maging hitsura sa sunod tuig alang sa atong pamilya?</li>
+</ul>
+<p>Ang mga bukas nga pangutana gipagana sa pagkukuryoso. Nagpahayag kini og interes sa sulod nga kalibutan sa imong partner. Samtang ang mga saradong pangutana nagpangita og impormasyon, ang mga bukas nga pangutana <strong>nagpangita og koneksyon.</strong></p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pilia gikan sa mga pangutana sa taas o mag-brainstorm og pipila ka imong kaugalingon nga mga bukas nga pangutana. Unya pangutana sa imong partner og usa o daghan pa sa kining mga pangutana sa sunod higayon nga magkauban mo.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 12: Small Things Often
+  {
+    title: "Gagmayng Butang, Kanunay",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Pagkahigala!</strong></p>
+<p>Maayong pag-abot sa Adlaw 12! Karon maghisgot kita mahitungod sa usa ka butang nga gamay apan gamhanan. Pagkahuman sa tanang mga tuig sa panukiduki, ang among motto mao: <strong>gagmayng mga butang, kanunay.</strong></p>
+<p>Ang gagmayng, tinuyo nga mga higayon adunay mas daghang gibug-aton kaysa mga nahiwalay, extravagant nga mga kilos pagdangop sa pagpalig-on og lig-on nga relasyon. Mao ang gagmayng mga butang ang importante. Ug usa sa labing mahinungdanong gagmayng mga butang gitawag og <strong>"bid."</strong></p>
+<p>Ang "bid" mao ang bisan unsang hangyo aron makonektar sa imong partner. Mahimo kang maghimo og bid para sa panaghisgutan, katawa, pagmahal, suporta, o simple lang nga pagtagad. Mahimong gagmay kini, sama sa pagsulti og "maayong buntag," o komplikado, sama sa pagpangayo og emosyonal nga suporta.</p>
+<p>Kadaghanan sa mga bid sayon nga matino ug masabtan: "Unsaon ko og hitsura?" "Maabot ba nimo ang guacamole?" "Motabang ka nako sa pagbag-o sa bedspread?" Apan ang ubang mga bid mas komplikado: "Gusto ka moubay nako sa yoga?" "Magsugod kita og pagtuon og gitara."</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Tan-awa kung mamatikdan nimo ang usa ka bid nga ikaw ug ang imong partner ang naghimo sa usag-usa karon. Importante ang pagkat-on sa pagmatikod sa mga bid sa imong partner. Ang sunod nga lakang mao ang "paglingi ngadto" sa mga bid — maghisgot pa kita niini ugma.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 13: Turning Towards
+  {
+    title: "Paglingi Ngadto Kaniya",
+    content: `<p>Kagahapon, nakat-unan nato nga ang labing gamhanan sa mga relasyon mao ang gagmayng mga butang. Matag adlaw naghimo kita og daghang gagmayng mga hangyo aron makonektar, nga gitawag og mga bid. Mao ang paagi sa atong pagtubag sa kining mga bid ang importante.</p>
+<p>Naghimo og panukiduki si John Gottman sa mga bag-ong kasal ug mibalik-balik kanila pagkahuman og unom ka tuig. Ang mga mag-asawa nga nagpabilin nga kasal mas maayo sa usa ka butang — ang ikatulo nga lebel sa Sound Relationship House: <strong>Paglingi Ngadto.</strong></p>
+<p>Sa unom ka tuig nga follow-up, <strong>ang mga mag-asawa nga nagpabilin nga kasal naglingi ngadto sa usag-usa 86% sa oras. Ang mga mag-asawa nga nagbulag nag-average lang og 33% sa oras.</strong> Ang sekreto mao ang Paglingi Ngadto.</p>
+<p>Kung ang imong partner maghimo og bid, adunay ka og tulo ka mga pagpili:</p>
+<ul>
+  <li><strong>Paglingi Ngadto</strong> — pag-ila ug pagtubag</li>
+  <li><strong>Paglihay</strong> — pagbaliwala (paglihay sa higdaanan, paglakaw, pagpadayon sa pagtan-aw sa imong telepono)</li>
+  <li><strong>Pagsukol</strong> — siloti sila sa paghimo og bid ("Unsa man? Dili ba nimo makita nga nagtan-aw ko sa dula!")</li>
+</ul>
+<p>Ang simpleng tubag nga paglingi ngadto — pagtaas ug pagsulti og "Mmhmm" — maayo na kaayo. Labaw sa tanan, ang Paglingi Ngadto nagpasabot og pagpahibalo sa imong partner nga nadungog mo sila ug nga kung nagsulti sila, ginabuhat mo ang pinakamabubuhaton mo aron maminaw.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Tubaga ang bid sa imong partner sa usa ka bag-o ug talagsaon nga paagi. Ibutang sa laray ang telepono. Magpabilin nga bukas ug magpabilin sa ilang team. Usab, bantayi kung kanus-a maglingi ngadto ang imong partner sa imong bid — gantihon sila pinaagi sa pagsulti og "salamat."</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 14: A Look Back
+  {
+    title: "Usa ka Pagtan-aw sa Likod",
+    content: `<p>Ibuod nato ang imong nakat-unan hangtod karon:</p>
+<ul>
+  <li>Nakat-unan mo nga ang pagkahigala mao ang punoan sa bisan unsang lig-on nga relasyon.</li>
+  <li>Nakat-unan mo nga ang susi sa bisan unsang pagkahigala mao ang pagkaadunay lig-on nga Love Map sa usag-usa, ug ang pagpangutana og mga bukas nga pangutana nagpalig-on sa imong Love Maps.</li>
+  <li>Nakat-unan mo ang pagpraktis sa gagmayng mga butang kanunay — mao ang gagmayng mga butang ang naghatag og pinakadakong kalainan sa mga relasyon.</li>
+  <li>Nakat-unan mo ang kahinungdanon sa pagmatikod sa mga gagmayng bid sa imong partner ug paglingi ngadto sa kining mga bid.</li>
+</ul>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Maghunahuna sa mosunod nga mga pangutana:</p>
+<ul>
+  <li>Unsa ang nagpagawas kining semanaha?</li>
+  <li>Unsang mga pagbag-o (kung adunay) ang imong namatikdan sukad sa pagsugod sa hagit?</li>
+  <li>Unsa ang pipila ka mga labing importante nga mahimong ipatuman sa imong relasyon?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 15: Checkpoint
+  {
+    title: "Tsekpoynt!",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Gagmayng mga Butang Kanunay!</strong></p>
+<p>Panahon na sa pagsaulog! Nakaabut ka na sa <strong>kabilungan nga punto</strong> sa 30-adlaw nga hagit ug angayan kang dayegon.</p>
+<p>Gasto ang pipila ka oras karon sa paghatag sa imong kaugalingon og gugma ug pag-atiman sa kaugalingon. Maligo. Manood og pelikula nga gusto nimo makita. Magluto og espesyal nga panihapon o mag-order og takeout. Buhata ang usa ka butang nga makapamaayo kanimo.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pagkahuman nga ganahan nimo ang imong kaugalingon, isulat ang usa ka butang nga plano mong ipunting sunod semana.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat bisan kanus-a karon.</p></div>`
+  },
+  // 16: Saying Thanks
+  {
+    title: "Pagpasalamat",
+    content: `<p>Daghan kitang nakat-unan mahitungod sa pagpakita og pasalamat kining bulana. Ug ang pagpakita og pasalamat panguna mahitungod sa pagsulti og <strong>"salamat."</strong> Kini usa ka pagpahayag sa pagpasalamat.</p>
+<p>Ang "salamat" gamhanan. Ang "salamat" nagtabang sa imong hunahuna sa pagmatikod aron makita ang kaayo nga naglungtad sa imong relasyon. Ug ang mga maayong relasyon nahimong ug nagpabilin nga maayo pinaagi sa gagmayng mga higayon.</p>
+<p>Mga butang sama sa:</p>
+<ul>
+  <li>"Salamat sa pagtangtang sa basura."</li>
+  <li>"Salamat sa pagtabang sa mga anak sa ilang mga leksyon karon."</li>
+  <li>"Salamat sa panaghisgutan sa panihapon."</li>
+</ul>
+<p>Bisan kung ikaw usa niadtong mga tawo nga dili maghunahuna nga kinahanglan mong salamatan ang mga tawo sa mga butang nga kinahanglan nilang buhaton, sulayi lang kini. Kung ang imong partner dili sanay sa imong pagpahayag og pasalamat, ang imong bag-ong gawi basin magpahibulong ug magpasaya kanila.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pangitaa ang pipila ka gagmayng mga butang nga isulti og "salamat" ug gasto ang pipila ka oras sa pagpahayag og tiunay nga pasalamat.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 17: Let's Get Specific
+  {
+    title: "Mangkonkreto Ta",
+    content: `<p>Atol sa among couples workshop, The Art and Science of Love, usa sa pinaka-gamhanan nga ehersisyo mao ang ehersisyo nga <strong>"Ginapasalamatan Ko."</strong></p>
+<p>Ang matag partner nagtan-aw sa listahan sa mga positibong katangian (pananglitan matinumanon, kalmado, kusgan, mapag-ampo, matahum), naglingin og pipila nga naghulagway sa ilang partner, ug unya nagsulatog usa ka talagsaon nga pananglitan alang sa matag usa.</p>
+<p>Pananglitan, mahimo kang maghunahuna nga "kusgan ang akong partner." Sa ulahi sa ehersisyo, magpahayag ka og imong pagpasalamat. "Ginapasalamatan ko kung unsa ka kusog nimo." Maayo na kaayo kini.</p>
+<p>Ug aron tinuod nga mapahimong nindot ang ehersisyo, magila ka og usa ka talagsaon nga pananglitan o istorya nga nagpakita sa kana nga katangian:</p>
+<p><em>"Ginapasalamatan ko kung unsa ka kusog nimo. Nahunahunaan ko ang higayon nga giatiman nimo ako ug ang mga anak nato sa miaging tuig sa dihang masakiton ang akong amahan, ug gibalhin nimo ang imong trabaho ug tinuod nga misulod aron suportahan kami. Gidumala nimo ang tanang logistika ug nahimong bato. Salamat sa paggiya kanato niadto. Dili ko masulti kung unsa ka nindot ang imong gihimo."</em></p>
+<p>Kining ehersisyo sa pagpasalamat nagmugna og gamhanan nga paglumo ug pagsuod tali sa mga partner.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pilia ang tulo ka positibong katangian nga naghulagway sa imong partner (o hunahunaa ang imong kaugalingon). Isulat ang usa ka talagsaon nga istorya alang sa matag katangian nga imong gipili, unya ipaambit ang imong gisulat sa imong partner.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 18: Getting Curious
+  {
+    title: "Pagkukuryoso",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Pagpasalamat!</strong></p>
+<p>Karon, magkuryoso ta! Ang pagkukuryoso usa ka lakang sa wala pa ang pagpamati ug usa ka bililhong kahanas sa bisan unsang relasyon. Desidiha karon nga imong pamasteron kini.</p>
+<p>Ang pagkukuryoso mahitungod sa imong partner nagpasabot sa pagkuha og pipila ka oras aron makita ang mga butang pinaagi sa ilang mga mata. Nagpasabot kini sa pagpause sa imong mga pakahulugan ug pagsulay sa pagsabot, gikan sa ilang panan-aw, kung unsa ang hitsura sa kalibutan. <strong>Ang pagkukuryoso ug pagkaluoy nagdala og mas lawom nga koneksyon sa imong partner.</strong></p>
+<p>Basin nagluto ka og pamahaw ug ang imong partner mosulod sa kusina ug magsugod og balobalo. Sa dili ka matubag, magpahigda. Unsa ang basin giingon sa ilang mga aksyon mahitungod sa ilang kaugalingon? Basin dili sila maayo og tulog, o naka-stress sa lain pang butang.</p>
+<p>Seguradong sa kana nga higayon sayon ang paglingkod sa "negatibo" nga panan-aw ug personal nga buhaton kini. Apan, kung nagtinguha ka nga adunay positibong panan-aw kanila, basin mo-imagine ka kung unsa ang nagkahitabo sa ilang kalibutan. Gamiti ang oras sa pagkupot og kaluoy.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Mag-imagine. Unsang ubang mga pagpili ang magamit kanimo sa dihang magsugod kang magpakahulugan mahitungod sa imong partner? Unsa ang kahulogan alang kanimo sa pagpili og pagkukuryoso kaysa kasiguroan mahitungod sa batasan sa imong partner?</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 19: Good Listener
+  {
+    title: "Pagpahimong Maayong Tigpamati",
+    content: `<p>Ang usa ka importanteng bahin sa pagkukuryoso mao ang pagpamati ug pagpangutana. Ug usa ka kahanas nga halos ang tanan makaganansya gikan sa pagpausbaw mao ang pagpahimong mas maayong tigpamati — tinuod nga pagpamati, ug ang pag-buhat sa pinakamabubuhaton mo aron makapakiuban sa imong partner.</p>
+<p><strong>Duha sa labing gamhanan nga mga butang sa usa ka relasyon mao ang pagpamati ug pakikiuban.</strong></p>
+<p>Hunahunaa ang pagpangutana niining mga pangutana:</p>
+<ul>
+  <li>Unsa man kini alang kanimo?</li>
+  <li>Unsa man ang imong dili ganahan sa kini nga sitwasyon?</li>
+  <li>Unsa ang imong mga kabalaka?</li>
+  <li>Sultihi ako pa og labaw pa mahitungod niana.</li>
+</ul>
+<p>Unya, isip bonus, sulayi ang pagpahayag og empati — i-imagine kung unsa ang ilang giagi ug kung unsa ang pamati niini:</p>
+<ul>
+  <li>"Uy, nagpakita kana nga tinuod nga nakapalagot."</li>
+  <li>"Makita ko kung ngano nga nakapalagot kini kanimo."</li>
+  <li>"Makatarunganon kana."</li>
+</ul>
+<p>Usahay gusto lang nato nga madungog ug dili mobati og nag-inusara sa atong giagi. Ang "Makatarunganon nga mobati ka niana" mahimong labihang gamhanan ug nakapaayo.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Mag-praktis sa arte sa pagpamati. Magpahigda og mas dugay kaysa sa imong naandan. Pangutana sa imong partner kung nahuman na sila sa pagsulti. Pangutana kung adunay pa ba. Bisan isulti ang "Nadungog ko ikaw."</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 20: How Was Your Day
+  {
+    title: "Kumusta ang Imong Adlaw, Nangga?",
+    content: `<p>Tanan nato nasayod sa pangutana: <strong>"Kumusta ang imong adlaw, nangga?"</strong></p>
+<p>Ang panukiduki nagpakita nga ang mga mag-asawa nga makahimo sa malampuson nga pagsangkap sa ilang mga relasyon gikan sa gawas nga mga stressor (sama sa stress sa trabaho) adunay mas lig-on nga mga relasyon sa paglabay sa panahon. Ang mga partner gusto nga mobati nga naa sila sa iisang team kaysa ang pag-atubang sa stress sa nag-inusara.</p>
+<p>Busa adunay kahulugan kini nga pangutana. Apan dili igo ang pagpangutana lang — kinahanglan nimo nga magpresensya ug tinuod nga maminaw. Ang paghimo og pagsulti mahitungod sa nahitabo sa kalibutan sa imong partner sa katapusan sa adlaw nga adunay empati usa ka bililhong kahanas.</p>
+<p>Ang pagpamati nga walay paghatag og tambag lisod alang sa kadaghanan nato. Apan nabuhat na nato ang mga lisod nga butang kaniadto.</p>
+<p>Usa ka importanteng pangungon nga kinabuhi pinaagi niini — ug ibutang sa refrigerator ug isulat sa likod sa imong kamot: <strong>Ang pagsabot kinahanglan nga mouna sa tambag.</strong></p>
+<p>Kung ang imong partner moadto kanimo aron magbahin og kasagmuyo, sa kadaghanan sa mga panahon dili gusto nila nga sulbaron nimo ang problema. Halos kanunay gusto lang nilang maminaw ka og maayo ug masabtan ang ilang kaagi. Gusto nilang mobati og dili nag-inusara. Ang simple lang nga presensya ug pagsaksi nagtabang sa imong partner nga mobati og dili nag-inusara sa stress.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pangutana sa imong partner mahitungod sa ilang adlaw ug unya magpahigda ug tinuod nga maminaw. Ayaw sulayi nga sulbaron ang problema. Maminaw lang ug magpakiuban.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 21: Let's Recap
+  {
+    title: "Ibalikan Nato",
+    content: `<p>Ibuod nato ang imong nakat-unan kining semanaha:</p>
+<ul>
+  <li>Nakat-unan mo ang gahum sa pagsulti og "salamat" para sa gagmayng mga butang sa imong relasyon.</li>
+  <li>Nagpraktis ka sa pagpunting sa mga positibong katangian ug pagsama-sama niini sa mga talagsaon nga mga istorya mahitungod sa imong partner.</li>
+  <li>Nakat-unan mo nga ang pagpause aron magpabilin nga mausisa ug maluoy ngadto sa imong partner mao ang punoan sa usa ka lig-on nga relasyon.</li>
+  <li>Nakat-unan mo ang tinuod nga pagpamati ug pakikiuban sa imong partner. Hinumdumi: <strong>ang pagsabot kinahanglan nga mouna sa tambag.</strong></li>
+</ul>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Maghunahuna sa mosunod nga mga pangutana:</p>
+<ul>
+  <li>Unsa ang usa ka butang nga imong nakat-unan sa miaging semana nga nagpabilin kanimo?</li>
+  <li>Unsa ang imong namatikdan sa imong relasyon sukad sa pagsugod sa hagit?</li>
+  <li>Unsang mga pagbag-o ang imong namatikdan sa imong kaugalingon?</li>
+</ul></div>
+<p>Ugma mosulod kita sa katapusang bahagi. Gamiti ang usa ka higayon aron hunahunaon kung unsa ka layo na ang imong naabut. Sa bisan unsang kaso, ang ugma usa ka bag-ong adlaw, ug mao ang inadlaw-adlaw nga trabaho ang nagpalig-on sa usa ka relasyon.</p>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 22: Time to Celebrate
+  {
+    title: "Panahon sa Pagsaulog!",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Pagpamati!</strong></p>
+<p>Magsaulog ta! Gamiti ang pipila ka oras karon sa paghatag sa imong kaugalingon og pipila ka pasalamat sa pagpabilin sa hagit. Nagtrabaho ka pinaagi sa mga lakang matag adlaw, ug nakadaog ka og pahigda. Gamiti ang pipila ka oras sa pagpasalamat sa IMONG KAUGALINGON ug kung unsa kadako ang imong nagawa kining bulana.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>I-explore ang pipila ka libreng Gottman resources ug pilia ang usa ka ipaambit sa imong partner. Pipila ka maayong mga video nga tanawon:</p>
+<ul>
+  <li><em>It's Not About The Nail</em></li>
+  <li><em>Emotional Bank Account</em></li>
+  <li><em>Turning Towards</em></li>
+  <li><em>Making Marriage Work</em></li>
+</ul></div>`
+  },
+  // 23: Big Dreams
+  {
+    title: "Dakong mga Damgo",
+    content: `<p>Maayong pag-abot sa Adlaw 23! Maging tinuod kita. Maghisgot kita mahitungod sa <strong>MGA DAMGO.</strong></p>
+<p>Importante alang sa mga mag-asawa nga magbahin sa ilang mga damgo sa usag-usa ug makahimo og paagi sa pagtabang sa tumong sa kinabuhi sa usag-usa. Usa ka importanteng aspeto sa bisan unsang relasyon mao ang pagmugna og atmospera nga nagdasig sa matag tawo sa pagsulti og matinuod mahitungod sa ilang mga paglaum ug mga damgo, mga hiyas, ug mga mong-ulbo.</p>
+<p>Sa tinuod, kanus-a ba kamo nagkatapos sa pagkuha og oras aron maghunahuna sa mga pangutana sama niini:</p>
+<ul>
+  <li>Unsa man ang pipila sa imong mga damgo alang sa imong kinabuhi?</li>
+  <li>Kanus-a ka nakaabut sa labing dako sa imong kinabuhi?</li>
+  <li>Unsa ang gusto mong mahinumduman kanimo sa dihang wala ka na?</li>
+</ul>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>I-block ang mga distraksyon sa usa ka hilom nga dapit sulod sa 20 minuto. Kumuha og blankong piraso sa papel ug ballpen, tinuod nga hunahuna kining mga pangutana, ug dungga ang imong mga damgo.</p><p>Kung posible, ipaambit ang pipila sa imong mga nabuklatan sa imong partner. Pangutana sila mahitungod sa ilang mga damgo. Ug tinuod nga maminaw. Unya hisgotan kung giunsa ninyo pagbuhat og gagmayng mga lakang ngadto sa suportahan sa usag-usa sa pagrealize sa imong mga damgo.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 24: Shared Meaning
+  {
+    title: "Gipaambit nga Kahulogan",
+    content: `<p>Tanan kita nagkinahanglan og mga damgo ug pagbati og katuyoan ug kahulogan sa atong kinabuhi. Ug kung ang atong pagbati og katuyoan nagkakuyog sa katuyoan sa atong partner, kana makahibulong.</p>
+<p>Ang panukiduki nagpakita nga ang labing maayong mga relasyon adunay pagbati sa <strong>gipaambit nga kahulogan.</strong> Usahay ang mga mag-asawa napalaron sa ilang gipaambit nga mga hiyas, apan ang tinuod nga mga master miadto sa layo aron pamugnaon kini.</p>
+<p>Ang gipaambit nga kahulogan usa sa espesyal nga mga lebel sa ibabaw sa Sound Relationship House — gitipon niini ang tanan ug nagmugna og mananaog nga relasyon.</p>
+<p>Pareho bang gusto nga magsugod og pagtanum? O basin adunay daghan pang game nights? Adunay gipaambit nga damgo sa pagsugod og negosyo? O pag-renovate sa itaas nga banyo? Ang gipaambit nga mga damgo, mga hiyas, ug mga ritwal naghimo og usa ka espesyal nga butang: nagpasiga kini og talagsaon nga "kita" sa relasyon ug nagmugna ug nagpalig-on sa imong pagkatawo isip usa ka mag-asawa.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pun-a kining mga blangko (magkauban kung mahimo):</p>
+<ul>
+  <li>Pareho kaming nagugma sa…</li>
+  <li>Gusto kaming mobyahe sa…</li>
+  <li>Kung manaog kami sa lotto, among…</li>
+  <li>Gusto kaming mahibal-an kung giunsa…</li>
+</ul><p>Ang mas daghan nga gipaambit nga kahulogan ang imong makita, mas lawom, mas dato, ug mas mapuslanon ang imong relasyon.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 25: Creating Rituals
+  {
+    title: "Paghimo og mga Ritwal",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Kahulogan!</strong></p>
+<p>Maghisgot kita mahitungod sa <strong>MGA RITWAL.</strong></p>
+<p>Ang Mga Ritwal sa Koneksyon mao ang mga gawi ug tradisyon nga ikaw ug ang imong partner nagmugna sulod sa imong relasyon. Kini mga butang nga mahimo nimong pag-asahan ug nagtabang kanimo nga mobati og seguro sa imong relasyon ug pamilya. <strong>Ang mga ritwal nagpalig-on sa imong pagkatawo isip usa ka mag-asawa ug pamilya.</strong></p>
+<p>Basin nag-ukit kamo og mga kalabasa matag tingdagdag, o nagluto ang imong partner sa imong paboritong pagkaon sa imong adlaw sa pangatawo. Basin ang mga pagtipun sa pamilya sa Dominggo importante, o gusto kamo nga maglakaw nga may kape matag buntag nga magkauban.</p>
+<p>Ang mga ritwal nagtabang kanato sa pagmarka og panahon ug paghimo og kahulogan. Ang pipila pormal ug maaasahan, sama sa mga pangunahong bakasyon o taunan nga mga biyahe. Ang pipila mas kaswal, sama sa kamatuoran nga ang Lunes mao ang pasta night, o nagbuhat kamo og crossword sa Dominggo sa buntag.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Maghinumdom mahitungod sa mga klase sa mga tradisyon sa pamilya ug mga ritwal nga pareho kamo nga adunay sa dihang nagdako kamo. Isulat ang usa ka konsistente apan talagsaon mahitungod sa:</p>
+<ul>
+  <li>Mga bakasyon</li>
+  <li>Imong adlaw sa pangatawo</li>
+  <li>Mga oras sa pagkaon</li>
+  <li>Mga weekend</li>
+</ul><p>Maghisgot sa usag-usa mahitungod sa kung unsa ang kahulogan sa imong kining mga ritwal. Mag-imagine og kusog kung giunsa nimo gusto sila karon — unsa ang imong isama? Unsa ang imong luwatan?</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 26: Rituals of Appreciation
+  {
+    title: "Mga Ritwal sa Pasalamat",
+    content: `<p>Nahinumdom ka ba og pipila ka semana ang milabay sa dihang gimbisita nato ang pasalamat? Karon, magkuha kita og gamay nga mas lawom nga bahin ug <strong>maghimo og aktuwal nga ritwal mahitungod sa pagpasalamat</strong> ug tan-awon kung giunsa pagbag-o sa imong kinabuhi.</p>
+<p>Kung naghimo na kamo og pormal nga ritwal, patapik-a ang imong kaugalingon sa likod. Naglaum kita nga kini usa ka bililhong kaagi sa pagmatikod ug pagbahin kung unsa ang maayo sa imong relasyon ug sa imong kinabuhi.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pilia ang usa sa mosunod (o paghimo sa imong kaugalingon) ug magpanumpa sa paghimo niini sulod sa sunod bulan. Ang pasalamat nagbag-o sa tanan. Ania ang pipila ka mga ideya:</p>
+<ul>
+  <li><strong>Lingguhang mga mensahe sa pagpasalamat.</strong> Sa panahon sa adlaw, i-text ang imong partner og usa ka butang nga imong gipasalamatan mahitungod kanila ug usa ka talagsaon nga pananglitan. "Hilabihang maayo nimo. Tinuod nga gipasalamatan ko nga nagbuhat ka og kape para sa ato duha karon sa buntag sa dili pa ko maka-mata."</li>
+  <li><strong>Gratitude journal.</strong> Gasto ang pipila ka minuto sa wala pa matulog matag gabii sa pagsulat og tulo ka butang nga imong gipasalamatan. Ipaambit kini sa imong partner — o maghimo og imong listahan nga magkauban.</li>
+  <li><strong>Adlaw-adlaw nga salamat.</strong> Buhati kini nga punto sa pagsulti og salamat sa usa ka butang matag adlaw, apan pilia ang usa ka butang nga dili nimo kasagarang ginasalamat. "Salamat sa pag-organisa sa refrigerator" o "Salamat sa pagmatikod nga lungotungot ko karon."</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 27: Magic Question
+  {
+    title: "Magic nga Pangutana",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Mga Ritwal!</strong></p>
+<p>Maayong pag-abot sa Adlaw 27! Andam ka ba sa <strong>USA KA PANGUTANA</strong> nga magbag-o sa imong relasyon ngadto sa mas maayo?</p>
+<p>Siyempre, mas maayo kini kung adunay ka pa ang ubang maayong mga himan sa bug-os nga pag-andar sama sa pagpasalamat, Love Maps, ug pagpamati.</p>
+<div class="task-box"><span class="task-label">Ang Magic nga Pangutana</span><p style="font-size:1.25rem; font-style:italic; color: var(--rose-dark);">"Unsa ang mahimo ko para malabsan ka og gugma kining semanaha?"</p><p>Ug unya, maminaw lang. Ipahibalo sa imong partner nga nadungog mo sila (paglingi ngadto sa kana nga bid).</p></div>
+<p>Gamhanan kini nga pangutana tungod kay gikuha niini ang hulam sa gugma sa imong partner. Nagdapit kini og resipe sa kalampusan ug eksakto kung giunsa ka nimo mahimong nindot alang kanila.</p>
+<p>Basin mobati kini og gawas-lugar ug wala sa putok. Apan maayo kana kung dili kini mabati nga natural sa una — nagkat-unan ka og bag-ong butang. Nakat-unan na ba kamo og instrumento sa musika kaniadto? Mihunong ba kamo tungod kay wala kini mabati nga natural? O nagpadayon ba kamo tungod kay nahibal-an nimo nga kung matun-an ang pagkontorto sa imong mga tudlo ngadto sa talagsaon nga porma mahimong mobunga kini og maanindot nga tunog?</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pangutana ug hinumdumi ang tubag sa kining pangutana. Naglaum kita nga dili na kinahanglan pang ihisgutan nga kinahanglan usab nimong sulayi ang paghimo sa butang nga isugyot sa imong partner. Sa paglabay sa panahon, ang mga pangutana sama niini mahimong mas natural. Ug sa gamay nga panahon ug praktis, ang tubag basin mao ang "Ginahimo na nimo kini."</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 28: A Look Back
+  {
+    title: "Usa ka Pagtan-aw sa Likod",
+    content: `<p>Uy, daghan kang nakat-unan kining bulana! Ania ang pipila ka mga highlight:</p>
+<ul>
+  <li>Nakat-unan mo ang kahinungdanon sa positibong panan-aw sa imong mga relasyon ug sa paagi nga imong ginatan-aw ang kalibutan.</li>
+  <li>Nakat-unan mo nga ang susi sa bisan unsang lig-on nga relasyon mao ang klaro nga Love Map ug pagpangutana og mga bukas nga pangutana.</li>
+  <li>Nakat-unan mo ang kahinungdanon sa pagmatikod sa mga gagmayng bid sa imong partner ug paglingi ngadto sa kining mga bid.</li>
+  <li>Nakat-unan mo ang gahum sa pagsulti og "salamat" para sa gagmayng mga butang sa imong relasyon.</li>
+  <li>Nakat-unan mo nga ang pagpause aron magpabilin nga mausisa ug maluoy ngadto sa imong partner mao ang punoan sa usa ka lig-on nga relasyon.</li>
+  <li>Nakat-unan mo kung giunsa ang pagpangutana og "Kumusta ang imong adlaw, nangga?" ug tinuod nga maminaw ug makiuban sa imong partner.</li>
+  <li>Nakat-unan mo ang kahinungdanon sa paghisgot mahitungod sa imong mga damgo ug pagmugna og gipaambit nga kahulogan.</li>
+  <li>Nakat-unan mo kung giunsa ang pagmugna og mga ritwal aron matukod ang kinabuhi nga gusto ninyo isip mga mag-asawa.</li>
+</ul>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Isulat ang imong kaugalingon nga mga paghunahuna:</p>
+<ul>
+  <li>Unsa pa ang imong nahinumdom?</li>
+  <li>Unsa ang labing nagpagawas?</li>
+  <li>Unsa ang imong hunahuna ang labing makapaabot og dakong epekto sa imong relasyon?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Partner</span><p>Sultihi sila sa imong gisulat karon.</p></div>`
+  },
+  // 29: Reflections
+  {
+    title: "Mga Paghunahuna",
+    content: `<p>Gaston nato ang pipila ka oras karon sa paghunahuna.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Hunahunaa kining mga pangutana:</p>
+<ul>
+  <li>Unsaon mo sa pagbati sa imong relasyon?</li>
+  <li>Unsa ang labing nakatabang kanimo?</li>
+  <li>Kung nakita nimo ang pipila ka mga bahin nga lisod, asa ka nahapit? Matikdi ang mga kana ug maghatag sa imong kaugalingon og gracia.</li>
+</ul></div>
+<p>Usab, may napasagdan ka bang mga pagpamatuod sa tibuok bulan? Aduna bay labi ka may kalabutan o gamhanan? Gusto ka ba nga buhaton pag-usab?</p>
+<p>Ang Gottman Institute adunay printable nga listahan sa mga pagpamatuod nga magamit sa ilang website — usa ka hapsay nga sheet nga adunay tanang mga pagpamatuod aron ma-download ug mapuno bisan kanus-a gusto nimo og pagtuboy sa positibidad. Maghimo og ritwal mahitungod niini. Apila ang imong partner usab!</p>
+<div class="bonus"><span class="bonus-label">Hapit Na!</span><p>Usa na lang ka adlaw. Gamiti ang usa ka higayon aron ipasalamat kung unsa ka layo na ang imong naabut.</p></div>`
+  },
+  // 30: You Did It
+  {
+    title: "Nahimo Nimo! 🎉",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Magic nga Pangutana — ug ang tibuok hagit!</strong></p>
+<p>Uy, nahimo nimo! Usa ka bug-os nga 30 ka adlaw sa pagmugna og mas maayong relasyon!</p>
+<p>Naglaum kami nga mobati ka og pagbag-o — usa ka gitukod pinaagi sa mga piraso sa impormasyon, nagpakita og gagmayng mga butang kanunay sa praktis.</p>
+<p>Sa tinuod, <strong>kini usa ka sinugdanan, dili usa ka katapusan.</strong> Kini ang pagsugod sa usa ka bag-ong kapitulo sa imong relasyon — usa nga gipagana sa imong nakat-unan sa miaging 30 ka adlaw.</p>
+<p>Ayaw pagduha-duha sa pagbalik sa kining mga pangutana kung mobati kang nahapit. Kini usa ka maayong paagi sa pagpahinumdom kanimo sa mga basic bisan samtang nagtukod ka og usa ka butang nga komplikado ug matahum.</p>
+<div class="task-box"><span class="task-label">Unsa ang Sunod?</span><p>Ania ang pipila ka dagdag nga mga paagi aron magpabilin nga naapil ug padayon nga pagpalig-on sa imong mga relasyon:</p>
+<ul>
+  <li>The Gottman Relationship Adviser</li>
+  <li>Gottman Connect para sa Mga Mag-asawa</li>
+  <li>Marriage Minute (libreng newsletter)</li>
+  <li>The Gottman Blog</li>
+  <li>Love Maps Relationship Quiz</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Gikan sa Gottman Team</span><p>Gamiti ang oras sa pagsaulog! Nanghinaut kami kanimo og daghang nindot nga mga higayon sa relasyon. 💛</p></div>`
+  },
+];
+
+const illustrations = [
+  // 0: Welcome
+  { img: "images/day-0.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a couple seated side by side at a desk, each writing in their own open journal under warm lamplight, a wall calendar behind them marking 30 days, a small ribbon of commitment between them, warm cream and deep rose palette, clean geometric shapes, sense of shared purpose and quiet determination, no text" },
+  // 1: Positive Perspective
+  { img: "images/day-1.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a balance scale centered in the wide frame, the left pan overflowing with glowing golden orbs and small heart and sun icons, the right pan nearly empty with a single grey cloud, warm golden light radiating from the heavier positive side, two silhouettes standing together on the bright side, cream and rose palette, symbolizing more good than bad tipping the scale of a relationship, no text" },
+  // 2: Shifting Positive
+  { img: "images/day-2.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — split scene across the wide frame: left half shows a figure wearing grey glasses frowning at scattered pans on a stove, right half shows the same figure wearing rose-tinted glasses seeing their partner making breakfast with care and a small heart above — a soft vertical dividing line between the two perspectives, dusty rose and cream palette, geometric style, showing that perspective is a daily choice, no text" },
+  // 3: First Impressions
+  { img: "images/day-3.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a horizontal timeline of a couple's early story stretching across the frame: two figures meeting under a streetlamp with a small spark between them, a shared coffee at a first date, a moment of decision marked by a glowing heart, finally two figures choosing each other — connected by a soft dotted line, warm cream and rose tones, nostalgic and tender mood, no text" },
+  // 4: Everyday Positivity
+  { img: "images/day-4.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a morning commute panorama: on the left a grey exhaust cloud and a frown, on the right a warm coffee cup with steam, sunbeams through a window casting a heart-shaped shadow, a kind hand holding a door open, and an open horizon glowing gold — the scene shifting left-to-right from negative to positive, golden and cream palette, depicting how the more beauty you seek the more appears, no text" },
+  // 5: Under Our Nose
+  { img: "images/day-5.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a figure in the center looking right with a furrowed brow focused on a clock showing lateness, while to their left an unwrapped gift, a yogurt carton, and a warm mug sit glowing softly on a table — 50% of the frame filled with unnoticed positive acts, sage and cream palette, split-focus composition showing how negative perspective blinds us to what partners already do, no text" },
+  // 6: Summary Please
+  { img: "images/day-6.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — an open journal spread across the wide frame with three illustrated Week 1 recap panels inside: a glowing balance scale, a pair of rose-tinted glasses, and two figures facing each other — gold ruled lines between panels, small checkmarks in the margins, cream and warm gold palette, tidy and reflective mood, no text" },
+  // 7: Small Wins
+  { img: "images/day-7.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a horizontal celebration banner: a small golden trophy on the left, then a row of seven checkmarks each paired with a small icon (a journal, two figures, a child, a friend, a breath wave, a briefcase, a heart) — confetti dots scattered wide across a cream background, warm rose and gold palette, encouraging and self-compassionate mood, no text" },
+  // 8: Best Buds
+  { img: "images/day-8.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — two figures side by side on a park bench laughing, small shared-interest icons floating above them in a wide arc — a game board piece, a leaf, a music note, a shared book — suggesting the richness of friendship within a relationship, sage green and warm cream palette, relaxed and joyful, geometric style, no text" },
+  // 9: Know Your Partner (Love Maps)
+  { img: "images/day-9.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a large unfolded map filling the wide frame, shaped loosely like a heart with compass rose in the corner, dotted with labeled icons across its surface: a favorite food bowl, a hobby bicycle, a star for dreams, a worry cloud, a friend silhouette — map fold creases visible, rose and warm tan palette, intimate cartographic style representing the Love Map concept from the Sound Relationship House, no text" },
+  // 10: Keep It Current
+  { img: "images/day-10.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide smartphone-style map interface, with a central location pin and circular refresh arrows, new detail icons appearing across the map surface (a new food icon updating, a hobby symbol changing, a friend's location pin appearing) — suggesting the Love Map being constantly updated like Google Maps, soft rose and cream palette, clean tech-meets-warmth aesthetic, no text" },
+  // 11: Open-Ended Questions
+  { img: "images/day-11.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — left third: a small closed door with a single tight question mark and a one-word answer bubble ('Yes.') — right two-thirds: a wide open doorway with warm golden light pouring through, a winding path beyond, and expansive speech bubbles with open-ended questions shown as flowing ellipses (…) — the contrast showing how open questions invite connection, cream and rose palette, no text" },
+  // 12: Small Things Often
+  { img: "images/day-12.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a horizontal sequence of small everyday bid moments spaced evenly across the frame: a figure saying good morning with a wave, two hands passing a bowl, a figure sending a quick text, a brief shoulder touch, a figure asking for help with a speech bubble — each scene small and simple, reinforcing that small things often matter most in a relationship, rose and cream palette, no text" },
+  // 13: Turning Towards
+  { img: "images/day-13.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — three side-by-side panels spanning the wide frame: left panel (muted grey) shows a figure turning away absorbed in their phone while partner speaks; center panel (muted) shows a figure snapping at their partner; right panel (largest, warmest, glowing rose) shows two figures fully facing each other, one reaching an open hand — a bold 86% vs 33% visual weight difference in brightness pulling the eye toward connection, the Gottman research made visual, no text" },
+  // 14: A Look Back (Week 2)
+  { img: "images/day-14.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a winding path stretching left to right across the full frame with four milestone markers along it: a heart-shaped map, an open speech bubble, a small coffee cup bid, and two figures turning toward each other — two small figures walking forward together at the far right, looking back at what they've built, cream and rose palette, sense of journey and relational progress, no text" },
+  // 15: Checkpoint (Halfway)
+  { img: "images/day-15.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide path with a clear midpoint marker at the center: left half receding into the past with small milestone icons (a scale, a map, a trophy, a coffee cup), right half opening bright and wide into possibility — a figure stands at the center marker with arms gently raised, surrounded by a soft celebratory glow and a '½' milestone flag, rose and gold palette, no text" },
+  // 16: Saying Thanks
+  { img: "images/day-16.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — three warm domestic vignettes in a horizontal row: left scene shows a figure smiling and gesturing to a recycling bin as their partner waves back; center scene shows two adults at a table helping a child with schoolbooks; right scene shows two figures sharing a candlelit dinner — each scene connected by a small floating thank-you card, cream and soft gold palette, showing gratitude for the ordinary moments, no text" },
+  // 17: Let's Get Specific
+  { img: "images/day-17.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a large heart outline spanning the wide frame, divided into three inner panels each illustrating a specific story of a partner's strength: left panel shows one figure steadying the other; center panel shows a figure calmly managing logistics with a checklist while their partner rests; right panel shows a figure standing like a rock in a symbolic storm — each panel anchored by a trait icon (a shield, a star, a steady hand), rose and cream palette, intimate and specific, no text" },
+  // 18: Getting Curious
+  { img: "images/day-18.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — wide split composition: left third shows a figure with arms crossed reacting to their partner grumbling in a kitchen, assumption-mode posture; right two-thirds shows a large soft magnifying glass lens overlaying the same scene, now revealing the partner surrounded by stress symbols (a briefcase, a clock, a sleepless thought cloud) — the lens reframing irritation as exhaustion with compassion, rose and sage palette, no text" },
+  // 19: Being a Good Listener
+  { img: "images/day-19.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide scene of two figures seated close together: the right figure speaking with a small emotion cloud above them (a wavy stress line, a raindrop, a tiny flame), the left figure leaning forward in an open listening posture with no phone, no crossed arms — between them soft concentric sound waves carrying the words, and small empathy phrases floating as thought bubbles ('I hear you', 'That makes sense') — warm cream and rose tones, no text" },
+  // 20: How Was Your Day
+  { img: "images/day-20.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a dusk living room scene spanning the width: on the left a figure arriving home with small stress icons still trailing them (a briefcase, a clock, a tangled line), on the right their partner turning toward them fully — phone face-down, open posture, warm amber light behind — between them a soft banner reading 'Understanding before advice' in icon form (an ear before a lightbulb), cream and warm tan palette, showing the safe harbor of a truly listening partner, no text" },
+  // 21: Let's Recap (Week 3)
+  { img: "images/day-21.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — an open journal spread wide with four Week 3 recap icons arranged across the pages: a floating thank-you card, a heart with story panels inside, a magnifying glass with a compassionate eye, and a large ear with concentric sound waves — gold ruled lines between them, small checkmarks beside each, cream and warm gold palette, reflective and organized mood, no text" },
+  // 22: Time to Celebrate
+  { img: "images/day-22.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a joyful wide celebration scene: two champagne flutes clinking at center, surrounded by floating Gottman learning resource icons (a nail with an X through it for 'It's Not About The Nail', a piggy bank for Emotional Bank Account, two figures turning toward each other, two wedding rings) — confetti and soft stars scattered across the full width, rose and gold palette, sense of accomplishment and shared learning, no text" },
+  // 23: Big Dreams
+  { img: "images/day-23.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a panoramic night-sky scene: two figures lying side by side on a wide hillside gazing up at a vast deep star field, one large glowing star centered above — below them three wide dream-thought clouds floating side by side containing: a mountain peak, an open book, and a small home with a garden — deep indigo sky fading to rose and cream at the horizon edges, sense of shared wonder and life purpose, no text" },
+  // 24: Shared Meaning
+  { img: "images/day-24.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide Venn diagram: left circle contains one partner's solo symbols (a mountain, a solo book, a bicycle), right circle contains the other's (a star, a paint palette), the overlapping center glowing warmly and larger than both — inside the shared center: a garden pot, a board game, a shared map pin, a business sprout — two figures standing together inside the glowing overlap, sage and cream palette, the 'we' identity of shared meaning made visible, no text" },
+  // 25: Creating Rituals
+  { img: "images/day-25.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide four-panel seasonal calendar view: autumn panel shows two figures carving a pumpkin; winter panel shows a birthday cake with candles; spring panel shows a family gathered around a Sunday dinner table; summer panel shows two figures on a morning walk with coffee — each panel marked with a recurring ritual icon, warm and domestic, cream and gold palette, the rhythm of cherished traditions across a year, no text" },
+  // 26: Rituals of Appreciation
+  { img: "images/day-26.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — three ritual vignettes in a horizontal row: left panel shows a glowing phone screen with a warm appreciation text message and a heart; center panel shows an open gratitude journal with three checkmarks beside a bedside lamp at night; right panel shows two figures in a kitchen, one gesturing to a tidied fridge while the other smiles with a thank-you — small hearts floating between all three panels, cream and rose palette, cozy intentional mood, no text" },
+  // 27: Magic Question
+  { img: "images/day-27.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — centered large glowing question mark with a heart nestled in its curve, on the left a figure leaning toward their partner with an open asking posture and a speech bubble containing the question — on the right the partner's response shown as a wide spread of love language icons: a cup of tea, a held hand, a quiet evening together, a kind note — soft rose and gold palette, sense of relief and ease when guesswork is removed from love, no text" },
+  // 28: A Look Back (Full month)
+  { img: "images/day-28.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a long panoramic timeline stretching the full width with eight milestone icons evenly spaced: a balance scale, a heart-shaped map, an open speech bubble, a small coffee cup bid, two figures turning toward each other, a thank-you card, a magnifying glass of curiosity, and a lit ritual candle — two small figures at the far right looking back along the full arc of 28 days, cream and rose palette, sense of deep accomplishment, no text" },
+  // 29: Reflections
+  { img: "images/day-29.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — a wide tranquil pond scene: a lone figure seated at the bank, the still water below reflecting their silhouette — surrounding the reflection in the water, small icons of the full 30-day journey float as ripples: a heart, a map, an ear, a candle, a trophy — gentle concentric ripples spreading outward, soft cream and sage green palette, introspective and peaceful mood of self-compassion and reflection, no text" },
+  // 30: You Did It
+  { img: "images/day-30.png", prompt: "Wide banner flat minimalist illustration, 16:5 aspect ratio — two figures center-frame holding hands stepping forward through a glowing finish-line ribbon, behind them a wide panoramic arc of all 30 journey icons compressed into a flowing path (scales, maps, ears, hearts, candles, stars, coffee cups, question marks) — ahead of them a bright open horizon, confetti raining across the full width, warm rose and gold palette, triumphant and forward-looking, the beginning of a new chapter not an ending, no text" },
+];
+
+const days = [
+  // 0: Welcome
+  {
+    label: "Welcome",
+    title: "Welcome to the Challenge",
+    date: "June 1, 2023",
+    content: `<p>Congratulations on taking the first step to a stronger relationship!</p>
+<p>Each day for the next 30 days you will receive a short email with a simple activity or reflection, designed to be completed on your own. While you don't need to include your partner, you might find you get more out of the challenge if you share some of the emails or your responses on a regular basis.</p>
+<p>Most activities take less than three minutes, so there's no reason to skip a day. We will do a summary every week so you have a chance to reflect and catch up if needed.</p>
+<div class="task-box"><span class="task-label">Your Commitment</span><p>Pick a time each day to slow down, think through, and apply what you read. Be consistent. An important part of any short-term challenge is keeping yourself accountable — some people find it useful to tell their partner they're starting the challenge, or enlist a friend to join so you can improve your relationships together.</p></div>
+<div class="bonus"><span class="bonus-label">Good luck!</span><p>Be on the lookout for the first email in your inbox today.</p></div>`
+  },
+  // 1
+  {
+    label: "Day 1",
+    title: "What Is Positive Perspective?",
+    date: "December 12, 2023",
+    content: `<p>Welcome to Day 1 of the 30 Days to a Better Relationship! One of the goals of this series is to create a <strong>positive perspective</strong> in your relationship by tuning in to what's going well, rather than what's not.</p>
+<p>Let's start with what might seem like a silly question: what does positive perspective mean?</p>
+<p>Think about it strictly as math: if you've got more good than bad, you have a positive. If you have more bad than good, you have a negative. In theory, all relationships fall somewhere on a hypothetical spectrum between extremely positive and extremely negative.</p>
+<p>When you're standing on the positive side of the line, you're more likely to give your partner the benefit of the doubt. Things roll off your back easily and you care less about inevitable small annoyances. You assume that your partner has the best intentions and trust that they are acting in the most loving way possible.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Read the affirmation below and write a response to the prompt. These small prompts have the enormous power to help you tune into the positivity that already exists in your relationship and build on the good feelings that you and your partner have for one another.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 2
+  {
+    label: "Day 2",
+    title: "Shifting Positive",
+    date: "December 13, 2023",
+    content: `<p>We started to talk yesterday about the meaning of the positive perspective. In a positive perspective, little things roll off your back. You are not focused on finding faults and you assume the best.</p>
+<p>People in the negative perspective are highly sensitive and tuned into their partner's mistakes. They also tend to interpret neutral actions negatively. Even positive actions can lose their potency.</p>
+<p><strong>And you can choose what perspective glasses you "put on" each day.</strong></p>
+<p>For example… your partner could be acting distant one morning, giving you short answers, and banging pans around when making breakfast. You might be tempted to assume they are angry with you and start feeling resentful.</p>
+<div class="or-divider">— OR —</div>
+<p>From a positive perspective — you could remember that your partner is loving and has good intentions. Maybe they didn't sleep well or are stressed about their big presentation at work. Maybe all they need is a hug.</p>
+<p>So how do you go about shifting perspectives? It starts with tuning into the things your partner is <strong>doing right</strong> rather than what they are doing wrong.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Be on the lookout for their best qualities and "catch" them doing something right. Try making a list of the small things you notice your partner does or says throughout the day — as if you're tracking their good habits.</p><p><em>For example: made coffee this morning, researched the best shop to repair our car, sent me a nice text this afternoon.</em></p><p>An awareness of these small moments builds the habit of mind of seeing your partner in a positive light.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 3
+  {
+    label: "Day 3",
+    title: "First Impressions",
+    date: "December 14, 2023",
+    content: `<p>This week we have been focusing on appreciating your partner and creating a positive perspective in your relationship.</p>
+<p>One key indicator of how a couple is doing in their relationship is how they remember their first moments together. Our research shows that couples who are able to positively reflect on their first impressions of each other and the story of how they came together are in a better place in their relationship.</p>
+<p>There's a reason that you fell in love. Chose to stay together. Chose to weather hard times. Chose to engage in a 30-day challenge. Those reasons are part of what we like to call <strong>"The Story of Us."</strong></p>
+<p>When the story about your relationship is positive, you have a buffer against issues that come up and it is easier to focus on your partner's positive qualities. In contrast, a negative "Story of Us" primes your mind to see your relationship in a negative light.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Reawaken some of those positive memories from when the two of you first met. Take a few minutes to reflect on these questions and write down what you remember:</p>
+<ul>
+  <li>What was it like the first time you met?</li>
+  <li>What was your first date like?</li>
+  <li>What was one of the first things you noticed about your partner?</li>
+  <li>What led you to decide that this was the person you wanted to commit to?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 4
+  {
+    label: "Day 4",
+    title: "Everyday Positivity",
+    date: "December 15, 2023",
+    content: `<p>Have you ever noticed how good it feels to notice beauty? To express thanks? To celebrate goodness?</p>
+<p>Chasing the positive perspective contributes to the closeness you feel with your partner, but it also has a profound impact on your psyche and your soul.</p>
+<p>Think about your daily commute. You can choose to notice the car with excessive exhaust in front of you, grumble about how cold it is outside, and the length of your drive.</p>
+<div class="or-divider">— OR —</div>
+<p>You could remember the sweet hug your partner gave you before leaving, the kindness of the person who held the door to the coffee shop, and the beautiful view on the horizon.</p>
+<p>And the cool thing about positivity is that <strong>the more you see, the more there is.</strong> If you shift your perspective so you are tuned in to see the beauty, excellence, and kindness, more usually shows up.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Go out of your way to be thankful for what's going right in your world. Literally, say the words "thank you" to your partner, the universe, or just the open air. See if it doesn't make you feel better.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 5
+  {
+    label: "Day 5",
+    title: "Under Our Nose",
+    date: "December 16, 2023",
+    content: `<p>By now, you've come to appreciate the importance of the positive perspective. And this week, you've gone out of your way to build it up in your relationship. Let's take a moment to look at the other side of the coin. <strong>What is the cost of a negative perspective?</strong></p>
+<p>For example, your partner may go by the post office and pick up the package you've been waiting for and also get your favorite yogurt at the store without you asking. If you are in a negative perspective, you may miss these things completely and focus instead on the fact that your partner arrived home 20 minutes late.</p>
+<p>Research has revealed that <strong>couples in a negative perspective miss up to 50% of the positive things their partners are already doing.</strong> With their heads turned to focus on what's wrong, they miss out on all the good stuff.</p>
+<p>And what's more, couples in a negative perspective sometimes see neutral behaviors as negative as well. It means being in a negative frame of mind can literally distort reality. Now that's a great incentive to be positive.</p>
+<p>As you start to shift your perspective toward the positive, a wonderful thing starts to happen. You start to notice all the positive things that are already happening. You start to see things closer to the way they actually are. It's right under your nose — you just have to put on the right glasses.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Inventory the negative things you're inclined to focus on in the course of your day and pack them away. What can you focus on instead? When it comes to your partner, what positive reality might you be missing?</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 6
+  {
+    label: "Day 6",
+    title: "Summary Please",
+    date: "December 17, 2023",
+    content: `<p>Let's summarize what we've learned so far! Now is also a good time to catch up on any days you may have missed. The good news is that you can do these at any time — and also pick your favorites and do them more than once!</p>
+<p>Here's what you learned this week:</p>
+<ul>
+  <li>You remembered fond memories about how you and your partner chose to come together.</li>
+  <li>You learned about the importance of a positive perspective in your relationship and in the way you view the world.</li>
+  <li>You learned that shifting towards the positive perspective helps you tune in to the good that already exists and strengthens the bond between you and your partner.</li>
+</ul>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Reflect on the following questions:</p>
+<ul>
+  <li>What are some of the changes you have noticed this week?</li>
+  <li>In what ways has practicing a positive perspective impacted your relationship this week?</li>
+  <li>What's one takeaway from this week?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 7
+  {
+    label: "Day 7",
+    title: "Small Wins!",
+    date: "December 18, 2023",
+    content: `<p><strong>Congratulations! You've completed Week 1 — Positive Perspective!</strong></p>
+<p>Great job! You are up to Day 7 of your 30-day challenge — a full week! And it's important to celebrate your wins. If it didn't go perfectly, it's equally important that you be kind to yourself and steel your resolve for next week.</p>
+<p>Take a few minutes now to write down a short list of all the things you have done well this week that you are proud of. A win is a win. And stacking wins is a critical skill in life and relationships.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Write down whatever is true for you! Here are some examples to get you started:</p>
+<ul>
+  <li>Sticking with this challenge</li>
+  <li>Sharing affirmations with your partner</li>
+  <li>Having a sweet moment with your kids</li>
+  <li>Connecting with a friend</li>
+  <li>Taking deep breaths</li>
+  <li>Moving a project forward at work</li>
+  <li>Taking time for self-care</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 8
+  {
+    label: "Day 8",
+    title: "Best Buds",
+    date: "December 19, 2023",
+    content: `<p>Welcome to Day 8! Today we are going to focus on <strong>friendship</strong> and what it means to be friends with your partner.</p>
+<p>What does friendship look like to you? What makes someone a good friend? Take a moment to think about your closest friends. How did you choose those people to be in your inner circle? What makes those friendships strong?</p>
+<p>And if you have kids, what did you teach them about how to treat their friends and classmates? What would they say a good friend is?</p>
+<p>In general terms, friends show interest in each other's lives and learn about each other's preferences and opinions. They do their best to treat each other with respect and show up for each other. They have each other's backs. They laugh and play together and often have shared interests.</p>
+<p>As with any friendship, your friendship with your significant other is a bond that must be nurtured and prioritized. Showing genuine interest in one another, playing together and being on the same team are all ways you can strengthen your relationship.</p>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 9
+  {
+    label: "Day 9",
+    title: "Know Your Partner",
+    date: "December 20, 2023",
+    content: `<p>To love someone, you need to <strong>really</strong> know them.</p>
+<p>Yesterday, we learned about the importance of creating a strong friendship in your relationship. And a big piece of friendship is knowing your partner.</p>
+<p>The 50+ years that Drs. John and Julie Gottman spent studying relationships and learning from thousands of couples resulted in some incredible findings. We call it the <strong>Sound Relationship House Theory</strong> — a well-researched recipe for success that couples showed us the way to build.</p>
+<p><strong>Love Maps</strong> is the first level. Think of it as the foundation, helping to keep the other levels strong. Your Love Map is basically the map of how your partner sees the world — their preferences, hopes and worries, their mind and soul.</p>
+<p>When you first meet your partner, your Love Map likely resembles some basic details scribbled on a napkin. Early in the relationship, we're eager to fill in as many details as possible, so we ask a lot of questions. As the relationship moves on, we begin to assume more than we ask. But it's essential that you don't ignore the foundation of your house.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Take this simple test. See if you know the answer to these questions, then check your answers with your partner:</p>
+<ul>
+  <li>Which foods does your partner hate?</li>
+  <li>What kind of hobbies do they enjoy?</li>
+  <li>What's a dream they have for the future?</li>
+  <li>What are they worried about?</li>
+</ul><p>These questions are just a small piece of your map. Tomorrow we'll talk about how to continue adding detail.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 10
+  {
+    label: "Day 10",
+    title: "Keep It Current",
+    date: "December 21, 2023",
+    content: `<p>Yesterday, you learned that an important part of your relationship is a clear Love Map of your partner's inner world.</p>
+<p>And the remarkable thing about Love Maps is that <strong>they are always changing.</strong> Your partner changes and grows in new ways all the time. Just because you asked your partner their favorite food or hobby 10 years ago doesn't mean you log it and never ask again. We need to do our part by updating our Love Maps and asking questions regularly.</p>
+<p>If your first map is scribbled on a napkin, your ideal map is more like using Google Maps on your smartphone — incredibly detailed and constantly being updated, even changing while you're driving due to new information.</p>
+<p>The value of these maps is that they give you confidence and predictability. You need those in your personal relationships as well.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Refresh your Love Map with some or all of the following questions:</p>
+<ul>
+  <li>What goals does your partner have for this year?</li>
+  <li>How does your partner like to be cared for when they are sick?</li>
+  <li>Who are your partner's closest friends?</li>
+  <li>What is your partner's favorite way to spend an evening?</li>
+</ul></div>`
+  },
+  // 11
+  {
+    label: "Day 11",
+    title: "Open-Ended Questions",
+    date: "December 22, 2023",
+    content: `<p>We learned yesterday that an important part of developing and maintaining a friendship is creating Love Maps of how well you know the other person, of what's in their mind and heart.</p>
+<p>To build stronger Love Maps, you simply ask <strong>open-ended questions!</strong></p>
+<p>Open-ended questions are the opposite of closed-ended questions, which don't invite a conversation — they can generally be answered with a one-word answer:</p>
+<p><em>"Did you have a good day?" "Yes."<br>"Did you call the repairman?" "No."<br>"Do you want dinner?" "Yes."</em></p>
+<p>In contrast, open-ended questions invite a thoughtful response. They open the heart. They begin a conversation:</p>
+<ul>
+  <li>What makes you feel most proud in your job right now?</li>
+  <li>If you could change something about our physical home, what would you choose and why?</li>
+  <li>What do you want next year to be like for our family?</li>
+</ul>
+<p>Open-ended questions are fueled by curiosity. They express interest in your partner's inner world. While closed-ended questions seek information, open-ended questions <strong>seek connection.</strong></p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Either choose from the questions above or brainstorm a few open-ended questions of your own. Then ask your partner one or more of these questions the next time you're together.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 12
+  {
+    label: "Day 12",
+    title: "Small Things Often",
+    date: "December 23, 2023",
+    content: `<p><strong>Congratulations! You've completed the Friendship section!</strong></p>
+<p>Welcome to Day 12! Today we're going to talk about something small but mighty. After all these years of research, our motto is: <strong>small things often.</strong></p>
+<p>Small, intentional moments hold more weight than isolated, extravagant gestures when it comes to building a strong relationship. It's the small stuff that counts. And one of the most important small things is called a <strong>"bid."</strong></p>
+<p>A "bid" is any request to connect with your partner. You can make a bid for conversation, humor, affection, support, or simply for attention. They can be small, like saying "good morning," or complex, like asking for emotional support.</p>
+<p>Most are actually pretty easy to spot and respond to: "How do I look?" "Can you pass the guacamole?" "Will you help me change the bedspread?" But other bids are more complicated: "Want to go to yoga with me?" "Let's learn how to play the guitar."</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>See if you can notice one bid that you and your partner make to each other today. It's important to learn to notice your partner's bids. The next step is to "turn towards" those bids — we'll talk more about that tomorrow.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 13
+  {
+    label: "Day 13",
+    title: "Turning Towards",
+    date: "December 24, 2023",
+    content: `<p>Yesterday, we learned that it's the small things that matter most in relationships. Every day we make lots of tiny requests to connect, which are called bids. It's how we respond to those bids that matters.</p>
+<p>John Gottman conducted a research study with newlyweds and then followed up with them six years later. The couples that stayed married were much better at one thing — the third level of the Sound Relationship House: <strong>Turn Towards.</strong></p>
+<p>At the six-year follow-up, <strong>couples that had stayed married turned towards one another 86% of the time. Couples that had divorced averaged only 33% of the time.</strong> The secret is Turning Towards.</p>
+<p>When your partner makes a bid, you have three choices:</p>
+<ul>
+  <li><strong>Turn Towards</strong> — acknowledge and respond</li>
+  <li><strong>Turn Away</strong> — ignore (rolling over in bed, walking away, continuing to look at your phone)</li>
+  <li><strong>Turn Against</strong> — punish them for making a bid ("What do you want? Can't you see I'm watching the game!")</li>
+</ul>
+<p>A simple turning towards response of looking up and saying "Mmhmm" is great. More than anything, Turning Towards means letting your partner know you heard them and that when they speak, you do your best to listen.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Respond to your partner's bid in a new and unique way. Put away the phone. Stay open and stay on their team. Also, keep an eye out for when your partner turns toward your bid — reward them by saying "thank you."</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 14
+  {
+    label: "Day 14",
+    title: "A Look Back",
+    date: "December 25, 2023",
+    content: `<p>Let's summarize what you've learned so far:</p>
+<ul>
+  <li>You learned that friendship is the core of any strong relationship.</li>
+  <li>You learned that the key to any friendship is having a solid Love Map of each other, and asking open-ended questions will strengthen your Love Maps.</li>
+  <li>You learned to practice small things often — it's the small things that make the biggest difference in relationships.</li>
+  <li>You learned the importance of noticing your partner's smallest bids and turning towards those bids.</li>
+</ul>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Reflect on the following questions:</p>
+<ul>
+  <li>What stood out this week?</li>
+  <li>What changes (if any) have you noticed since beginning the challenge?</li>
+  <li>What were some takeaways that you can implement into your relationship?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 15
+  {
+    label: "Day 15",
+    title: "Checkpoint!",
+    date: "December 26, 2023",
+    content: `<p><strong>Congratulations! You've completed the Small Things Often section!</strong></p>
+<p>Time to celebrate! You have reached the <strong>halfway point</strong> in the 30-day challenge and you deserve some praise.</p>
+<p>Spend some time today giving yourself some love and doing some self-care. Take a bath. Watch a movie you've been wanting to see. Make yourself a special dinner or order takeout. Do something that feels good to you.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Once you reward yourself, write down one thing you plan to focus on next week.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote sometime today.</p></div>`
+  },
+  // 16
+  {
+    label: "Day 16",
+    title: "Saying Thanks",
+    date: "December 27, 2023",
+    content: `<p>We've been learning a lot about showing appreciation this month. And showing appreciation is primarily about saying <strong>"thank you."</strong> It is an expression of gratitude.</p>
+<p>"Thank you" is powerful. "Thank you" helps your mind tune in to see the good that exists in your relationship. And great relationships become and stay great through small moments.</p>
+<p>Things like:</p>
+<ul>
+  <li>"Thank you for taking out the recycling."</li>
+  <li>"Thank you for helping the kids with schoolwork today."</li>
+  <li>"Thank you for the conversation at dinner."</li>
+</ul>
+<p>Even if you're one of those people that doesn't think you should thank people for stuff they're supposed to do anyway, just try it out. If your partner isn't used to you expressing gratitude, your new habit may surprise and delight them.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Seek out some small things to say "thank you" for and spend some time expressing sincere gratitude.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 17
+  {
+    label: "Day 17",
+    title: "Let's Get Specific",
+    date: "December 28, 2023",
+    content: `<p>During our couples workshop, The Art and Science of Love, one of the most powerful exercises is the <strong>"I Appreciate"</strong> exercise.</p>
+<p>Each partner looks at a list of positive characteristics (i.e. loyal, calm, strong, thoughtful, attractive), circles a few that describe their partner, and then writes a specific example for each.</p>
+<p>For example, you could think, "my partner is strong." Later in the exercise, you would express your appreciation. "I appreciate how strong you are." Which is already wonderful.</p>
+<p>And to really ace the exercise, you would acknowledge a specific example or story that illustrates that characteristic:</p>
+<p><em>"I appreciate how strong you are. I think of when you took care of the kids and me last year when my dad was sick, and you moved around your work schedule and really stepped in to support us all. You managed all the logistics and were a rock. Thank you for guiding us through that. I can't tell you how much I appreciated it."</em></p>
+<p>This appreciation exercise creates a powerful softening and a closeness between partners.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Pick three positive traits that describe your partner (or come up with your own). Jot down a specific story for each trait you selected, then share what you wrote with your partner.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 18
+  {
+    label: "Day 18",
+    title: "Getting Curious",
+    date: "December 29, 2023",
+    content: `<p><strong>Congratulations! You've completed the Appreciation section!</strong></p>
+<p>Today, let's get curious! Curiosity is a step before listening and is a valuable skill in any relationship. Decide today that you're going to master it.</p>
+<p>Getting curious about your partner means taking some time to see things through their eyes. It means pausing your assumptions and trying to understand, from their perspective, what the world looks like. <strong>Curiosity and compassion lead to a deeper connection with your partner.</strong></p>
+<p>Maybe you are making breakfast and your partner comes into the kitchen and starts grumbling. Before reacting, take a pause. What could their actions be saying about themselves? Maybe they didn't sleep well, or they are stressed about something else.</p>
+<p>Sure, in that moment it would be easy to slip on "negative" framed glasses and take it personally. But, if you're committed to holding them in a positive light, you might imagine what might be going on in their world. Take time to hold compassion.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Imagine. What other options are available to you when you begin to make assumptions about your partner? What would it mean for you to consider curiosity rather than certainty about your partner's behavior?</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 19
+  {
+    label: "Day 19",
+    title: "Being a Good Listener",
+    date: "December 30, 2023",
+    content: `<p>An important part of being curious is listening and asking questions. And one skill most everyone could benefit from is becoming an even better listener — really listening, and doing your best to empathize about what the situation might be like for your partner.</p>
+<p><strong>Two of the most powerful things in a relationship are to listen and empathize.</strong></p>
+<p>Imagine asking these questions:</p>
+<ul>
+  <li>What is this like for you?</li>
+  <li>What is it that you don't like about this situation?</li>
+  <li>What are your concerns?</li>
+  <li>Tell me more about that.</li>
+</ul>
+<p>Then, as a bonus, try to express empathy — imagine what they are going through and how that might feel:</p>
+<ul>
+  <li>"Wow, that sounds really frustrating."</li>
+  <li>"I can see why you'd be upset by this."</li>
+  <li>"That makes sense."</li>
+</ul>
+<p>Sometimes all we want is to be heard and to not feel so alone in what we're going through. "It makes sense that you feel that way" can be incredibly powerful and healing.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Practice the art of listening. Pause longer than you might have before. Ask your partner if they're finished speaking. Ask if there's anything else. Even say, "I hear you."</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 20
+  {
+    label: "Day 20",
+    title: "How Was Your Day, Dear?",
+    date: "December 31, 2023",
+    content: `<p>We all know the question: <strong>"How was your day, dear?"</strong></p>
+<p>Research shows that couples who are able to successfully buffer their relationships from outside stressors (like job stress) have much stronger relationships over time. Partners want to feel like they are on the same team rather than facing the stress alone.</p>
+<p>So there's something to this question. But it's not enough just to ask — you have to be present and really listen. Being able to talk about what went on in your partner's world at the end of the day with empathy is another valuable skill.</p>
+<p>Listening without giving advice is hard for most of us. But we've all done hard things before.</p>
+<p>An important sentence to live by — and put up on the fridge and write on the back of your hand: <strong>Understanding must precede advice.</strong></p>
+<p>When your partner comes to you to share a frustration, most of the time they do not want you to solve the problem. They almost always just want you to listen thoughtfully and understand their experience. They want to feel less alone. Simply being there and witnessing helps your partner feel less alone with the stress.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Ask your partner about their day and then stay quiet and really listen. Do not try to solve the problem. Just listen and empathize.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 21
+  {
+    label: "Day 21",
+    title: "Let's Recap",
+    date: "January 1, 2024",
+    content: `<p>Let's summarize what you've learned this week:</p>
+<ul>
+  <li>You learned the power of saying "thank you" for small things in your relationship.</li>
+  <li>You practiced highlighting positive traits and combining them with specific stories about your partner.</li>
+  <li>You learned that pausing to stay curious and compassionate towards your partner is at the core of a strong relationship.</li>
+  <li>You learned to really listen and empathize with your partner. Remember: <strong>understanding must precede advice.</strong></li>
+</ul>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Reflect on the following questions:</p>
+<ul>
+  <li>What was one thing you learned last week that stuck with you?</li>
+  <li>What have you noticed in your relationship since beginning the challenge?</li>
+  <li>What changes have you noticed in yourself?</li>
+</ul></div>
+<p>Tomorrow we enter the final stretch. Take a moment to consider how far you've come. In any case, tomorrow is a new day, and it's the day-to-day work that builds a relationship.</p>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 22
+  {
+    label: "Day 22",
+    title: "Time to Celebrate!",
+    date: "January 2, 2024",
+    content: `<p><strong>Congratulations! You've completed the Listening section!</strong></p>
+<p>Let's celebrate! Take some time today to give yourself some thanks for sticking with this challenge. You've been working through the steps each day, and you've earned a break. Take some time to appreciate YOU and how much you have accomplished this month.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Explore some free Gottman resources and pick one to share with your partner. Some great videos to check out:</p>
+<ul>
+  <li><em>It's Not About The Nail</em></li>
+  <li><em>Emotional Bank Account</em></li>
+  <li><em>Turning Towards</em></li>
+  <li><em>Making Marriage Work</em></li>
+</ul></div>`
+  },
+  // 23
+  {
+    label: "Day 23",
+    title: "Big Dreams",
+    date: "January 3, 2024",
+    content: `<p>Welcome to Day 23! Let's get real. Let's talk about <strong>DREAMS.</strong></p>
+<p>It's important for couples to share their dreams with one another and come up with a way to support each other's purposes for living. An important aspect of any relationship is to create an atmosphere that encourages each person to talk honestly about their hopes and dreams, values, and aspirations.</p>
+<p>Realistically, when was the last time you took time to reflect on questions like these:</p>
+<ul>
+  <li>What are some of the dreams you have for your life?</li>
+  <li>When have you felt the most fulfilled in your life?</li>
+  <li>What do you want to be remembered for when you're gone?</li>
+</ul>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Block out distractions in a quiet space for 20 minutes. Grab a blank piece of paper and pen, really think through these questions, and honor your dreams.</p><p>If possible, share some of your discoveries with your partner. Ask them about their dreams. And really listen. Then discuss how you both can make small steps towards supporting each other to realize your dreams.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 24
+  {
+    label: "Day 24",
+    title: "Shared Meaning",
+    date: "January 4, 2024",
+    content: `<p>We all need dreams and a sense of purpose and meaning in our lives. And when our sense of purpose is aligned with our partner's, that's amazing.</p>
+<p>Research shows that the best relationships have a sense of <strong>shared meaning.</strong> Sometimes couples get lucky in their shared value set, but the true masters go out of their way to create it.</p>
+<p>Shared meaning is one of the very special levels at the top of the Sound Relationship House — it brings everything together and creates a winning relationship.</p>
+<p>Both want to learn to garden? Or maybe have more game nights? Have a shared dream of starting a business? Or remodeling the upstairs bathroom? Shared dreams, values, and rituals do a wonderful thing: they light up a unique "we" in the relationship and create and strengthen your identity as a couple.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Fill in these blanks (together if you can):</p>
+<ul>
+  <li>We both like…</li>
+  <li>We want to take a trip to…</li>
+  <li>If we won the lottery, we would…</li>
+  <li>We want to learn how to…</li>
+</ul><p>The more shared meaning you can find, the deeper, richer, and more rewarding your relationship will be.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 25
+  {
+    label: "Day 25",
+    title: "Creating Rituals",
+    date: "January 5, 2024",
+    content: `<p><strong>Congratulations! You've completed the Meaning section!</strong></p>
+<p>Let's talk about <strong>RITUALS.</strong></p>
+<p>Rituals of Connection are the habits and traditions you and your partner create within your relationship. They are things you can count on and help you feel secure in your relationship and family. <strong>Rituals build your couple and family identity.</strong></p>
+<p>Maybe you carve pumpkins each fall, or your partner cooks your favorite dinner on your birthday. Maybe family mealtimes on Sundays are important, or you like to go for a walk with coffee each morning together.</p>
+<p>Rituals help us mark time and make meaning. Some are formal and predictable, like major holidays or annual vacations. Some are more casual, like the fact that Mondays are pasta night, or you do a crossword on Sunday mornings.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Reminisce about the kinds of family traditions and rituals that each of you had when you were growing up. Write down something consistent but unique about:</p>
+<ul>
+  <li>The holidays</li>
+  <li>Your birthday</li>
+  <li>Mealtimes</li>
+  <li>The weekends</li>
+</ul><p>Talk with one another about what was meaningful to you about these rituals. Imagine out loud how you would like them to be now — what would you include? What would you leave out?</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 26
+  {
+    label: "Day 26",
+    title: "Rituals of Appreciation",
+    date: "January 6, 2024",
+    content: `<p>Remember a couple of weeks ago when we explored gratitude? Today, we're going to take a bit of a deeper dive and <strong>create an actual ritual around appreciation</strong> and see how your life changes.</p>
+<p>If you've already built a formal ritual, then pat yourself on the back. We hope it's been a valuable experience of noticing and sharing what is going right in your relationship and your life.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Choose one of the following (or make up your own) and commit to doing it for the next month. Gratitude changes everything. Here are some ideas:</p>
+<ul>
+  <li><strong>Weekly appreciation texts.</strong> During the day, text your partner one thing you appreciate about them and a specific example. "You are so thoughtful. I really appreciated you making coffee for both of us this morning before I woke up."</li>
+  <li><strong>Gratitude journal.</strong> Spend a few minutes before bed each night writing down three things you are grateful for. Share them with your partner — or create your list together.</li>
+  <li><strong>Daily thank you.</strong> Make it a point to say thank you for something each day, but choose something you might not normally say thank you for. "Thanks for organising the fridge" or "Thank you for noticing I was feeling down today."</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 27
+  {
+    label: "Day 27",
+    title: "Magic Question",
+    date: "January 7, 2024",
+    content: `<p><strong>Congratulations! You've completed the Rituals section!</strong></p>
+<p>Welcome to Day 27! Are you ready for <strong>ONE QUESTION</strong> that will change your relationship for the better?</p>
+<p>Of course, it works better if you have those other great tools in full function like appreciation, Love Maps, and listening.</p>
+<div class="task-box"><span class="task-label">The Magic Question</span><p style="font-size:1.25rem; font-style:italic; color: var(--rose-dark);">"What can I do to make you feel loved this week?"</p><p>And then, just listen. Let your partner know you heard them (turn toward that bid).</p></div>
+<p>This is a powerful question because it takes the guesswork out of loving your partner. It prompts a recipe for success and exactly how you can shine for them.</p>
+<p>It may feel awkward and out of the blue. But that's okay if it doesn't feel natural at first — you are learning something new. Have you ever learned how to play a musical instrument? Did you quit because it didn't feel natural? Or did you press on because you knew that if you learned to contort your fingers into an unusual shape it could result in a beautiful sound?</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Ask and remember the answer to this question. Hopefully, it goes without saying that you should also try to do the thing your partner suggests. Over time, questions like these will become more natural. And with a little time and practice, the answer might be, "You're already doing it."</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 28
+  {
+    label: "Day 28",
+    title: "A Look Back",
+    date: "January 8, 2024",
+    content: `<p>Wow, you've learned a lot this month! Here are some highlights:</p>
+<ul>
+  <li>You learned about the importance of a positive perspective in your relationships and in the way you view the world.</li>
+  <li>You learned that a key to any strong relationship is a clear Love Map and asking open-ended questions.</li>
+  <li>You learned the importance of noticing your partner's smallest bids and turning towards those bids.</li>
+  <li>You learned the power of saying "thank you" for small things in your relationship.</li>
+  <li>You learned that pausing to stay curious and compassionate towards your partner is at the core of a strong relationship.</li>
+  <li>You learned how to ask "How was your day, dear?" and to really listen and empathize with your partner.</li>
+  <li>You learned the importance of talking about your dreams and creating shared meaning.</li>
+  <li>You learned how to create rituals to build the life you want as a couple.</li>
+</ul>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Jot down your own reflections:</p>
+<ul>
+  <li>What else do you remember?</li>
+  <li>What stands out the most?</li>
+  <li>What do you think will make the biggest impact on your relationship?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Get Your Partner Involved</span><p>Tell them what you wrote today.</p></div>`
+  },
+  // 29
+  {
+    label: "Day 29",
+    title: "Reflections",
+    date: "January 9, 2024",
+    content: `<p>Let's spend some time today reflecting.</p>
+<div class="task-box"><span class="task-label">Today's Task</span><p>Think through these questions:</p>
+<ul>
+  <li>How do you feel in your relationship?</li>
+  <li>What did you benefit from most?</li>
+  <li>If you found some parts challenging, where did you get stuck? Notice those and give yourself some grace.</li>
+</ul></div>
+<p>Also, did you miss any affirmations throughout the month? Are there any that felt especially relevant or potent? Want to do them again?</p>
+<p>The Gottman Institute has a printable affirmations list available on their website — a handy sheet with all the affirmations to download and fill in whenever you want a positivity boost. Create a ritual around it. Include your partner, too!</p>
+<div class="bonus"><span class="bonus-label">Almost There!</span><p>Just one more day. Take a moment to appreciate how far you've come.</p></div>`
+  },
+  // 30
+  {
+    label: "Day 30",
+    title: "You Did It! 🎉",
+    date: "January 10, 2024",
+    content: `<p><strong>Congratulations! You've completed the Magic Question section — and the entire challenge!</strong></p>
+<p>Wow, you did it! A full 30 days to create a better relationship!</p>
+<p>Hopefully, you feel a shift — one that was built on by bits of information, showing small things often in practice.</p>
+<p>In reality, <strong>this is a beginning, not an ending.</strong> This is the start of a new chapter in your relationship — one that is fueled by what you've learned over the last 30 days.</p>
+<p>Don't hesitate to return to these prompts if you ever feel stuck. They're a great way to remind you of the basics even as you build something complex and beautiful.</p>
+<div class="task-box"><span class="task-label">What's Next?</span><p>Here are some additional ways to stay involved and keep strengthening your relationships:</p>
+<ul>
+  <li>The Gottman Relationship Adviser</li>
+  <li>Gottman Connect for Couples</li>
+  <li>Marriage Minute (free newsletter)</li>
+  <li>The Gottman Blog</li>
+  <li>Love Maps Relationship Quiz</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">From The Gottman Team</span><p>Take time to celebrate! Wishing you many wonderful relationship moments. 💛</p></div>`
+  }
+];
+
+let currentDay = null;
+let currentLang = 'en';
+// Persist responses in memory keyed by day index
+const responses = {};
+
+function saveCurrentResponses() {
+  const him = document.getElementById('resp-him');
+  const her = document.getElementById('resp-her');
+  if (him && her && currentDay !== null) {
+    responses[currentDay] = { him: him.value, her: her.value };
+  }
+}
+
+function fileSlug(n) {
+  if (n === 0) return 'WELCOME';
+  return `DAY-${n}`;
+}
+
+function saveTxt(text, filename) {
+  const blob = new Blob([text], { type: 'text/plain' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function clearAndConfirm(textareaId, confirmId, msg) {
+  const ta = document.getElementById(textareaId);
+  const cf = document.getElementById(confirmId);
+  if (ta) {
+    ta.classList.add('clearing');
+    setTimeout(() => {
+      ta.value = '';
+      ta.classList.remove('clearing');
+      // also clear stored value
+      if (responses[currentDay]) responses[currentDay][textareaId === 'resp-him' ? 'him' : 'her'] = '';
+    }, 400);
+  }
+  if (cf) {
+    cf.textContent = msg;
+    cf.classList.add('show');
+    setTimeout(() => cf.classList.remove('show'), 2800);
+  }
+}
+
+function saveHim() {
+  const d = days[currentDay];
+  const slug = fileSlug(currentDay);
+  const ta = document.getElementById('resp-him');
+  const val = ta ? ta.value : '';
+  if (!val.trim()) { clearAndConfirm('resp-him', 'confirm-him', 'Nothing written yet!'); return; }
+  if (responses[currentDay]) responses[currentDay].him = val;
+  const text = `30 Days to a Better Relationship\n${d.label}: ${d.title}\n${d.date}\n\nHis Response\n${'\u2500'.repeat(40)}\n\n${val}\n`;
+  saveTxt(text, `${slug}-Response_Him.txt`);
+  clearAndConfirm('resp-him', 'confirm-him', 'Saved \u2713');
+}
+
+function saveHer() {
+  const d = days[currentDay];
+  const slug = fileSlug(currentDay);
+  const ta = document.getElementById('resp-her');
+  const val = ta ? ta.value : '';
+  if (!val.trim()) { clearAndConfirm('resp-her', 'confirm-her', 'Nothing written yet!'); return; }
+  if (responses[currentDay]) responses[currentDay].her = val;
+  const text = `30 Days to a Better Relationship\n${d.label}: ${d.title}\n${d.date}\n\nHer Response\n${'\u2500'.repeat(40)}\n\n${val}\n`;
+  saveTxt(text, `${slug}-Response_Her.txt`);
+  clearAndConfirm('resp-her', 'confirm-her', 'Saved \u2713');
+}
+
+function flashConfirm(msg) {}
+
+// Per-day image store: { him: dataURL, her: dataURL }
+const dayImages = {};
+
+function photoSVG() {
+  return `<svg class="cp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>`;
+}
+
+function loadColImage(e, who) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(ev) {
+    const ph = document.getElementById(`photo-${who}`);
+    if (!ph) return;
+    const existing = ph.querySelector('img.cp-preview');
+    if (existing) existing.remove();
+    const img = document.createElement('img');
+    img.src = ev.target.result;
+    img.className = 'cp-preview';
+    ph.appendChild(img);
+    ph.classList.add('has-image');
+    if (!dayImages[currentDay]) dayImages[currentDay] = {};
+    dayImages[currentDay][who] = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function removeColImage(e, who) {
+  e.stopPropagation();
+  const ph = document.getElementById(`photo-${who}`);
+  if (!ph) return;
+  const existing = ph.querySelector('img.cp-preview');
+  if (existing) existing.remove();
+  ph.classList.remove('has-image');
+  if (dayImages[currentDay]) delete dayImages[currentDay][who];
+  const inp = document.getElementById(`photo-input-${who}`);
+  if (inp) inp.value = '';
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  const btnEn = document.getElementById('btn-en');
+  const btnBis = document.getElementById('btn-bis');
+  if (btnEn) btnEn.classList.toggle('active', lang === 'en');
+  if (btnBis) btnBis.classList.toggle('active', lang === 'bis');
+  if (currentDay !== null) showDay(currentDay);
+}
+
+function showGrid() {
+  saveCurrentResponses();
+  document.getElementById('grid-view').style.display = 'block';
+  document.getElementById('detail-view').style.display = 'none';
+  window.scrollTo(0,0);
+}
+
+function showDay(n) {
+  saveCurrentResponses();
+  currentDay = n;
+  const d = days[n];
+  const prev = n > 0 ? days[n-1].label : null;
+  const next = n < days.length-1 ? days[n+1].label : null;
+
+  document.getElementById('btn-prev').textContent = prev ? `\u2190 ${prev}` : '';
+  document.getElementById('btn-prev').style.visibility = prev ? 'visible' : 'hidden';
+  document.getElementById('btn-next').textContent = next ? `${next} \u2192` : '';
+  document.getElementById('btn-next').style.visibility = next ? 'visible' : 'hidden';
+
+  const savedHim = (responses[n] && responses[n].him) || '';
+  const savedHer = (responses[n] && responses[n].her) || '';
+
+  const ill = illustrations[n];
+  const bis = bisayaTranslations[n];
+  const isBis = currentLang === 'bis' && bis;
+  const displayTitle = isBis ? bis.title : d.title;
+  const displayContent = isBis ? bis.content : d.content;
+  const seriesLabel = isBis ? '30 Adlaw ngadto sa Mas Maayong Relasyon' : '30 Days to a Better Relationship';
+  document.getElementById('detail-body').innerHTML = `
+    <div class="detail-eyebrow">${d.label} \u00b7 ${seriesLabel}</div>
+    <h2 class="detail-title">${displayTitle}</h2>
+    <div class="detail-date">${d.date}</div>
+    <div class="day-illustration-wrap">
+      <div class="day-illustration-frame">
+        <img class="day-illustration" src="${ill.img}" alt="${displayTitle} illustration">
+      </div>
+    </div>
+    <div class="detail-divider"></div>
+    <div class="detail-content">${displayContent}</div>
+
+    <div class="response-section">
+      <div class="response-section-header">
+        <span class="response-section-title">Our Responses</span>
+        <span class="response-section-hint">Write your thoughts, then submit to save</span>
+      </div>
+      <div class="response-columns">
+        <div class="response-col him">
+          <div class="col-photo" id="photo-him">
+            <svg class="cp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span class="cp-text">Photo</span>
+          </div>
+          <label><span class="dot"></span>Him</label>
+          <div class="textarea-wrap">
+            <textarea id="resp-him" placeholder="Write your thoughts here\u2026">${savedHim}</textarea>
+          </div>
+          <div class="response-col-footer">
+            <span class="save-confirm-inline" id="confirm-him"></span>
+            <button class="save-btn him" onclick="saveHim()">\u2193 Submit</button>
+          </div>
+        </div>
+        <div class="response-col her">
+          <div class="col-photo" id="photo-her">
+            <svg class="cp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span class="cp-text">Photo</span>
+          </div>
+          <label><span class="dot"></span>Her</label>
+          <div class="textarea-wrap">
+            <textarea id="resp-her" placeholder="Write your thoughts here\u2026">${savedHer}</textarea>
+          </div>
+          <div class="response-col-footer">
+            <span class="save-confirm-inline" id="confirm-her"></span>
+            <button class="save-btn her" onclick="saveHer()">\u2193 Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('grid-view').style.display = 'none';
+  const dv = document.getElementById('detail-view');
+  dv.style.display = 'block';
+  dv.style.animation = 'none';
+  dv.offsetHeight;
+  dv.style.animation = '';
+
+  // Restore images if saved for this day, otherwise show default profile photos
+  const defaultPhotos = { him: 'images/Justin.png', her: 'images/Kate.png' };
+  ['him','her'].forEach(who => {
+    const src = (dayImages[n] && dayImages[n][who]) ? dayImages[n][who] : defaultPhotos[who];
+    const ph = document.getElementById(`photo-${who}`);
+    if (ph) {
+      const img = document.createElement('img');
+      img.src = src;
+      img.className = 'cp-preview';
+      ph.appendChild(img);
+      ph.classList.add('has-image');
+    }
+  });
+
+  window.scrollTo(0,0);
+}
+
+function prevDay() { if (currentDay > 0) showDay(currentDay - 1); }
+function nextDay() { if (currentDay < days.length-1) showDay(currentDay + 1); }
+
+// ── FONT SIZE ─────────────────────────────────
+const FONT_SIZES = [13, 14, 15, 16, 17, 18, 20, 22];
+let fontSizeIndex = 3; // default 16px
+
+function applyFontSize() {
+  document.documentElement.style.fontSize = FONT_SIZES[fontSizeIndex] + 'px';
+  const down = document.getElementById('nav-font-down');
+  const up   = document.getElementById('nav-font-up');
+  if (down) down.disabled = fontSizeIndex === 0;
+  if (up)   up.disabled   = fontSizeIndex === FONT_SIZES.length - 1;
+  localStorage.setItem('gottman-font-size', fontSizeIndex);
+}
+
+function adjustFontSize(dir) {
+  fontSizeIndex = Math.max(0, Math.min(FONT_SIZES.length - 1, fontSizeIndex + dir));
+  applyFontSize();
+}
+
+// Restore saved preference on load
+(function() {
+  const saved = localStorage.getItem('gottman-font-size');
+  if (saved !== null) fontSizeIndex = parseInt(saved, 10);
+  applyFontSize();
+})();
+
+// keyboard navigation
+document.addEventListener('keydown', e => {
+  if (document.getElementById('detail-view').style.display === 'block') {
+    if (e.key === 'ArrowLeft') prevDay();
+    if (e.key === 'ArrowRight') nextDay();
+    if (e.key === 'Escape') showGrid();
+  }
+});
+</script>
+</body>
+</html>
