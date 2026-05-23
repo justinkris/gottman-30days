@@ -658,21 +658,16 @@
   .day-illustration-frame {
     width: 100%;
     max-width: 100%;
-    aspect-ratio: 16 / 5;
     background: white;
     border: 1.5px dashed var(--parchment);
     border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
   }
 
   .day-illustration {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
-    object-fit: cover;
     border-radius: 5px;
   }
 
@@ -809,7 +804,8 @@
     </div>
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" id="btn-bis" onclick="setLang('bis')">BIS</button>
+      <button class="lang-btn" id="btn-bis" onclick="setLang('bis')">TAG</button>
+      <button class="lang-btn" id="btn-ceb" onclick="setLang('ceb')">CEB</button>
     </div>
     <button class="nav-next" onclick="nextDay()" id="btn-next">Next →</button>
   </nav>
@@ -1262,6 +1258,459 @@ const bisayaTranslations = [
 <ul>
   <li>The Gottman Relationship Adviser</li>
   <li>Gottman Connect para sa Mga Mag-asawa</li>
+  <li>Marriage Minute (libreng newsletter)</li>
+  <li>The Gottman Blog</li>
+  <li>Love Maps Relationship Quiz</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Gikan sa Gottman Team</span><p>Gamiti ang oras sa pagsaulog! Nanghinaut kami kanimo og daghang nindot nga mga higayon sa relasyon. 💛</p></div>`
+  },
+];
+
+const cebuanoTranslations = [
+  // 0: Welcome
+  {
+    title: "Maayong Pag-abot sa Hagit",
+    content: `<p>Congratulations sa pagbuhat sa unang lakang paingon sa mas lig-on nga relasyon!</p>
+<p>Matag adlaw sulod sa sunod 30 ka adlaw, makadawat ka og mubo nga buluhaton o pagninilag — gilaraw aron mahuman sa imong kaugalingon. Bisan dili kinahanglan nga apilion ang imong kapikas, mahimo kang makadawat og mas daghan gikan sa hagit kung mag-ambit ka sa pipila sa mga sulat o tubag sa regular nga paagi.</p>
+<p>Kadaghanan sa mga buluhaton molugway og dili kapin sa tulo ka minuto, mao nga wala nay rason nga mag-preno bisan usa ka adlaw. Maghimo kami og buod matag semana aron adunay kahigayonan ka sa pagpagninilag ug pag-apil kung kinahanglan.</p>
+<div class="task-box"><span class="task-label">Imong Pangako</span><p>Pilia ang usa ka oras matag adlaw aron hinay-hinay, hunahuna-on, ug gamiton ang imong mabasa. Pagkonsistente. Usa ka hinungdanon nga bahin sa bisan unsang hagit mao ang pagbuot sa imong kaugalingon nga manubag — ang pipila ka tawo nakita nga mapuslanon ang pagsulti sa ilang kapikas nga nagsugod na sila, o pagdapit sa usa ka higala aron magsali ug magpauswag sila sa ilang mga relasyon sa usa ka panahon.</p></div>
+<div class="bonus"><span class="bonus-label">Maayong Swerte!</span><p>Bantayi ang unang mensahe sa imong inbox karon.</p></div>`
+  },
+  // 1: Positive Perspective
+  {
+    title: "Unsa ang Positibong Panan-aw?",
+    content: `<p>Maayong pag-abot sa Adlaw 1 sa 30 ka Adlaw alang sa Mas Maayong Relasyon! Usa sa mga tumong niini nga serye mao ang paghimo og <strong>positibong panan-aw</strong> sa imong relasyon pinaagi sa pagmatikod sa maayo kaysa sa dili maayo.</p>
+<p>Sugdan ta sa pangutana nga basin sagad himuon: unsa gyud ang kahulogan sa positibong panan-aw?</p>
+<p>Hunahunaa kini isip matematika: kung adunay ka og mas daghan nga maayo kaysa daotan, positibo ka. Kung adunay ka og mas daghan nga daotan kaysa maayo, negatibo ka. Sa teorya, ang tanang relasyon nahulog sa usa ka hypothetical nga spectrum tali sa labihang positibo ug labihang negatibo.</p>
+<p>Kung nagtindog ka sa positibong bahin sa linya, mas lagmit kang maghatag sa imong kapikas og benepisyo sa pag-agam-agam. Ang mga butang dali ra nga mosalun. Dili ka nagpunting sa pagpangita og mga sayop ug gihunahuma mo nga ang imong kapikas adunay labing maayong tuyo ug nagtuo ka nga sila naglihok sa labing mahigugmaong paagi nga mahimo.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Basaha ang pagpamatuod sa ubos ug isulat ang usa ka tubag. Kining gagmayng mga pangutana adunay dakong gahum sa pagtabang kanimo sa pagmatikod sa positibidad nga anaa na sa imong relasyon ug sa pagtukod sa maayong mga pagbati nga giambit ninyo sa usag-usa.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 2: Shifting Positive
+  {
+    title: "Pagbalhin sa Positibo",
+    content: `<p>Nagsugod na kita kagahapon sa paghisgot sa kahulogan sa positibong panan-aw. Sa positibong panan-aw, ang gagmayng mga butang dali ra nga mosalun. Dili ka nagpunting sa pagpangita og mga sayop ug gihunahuma mo ang labing maayo.</p>
+<p>Ang mga tawo nga anaa sa negatibong panan-aw labi nga sensitibo ug nagmatikod sa mga sayop sa ilang kapikas. Sila usab adunay tendensya nga ang mga natural nga aksyon gitan-aw nga negatibo. Bisan ang mga positibong aksyon mahimong mawad-an og kusog.</p>
+<p><strong>Ug ikaw ang makapili kung unsang klase sa salamin ang imong "isuot" matag adlaw.</strong></p>
+<p>Pananglitan… ang imong kapikas basin magpakita og layo usa ka buntag, naghatag og mubo nga mga tubag, ug nagpatunog og mga kaldero samtang nagluto og pamahaw. Basin maandam kang maghunahuma nga nalagot sila kanimo ug magsugod sa pagkalagot.</p>
+<div class="or-divider">— O KAYA —</div>
+<p>Gikan sa positibong panan-aw — mahimo kang mahinumdom nga ang imong kapikas mahigugmaon ug adunay maayong tuyo. Basin dili sila nakatulog og maayo o naka-stress sa ilang dakong presentasyon sa trabaho. Basin ang ilang gikinahanglan mao lang ang usa ka yakap.</p>
+<p>Busa unsaon man ang pagbalhin sa panan-aw? Nagsugod kini sa pagmatikod sa mga butang nga <strong>tama ang gihimo</strong> sa imong kapikas kaysa sa ilang mga sayop.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Bantayi ang ilang labing maayong mga kalidad ug "dakpa" sila nga naghimo og butang nga tama. Sulayi ang paghimo og listahan sa gagmayng mga butang nga imong napansin nga gihimo o giingon sa imong kapikas sa tibuok adlaw — daw nagsubay ka sa ilang maayong mga gawi.</p><p><em>Pananglitan: naghimo og kape karong buntag, nangita sa labing maayong tindahan para sa atong sakyanan, nagpadala og matahum nga mensahe karong hapon.</em></p><p>Ang pagmatikod niining mga gagmayng higayon nagtukod sa gawi sa hunahuna sa pagtan-aw sa imong kapikas sa positibong kahayag.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 3: First Impressions
+  {
+    title: "Unang mga Impresyon",
+    content: `<p>Niini nga semana nagpunting kita sa pagpasalamat sa imong kapikas ug sa paghimo og positibong panan-aw sa imong relasyon.</p>
+<p>Usa ka pangunang timailhan sa kahimtang sa usa ka magtiayon sa ilang relasyon mao kung giunsa nila paghinumdom ang ilang unang mga higayon nga magkauban. Ang among panukiduki nagpakita nga ang mga magtiayon nga makahimo sa positibong paghunahuna sa ilang unang mga impresyon sa usag-usa ug sa istorya kung giunsa sila nagkahiusa mas maayo ang kahimtang sa ilang relasyon.</p>
+<p>Adunay rason nga nahigugma ka. Nagpili nga magpabilin nga magkauban. Nagpili nga mag-atubang sa lisod nga mga panahon. Nagpili nga mosalmot sa usa ka 30-ka-adlaw nga hagit. Kining mga rason kabahin sa gitawag namong <strong>"Ang Atong Istorya."</strong></p>
+<p>Kung ang istorya mahitungod sa imong relasyon positibo, adunay ka og buffer batok sa mga problema nga modangat ug mas sayon ang pagpunting sa positibong mga kalidad sa imong kapikas. Sa kaatbang, ang negatibong "Atong Istorya" naghimo sa imong hunahuna nga mosanta sa imong relasyon sa negatibong kahayag.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pukawa ang pipila sa mga positibong alaala gikan sa dihang una kamong nagkita. Maghunahuna sa pipila ka minuto ug isulat ang imong mga nahinumduman:</p>
+<ul>
+  <li>Unsay hitsura sa unang higayon nga nagkita mo?</li>
+  <li>Unsay hitsura sa inyong unang lakaw?</li>
+  <li>Unsa ang usa sa unang mga butang nga imong napansin mahitungod sa imong kapikas?</li>
+  <li>Unsa ang naghikay kanimo sa pagdesisyon nga kini ang tawo nga gusto mong magpabilin?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 4: Everyday Positivity
+  {
+    title: "Positibidad sa Matag Adlaw",
+    content: `<p>Namatikdan ba nimo kung unsa ka maayo ang pagmatikod sa katahum? Ang pagpahayag og pasalamat? Ang pagsaulog sa kamaayo?</p>
+<p>Ang pagsubay sa positibong panan-aw nakatuon sa pagduul nga imong gibati sa imong kapikas, apan kini usab adunay lawom nga epekto sa imong kalag ug kahimtang sa hunahuna.</p>
+<p>Hunahunaa ang imong adlaw-adlaw nga byahe. Mahimo kang magpili sa pagmatikod sa kotse nga adunay labihang aso sa atubangan nimo, maglagot sa kabugnaw sa gawas, ug sa gitas-on sa imong biyahe.</p>
+<div class="or-divider">— O KAYA —</div>
+<p>Mahimo kang mahinumdom sa matam-is nga yakap nga gihatag sa imong kapikas sa wala pa ka moadto, sa kamaayo sa tawo nga naghawid sa pultahan sa coffee shop, ug sa matahum nga talan-awon sa horizonte.</p>
+<p>Ug ang maayo mahitungod sa positibidad mao nga <strong>ang mas daghan nimong makita, mas daghan ang maglungtad.</strong> Kung ilisdan nimo ang imong panan-aw aron makita ang katahum, kahusayan, ug kamaayo, kasagaran mas daghan ang moabay.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Adto sa layo ug magpasalamat alang sa mga butang nga nagmalampuson sa imong kalibutan. Buhatang husto, sultiha ang mga pulong nga "salamat" sa imong kapikas, sa uniberso, o sa bukas nga hangin. Tan-awa kung dili kini makapagaan sa imong gibati.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 5: Under Our Nose
+  {
+    title: "Anaa na sa Atong Atubangan",
+    content: `<p>Karon, nakat-unan na nimo ang importansya sa positibong panan-aw. Ug niini nga semana, naghimo ka og mga lakang paingon niini sa imong relasyon. Magpahunong ta usa aron makita ang pikas bahin sa barya. <strong>Unsa ang gasto sa negatibong panan-aw?</strong></p>
+<p>Pananglitan, ang imong kapikas basin moadto sa post office ug kuhaon ang pakete nga imong gihulat ug usab mokuhag imong paboritong yogurt sa tindahan nga wala ka mangutana. Kung anaa ka sa negatibong panan-aw, basin mapasagdan mo kining mga butang ug magpunting hinuon sa kamatuoran nga naulahi ang imong kapikas og 20 ka minuto.</p>
+<p>Ang panukiduki nagpakita nga <strong>ang mga magtiayon nga anaa sa negatibong panan-aw napasagdan hangtod sa 50% sa mga positibong butang nga gihimo na sa ilang mga kapikas.</strong> Tungod kay ang ilang mga ulo natuyong sa pagpanagana sa sayop, napasagdan nila ang tanan nga maayo.</p>
+<p>Ug labaw pa niini, ang mga magtiayon nga anaa sa negatibong panan-aw usahay makakita og neutral nga mga pamatasan isip negatibo usab. Nagpasabot kini nga ang pagpuyo sa negatibong kahimtang sa hunahuna mahimong makabaglid sa tinuod nga reyalidad. Karon mao kana ang maayong rason aron magpositibo.</p>
+<p>Samtang nagsugod kang magbalhin sa imong panan-aw ngadto sa positibo, usa ka makapatingala nga butang ang magsugod nga mahitabo. Magsugod kang mamatikdan ang tanan nga positibong mga butang nga nanahitabo na. Magsugod kang makakita og mga butang nga mas duul sa ilang tinuod nga hitsura. Anaa kini sa atong atubangan — kinahanglan lang natong isuot ang husto nga salamin.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>I-inventory ang mga negatibong butang nga imong gisugod nga pagpunting sa tibuok imong adlaw ug ibutang sila sa bag. Unsa ang imong mahimong pagpunting? Pagdangat sa imong kapikas, unsang positibong katinuod ang basin mapasagdan nimo?</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 6: Summary Please
+  {
+    title: "Buod sa Unang Semana",
+    content: `<p>Ibuod ta ang atong nakat-unan hangtod karon! Maayo usab kini nga panahon aron maapil ang bisan unsang adlaw nga imong napasagdan. Ang maayong balita mao nga mahimo nimong buhaton kini bisan kanus-a — ug pilion ang imong mga paborito ug buhaton kini og labaw pa sa usa ka beses!</p>
+<p>Narito ang imong nakat-unan niini nga semana:</p>
+<ul>
+  <li>Nahinumdom ka sa maayong mga alaala mahitungod sa giunsa pag-ilis nimo ug imong kapikas nga magkauban.</li>
+  <li>Nakat-unan mo ang importansya sa positibong panan-aw sa imong relasyon ug sa paagi sa imong pagtan-aw sa kalibutan.</li>
+  <li>Nakat-unan mo nga ang pagbalhin ngadto sa positibong panan-aw nagtabang kanimo sa pagmatikod sa maayo nga anaa na ug nagpalig-on sa bugkos tali kanimo ug sa imong kapikas.</li>
+</ul>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pagninilag sa mosunod nga mga pangutana:</p>
+<ul>
+  <li>Unsa ang pipila sa mga pagbabag-o nga imong namatikdan niini nga semana?</li>
+  <li>Sa unsang paagi ang paghuwad sa positibong panan-aw nakaapekto sa imong relasyon niini nga semana?</li>
+  <li>Unsa ang usa ka nahinumduman gikan niini nga semana?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 7: Small Wins
+  {
+    title: "Gagmayng mga Kadaugan!",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang Semana 1 — Positibong Panan-aw!</strong></p>
+<p>Maayong trabaho! Adlaw 7 na kini sa imong 30-ka-adlaw nga hagit — usa ka bug-os nga semana! Ug importante ang pagsaulog sa imong mga kadaugan. Kung dili kini nahimong hingpit, sama ka usab ka importante sa pagkamaaghop sa imong kaugalingon ug pagpalig-on sa imong determinasyon para sa sunod nga semana.</p>
+<p>Kuha og pipila ka minuto karon aron isulat ang mubo nga listahan sa tanan nga mga butang nga imong nahimo maayo niini nga semana nga ipinagmamalakin mo. Ang kadaugan usa ka kadaugan. Ug ang pagtumpok og mga kadaugan usa ka kritikal nga kahanas sa kinabuhi ug mga relasyon.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Isulat ang bisan unsa nga tinuod alang kanimo! Ania ang pipila ka mga pananglitan aron makasugod:</p>
+<ul>
+  <li>Nagpadayon sa hagit</li>
+  <li>Nagpaambit og mga pagpamatuod sa imong kapikas</li>
+  <li>Adunay tam-is nga higayon uban sa imong mga anak</li>
+  <li>Nagkonektar uban sa usa ka higala</li>
+  <li>Naghugop og lawom</li>
+  <li>Nagpaabot og proyekto sa trabaho</li>
+  <li>Nagkuha og oras alang sa pag-atiman sa kaugalingon</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 8: Best Buds
+  {
+    title: "Labing Maayong mga Higala",
+    content: `<p>Maayong pag-abot sa Adlaw 8! Karon magpunting kita sa <strong>pagkahigala</strong> ug unsa ang kahulogan sa pagkahigala sa imong kapikas.</p>
+<p>Unsa ang hitsura sa pagkahigala alang kanimo? Unsa ang naghimo og maayong higala? Kuha og higayon aron hunahuna-on ang imong pinaka-suod nga mga higala. Giunsa mo pagpili niining mga tawhana nga mahimong bahin sa imong sulod nga sirkulo? Unsa ang nagpalig-on sa mga pagkahigala?</p>
+<p>Ug kung adunay ka mga anak, unsa ang imong gitudlo kanila mahitungod sa pagtrato sa ilang mga higala ug mga kasilungan? Unsa ang ilang isulti nga ang usa ka maayong higala?</p>
+<p>Sa kinatibuk-an, ang mga higala nagpakita og interes sa kinabuhi sa usag-usa ug nakat-unan ang mga kagustuhan ug opinyon sa usag-usa. Naningkamot sila sa pagtrato sa usag-usa nga may pagtahud ug nagpakita alang sa usag-usa. Nagbantay sila sa usag-usa. Nagkatawa ug naglaro sila nga magkauban ug kasagaran adunay gipaambit nga mga interes.</p>
+<p>Sama sa bisan unsang pagkahigala, ang imong pagkahigala sa imong kapikas usa ka bugkos nga kinahanglan nga alagaron ug himuong priyoridad. Ang pagpakita og tinuod nga interes sa usag-usa, paglaro nga magkauban ug pag-anaa sa iisang team mga paagi sa pagpalig-on sa imong relasyon.</p>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 9: Know Your Partner (Love Maps)
+  {
+    title: "Hibal-i ang Imong Kapikas",
+    content: `<p>Aron mahigugma sa usa ka tawo, kinahanglan nga <strong>tinuod nga</strong> hibal-on sila.</p>
+<p>Kagahapon, nakat-unan naton ang importansya sa paghimo og kusog nga pagkahigala sa imong relasyon. Ug usa ka dakong bahin sa pagkahigala mao ang pagkahibalo sa imong kapikas.</p>
+<p>Ang 50+ ka tuig nga gipagugol ni Dr. John ug Julie Gottman sa pag-aaral sa mga relasyon ug pagkat-on gikan sa libu-libo nga mga magtiayon nagresulta sa pipila ka talagsaon nga mga nahibal-an. Gitawag namo kini og <strong>Sound Relationship House Theory</strong> — usa ka maayong-research nga resipe sa kalampusan nga gipakita kanato sa mga magtiayon ang dalan sa pagtukod.</p>
+<p><strong>Ang Love Maps</strong> mao ang unang lebel. Hunahunaa kini isip pundasyon, nagpatunhay sa ubang mga lebel nga lig-on. Ang imong Love Map sa kinatibuk-an mao ang mapa sa paagi sa imong kapikas sa pagtan-aw sa kalibutan — ang ilang mga kagustuhan, mga paglaum ug mga kabalaka, ang ilang hunahuna ug kalag.</p>
+<p>Sa dihang una nimong nakilala ang imong kapikas, ang imong Love Map lagmit nagsunod sa pipila ka batakang detalye nga gisulat sa usa ka napkin. Sa sinugdan sa relasyon, gikusog kita sa pagpuno og daghang detalye kutob sa mahimo, mao nga daghan kita og gipangutana. Samtang nagpadayon ang relasyon, nagsugod kita nga maghunahuma kaysa magpangutana. Apan hinungdanon nga dili nimo pasagdan ang pundasyon sa imong balay.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Kuha niini nga mubo nga pagsulay. Tan-awa kung nahibal-an mo ang tubag sa kining mga pangutana, unya i-check ang imong mga tubag sa imong kapikas:</p>
+<ul>
+  <li>Unsang mga pagkaon ang gikasilag sa imong kapikas?</li>
+  <li>Unsang klase sa mga hobby ang ilang kinaugali?</li>
+  <li>Unsa ang usa sa ilang mga damgo alang sa umaabot?</li>
+  <li>Unsa ang ilang gikabalak-an?</li>
+</ul><p>Kining mga pangutana gamay ra nga bahin sa imong mapa. Ugma, maghisgot kita mahitungod sa pagpadayon sa pagdugang og detalye.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 10: Keep It Current
+  {
+    title: "I-update ang Imong Mapa",
+    content: `<p>Kagahapon, nakat-unan mo nga ang hinungdanong bahin sa imong relasyon mao ang klaro nga Love Map sa sulod nga kalibutan sa imong kapikas.</p>
+<p>Ug ang talagsaon nga butang mahitungod sa Love Maps mao nga <strong>kanunay kini nagbabag-o.</strong> Ang imong kapikas nagbabag-o ug nagdako sa bag-ong mga paagi sa tanan nga higayon. Ang kamatuoran nga nangutana ka sa imong kapikas mahitungod sa ilang paboritong pagkaon o hobby 10 ka tuig na ang milabay dili nagpasabot nga irekord mo kini ug dili na mangutana pag-usab. Kinahanglan natong buhaton ang atong bahin pinaagi sa pag-update sa atong Love Maps ug regular nga pagpangutana.</p>
+<p>Kung ang imong unang mapa gisulat sa usa ka napkin, ang imong ideal nga mapa mas sama sa paggamit og Google Maps sa imong smartphone — dili hitupngang detalyado ug kanunay nga gi-update, bisan nagbabag-o samtang nagmaneho ka tungod sa bag-ong impormasyon.</p>
+<p>Ang bili niining mga mapa mao nga naghatag sila kanimo og pagtuo ug katinuran. Gikinahanglan nimo kini sa imong personal nga mga relasyon usab.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>I-refresh ang imong Love Map pinaagi sa pipila o tanan sa mosunod nga mga pangutana:</p>
+<ul>
+  <li>Unsang mga tumong ang imong kapikas alang niining tuiga?</li>
+  <li>Giunsa ang imong kapikas mahigustuhan nga pagalagaron kung nasakit sila?</li>
+  <li>Kinsa ang pinaka-suod nga mga higala sa imong kapikas?</li>
+  <li>Unsa ang paboritong paagi sa imong kapikas sa paggugol og kagabhion?</li>
+</ul></div>`
+  },
+  // 11: Open-Ended Questions
+  {
+    title: "Mga Bukas nga Pangutana",
+    content: `<p>Nakat-unan nato kagahapon nga ang hinungdanong bahin sa pagpauswag ug pagpadayon sa pagkahigala mao ang paghimo og Love Maps sa kung unsa ang nahibal-an nimo mahitungod sa usa ka tawo, sa sulod sa ilang hunahuna ug kasingkasing.</p>
+<p>Aron mapalakas ang Love Maps, pangutana lang og <strong>mga bukas nga pangutana!</strong></p>
+<p>Ang mga bukas nga pangutana kaatbang sa mga sarado nga pangutana, nga dili nagdapit og panghisgot — kasagaran masabtan pinaagi sa usa ka pulong lang nga tubag:</p>
+<p><em>"Maayo ba ang imong adlaw?" "Oo."<br>"Gihawagan mo ba ang repairman?" "Dili."<br>"Gusto ka ba og panihapon?" "Oo."</em></p>
+<p>Sa kaatbang, ang mga bukas nga pangutana nagdapit og hunahuna-on nga tubag. Nagbukas sila sa kasingkasing. Nagsugod sila og panghisgot:</p>
+<ul>
+  <li>Unsa ang nakapagmapainubsanon kanimo sa imong trabaho karon?</li>
+  <li>Kung mabag-o mo ang usa ka butang mahitungod sa atong pisikal nga balay, unsa kini ug ngano?</li>
+  <li>Unsa ang imong gusto nga maging hitsura sa sunod nga tuig alang sa atong pamilya?</li>
+</ul>
+<p>Ang mga bukas nga pangutana gisuportahan sa pagkamausisaon. Nagpahayag sila og interes sa sulod nga kalibutan sa imong kapikas. Samtang ang mga sarado nga pangutana nagpangita og impormasyon, ang mga bukas nga pangutana <strong>nagpangita og koneksyon.</strong></p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pilion gikan sa mga pangutana sa ibabaw o maghimo og pipila ka bukas nga pangutana sa imong kaugalingon. Unya pangutana ang imong kapikas og usa o daghang niining mga pangutana sa sunod nga higayon nga magkauban kamo.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 12: Small Things Often
+  {
+    title: "Gagmay apan Kanunay",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Pagkahigala!</strong></p>
+<p>Maayong pag-abot sa Adlaw 12! Karon maghisgot kita mahitungod sa usa ka butang nga gagmay apan gamhanan. Human niining tanan nga mga tuig sa panukiduki, ang among motto mao: <strong>gagmayng mga butang kanunay.</strong></p>
+<p>Ang gagmay, tinuyo nga mga higayon adunay labaw nga gibug-aton kaysa mga hiluha, ekstra-ordinayong mga gesture pagdangat sa pagtukod og kusog nga relasyon. Ang gagmayng mga butang mao ang naghimong dako. Ug usa sa labing hinungdanong gagmayng mga butang gitawag og <strong>"bid."</strong></p>
+<p>Ang "bid" mao ang bisan unsang hangyo aron makonektar sa imong kapikas. Mahimo kang maghimo og bid para sa panghisgot, katawa, pagmahal, suporta, o simple lang nga pagtagad. Mahimong gagmay kini, sama sa pagsulti og "maayong buntag," o komplikado, sama sa pagpangayo og emosyonal nga suporta.</p>
+<p>Kadaghanan sa mga bid sayon ra makita ug masabtan: "Kumusta ang akong hitsura?" "Mahimo mo ba akong ihatag og guacamole?" "Makatabang ka ba sa pagbag-o sa bedspread?" Apan ang ubang mga bid mas komplikado: "Gusto ka bang mouban sa yoga?" "Manon ta og pagtugma sa gitara."</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Tan-awa kung makat-onan mo ang usa ka bid nga imo ug sa imong kapikas buhaton sa usag-usa karon. Hinungdanon ang pagkat-on sa pagmatikod sa mga bid sa imong kapikas. Ang sunod nga lakang mao ang "paglingi ngadto" sa kining mga bid — maghisgot kita labaw pa niini ugma.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 13: Turning Towards
+  {
+    title: "Paglingi Ngadto",
+    content: `<p>Kagahapon, nakat-unan nato nga ang gagmayng mga butang mao ang labing naghimong dako sa mga relasyon. Matag adlaw naghimo kita og daghang gagmayng mga hangyo sa koneksyon, nga gitawag og mga bid. Ang paagi sa atong pagtubag niining mga bid mao ang naghimong dakong kalainan.</p>
+<p>Naghimo og panukiduki si John Gottman sa mga bag-ong kasal ug unya gisundan sila og unom ka tuig sa ulahi. Ang mga magtiayon nga nagpabilin nga kasal mas maayo sa usa ka butang — ang ikatulo nga lebel sa Sound Relationship House: <strong>Paglingi Ngadto.</strong></p>
+<p>Sa unom ka tuig nga follow-up, <strong>ang mga magtiayon nga nagpabilin nga kasal naglingi ngadto sa usag-usa 86% sa oras. Ang mga magtiayon nga nagbulag nag-average lang og 33% sa oras.</strong> Ang sekreto mao ang Paglingi Ngadto.</p>
+<p>Kung ang imong kapikas maghimo og bid, adunay ka og tulo ka pagpili:</p>
+<ul>
+  <li><strong>Paglingi Ngadto</strong> — kilalanon ug tubagon</li>
+  <li><strong>Paglingi Palayo</strong> — pasagdan (pagliko sa kama, paglakaw palayo, pagpadayon sa pagtan-aw sa imong telepono)</li>
+  <li><strong>Paglingi Batok</strong> — silotan sila sa paghimo og bid ("Unsa ang gusto mo? Dili mo ba makita nga nagtan-aw ko sa dula!")</li>
+</ul>
+<p>Ang usa ka simple nga tubag nga "Mmhmm" samtang naglingi ngadto maayo na. Labaw sa tanang butang, ang Paglingi Ngadto nagpasabot sa pagpahibalo sa imong kapikas nga nadungog mo sila ug kung sila mosulti, gibuhat mo ang imong pinakamahimo nga maminaw.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Tubaga ang bid sa imong kapikas sa bag-o ug talagsaon nga paagi. Ibutang sa laray ang telepono. Magpabilin nga bukas ug magpabilin sa ilang team. Usab, bantayi kung kanus-a ang imong kapikas maglingi ngadto sa imong bid — gantihon sila pinaagi sa pagsulti og "salamat."</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 14: A Look Back (Week 2)
+  {
+    title: "Pagtan-aw sa Nakalabay",
+    content: `<p>Ibuod ta ang imong nakat-unan hangtod karon:</p>
+<ul>
+  <li>Nakat-unan mo nga ang pagkahigala mao ang pundasyon sa bisan unsang kusog nga relasyon.</li>
+  <li>Nakat-unan mo nga ang yawe sa bisan unsang pagkahigala mao ang pagkuha og malig-on nga Love Map sa usag-usa, ug ang pagpangutana og mga bukas nga pangutana magpalig-on sa imong Love Maps.</li>
+  <li>Nakat-unan mo ang paghuwad sa gagmayng mga butang kanunay — ang gagmayng mga butang ang naghatag og labing dakong pagbabag-o sa mga relasyon.</li>
+  <li>Nakat-unan mo ang importansya sa pagmatikod sa gagmayng mga bid sa imong kapikas ug paglingi ngadto niining mga bid.</li>
+</ul>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pagninilag sa mosunod nga mga pangutana:</p>
+<ul>
+  <li>Unsa ang nanguna niini nga semana?</li>
+  <li>Unsang mga pagbabag-o (kung adunay) ang imong namatikdan sukad sa pagsugod sa hagit?</li>
+  <li>Unsay pipila ka mga nahinumduman nga mahimo nimong ipatuman sa imong relasyon?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 15: Checkpoint (Halfway)
+  {
+    title: "Checkpoint! Katung-on na!",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Gagmayng mga Butang Kanunay!</strong></p>
+<p>Oras na sa pagsaulog! Naabut na nimo ang <strong>katung-on</strong> sa 30-ka-adlaw nga hagit ug nangailhan ka og pipila ka pagdayeg.</p>
+<p>Gusto nimo og panahon karon para maghatag sa imong kaugalingon og gugma ug paghimo og pag-atiman sa kaugalingon. Mag-bath. Manood og pelikula nga imong gitinguha nga makita. Maghimo og espesyal nga panihapon o mag-order og takeout. Buhata ang butang nga makapamaayo kanimo.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Sa dihang magpadayon ka sa imong kaugalingon, isulat ang usa ka butang nga plano mong pagpunting sa sunod nga semana.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat sa bisan kanus-a karon.</p></div>`
+  },
+  // 16: Saying Thanks
+  {
+    title: "Pagpasalamat",
+    content: `<p>Daghang kita nakat-unan mahitungod sa pagpakita og pagdayeg niini nga buwan. Ug ang pagpakita og pagdayeg pangunahing mahitungod sa pagsulti og <strong>"salamat."</strong> Kini usa ka pagpahayag sa pasalamat.</p>
+<p>Ang "salamat" gamhanan. Ang "salamat" nagtabang sa imong hunahuna aron mamatikdan ang maayo nga anaa sa imong relasyon. Ug ang daghang maayong mga relasyon nahimong ug nagpabilin nga daghang maayo pinaagi sa gagmayng mga higayon.</p>
+<p>Mga butang sama sa:</p>
+<ul>
+  <li>"Salamat sa pag-gawas sa basura."</li>
+  <li>"Salamat sa pagtabang sa mga anak sa ilang mga leksyon karon."</li>
+  <li>"Salamat sa panghisgot sa panihapon."</li>
+</ul>
+<p>Bisan kung ikaw usa niadtong mga tawo nga dili maghunahuma nga kinahanglan mong salamatan ang mga tawo sa mga butang nga kinahanglan nilang buhaton, sulayi lang kini. Kung ang imong kapikas dili sanay sa imong pagpahayag og pasalamat, ang imong bag-ong gawi basin makapahibulong ug makapasaya kanila.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pangitaa ang pipila ka gagmayng mga butang para makaingon og "salamat" ug gusto og panahon sa pagpahayag og tinuod nga pasalamat.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 17: Let's Get Specific
+  {
+    title: "Magpasalamat og Espesipiko",
+    content: `<p>Sa among couples workshop, The Art and Science of Love, usa sa labing gamhanan nga ehersisyo mao ang ehersisyo sa <strong>"Nagpasalamat Ako."</strong></p>
+<p>Ang matag kapikas nagtan-aw sa listahan sa mga positibong katangian (pananglitan matinumanon, kalmado, kusgan, mapag-ampo, matahum), naglingin og pipila nga naghulagway sa ilang kapikas, ug unya nagsulatog usa ka talagsaon nga pananglitan alang sa matag usa.</p>
+<p>Pananglitan, mahimo kang maghunahuma, "Ang akong kapikas kusgan." Sa ulahi sa ehersisyo, ipahayag nimo ang imong pagdayeg. "Nagpasalamat ako sa imong kusog." Nga kana maayo na gyud.</p>
+<p>Ug aron tinuod nga mabuhat ang ehersisyo, kilalanon nimo ang usa ka talagsaon nga pananglitan o istorya nga nagpakita sa maong katangian:</p>
+<p><em>"Nagpasalamat ako sa imong kusog. Nahinumdom ko sa dihang nag-atiman mo sa mga anak ug kanako niadtong miaging tuig sa dihang nasakit ang akong papa, ug imong gibahin ang imong schedule sa trabaho ug tinuod nga nag-apil aron suportahan kami tanan. Gidumala mo ang tanan nga logistics ug usa ka bato. Salamat sa paggiya kanato niini. Dili ko masulti kung unsa kadako ang akong pagpasalamat."</em></p>
+<p>Kining ehersisyo sa pagdayeg naghimo og gamhanan nga paglambo ug pagduul tali sa mga kapikas.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pilia ang tulo ka positibong katangian nga naghulagway sa imong kapikas (o imbentaron ang imong kaugalingon). Isulat ang usa ka talagsaon nga istorya alang sa matag katangian nga imong gipili, unya ipaambit ang imong gisulat sa imong kapikas.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 18: Getting Curious
+  {
+    title: "Pagkamausisaon",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Pagdayeg!</strong></p>
+<p>Karon, magmausisaon ta! Ang pagkamausisaon usa ka lakang sa wala pa ang pamati ug usa ka bililhong kahanas sa bisan unsang relasyon. Pagdesisyon karon nga imong dominarahon kini.</p>
+<p>Ang pagkamausisaon mahitungod sa imong kapikas nagpasabot sa pagkuha og pipila ka oras aron makita ang mga butang pinaagi sa ilang mga mata. Nagpasabot kini sa pagpahunong sa imong mga paghunahuma ug pagsulay sa pagsabot, gikan sa ilang panan-aw, kung unsa ang hitsura sa kalibutan. <strong>Ang pagkamausisaon ug kaluoy nagdala og mas lawom nga koneksyon sa imong kapikas.</strong></p>
+<p>Basin nagluto ka og pamahaw ug ang imong kapikas mosulod sa kusina ug magsugod og pag-angal. Sa wala pa motubag, mohunong. Unsa ang basin giingon sa ilang mga aksyon mahitungod sa ilang kaugalingon? Basin dili sila nakatulog og maayo, o naka-stress sa laing butang.</p>
+<p>Siguradong sa kana nga higayon sayon ang paglusot sa "negatibo" nga mga salamin ug ang personal nga buhaton kini. Apan, kung nagtinguha ka nga anaa sa positibong panan-aw kanila, basin mag-imagine ka kung unsa ang nagkahitabo sa ilang kalibutan. Magkuha og oras sa pagkupot og kaluoy.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Mag-imagine. Unsang ubang mga pagpili ang magamit kanimo sa dihang magsugod kang maghunahuma mahitungod sa imong kapikas? Unsa ang kahulogan alang kanimo sa pagpili og pagkamausisaon kaysa kasiguroan mahitungod sa pamatasan sa imong kapikas?</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 19: Being a Good Listener
+  {
+    title: "Pagpamati sa Kasingkasing",
+    content: `<p>Ang hinungdanong bahin sa pagkamausisaon mao ang pamati ug pagpangutana. Ug usa ka kahanas nga halos tanan makigdaug-sa mao ang paghimong mas maayong tigpamati — tinuod nga pamati, ug pagbuhat sa imong pinakamahimo aron makiuban mahitungod sa kung unsay hitsura ang sitwasyon alang sa imong kapikas.</p>
+<p><strong>Duha sa pinaka-gamhanan nga mga butang sa usa ka relasyon mao ang pamati ug pakiuban.</strong></p>
+<p>Isipon ang pagpangutana niining mga pangutana:</p>
+<ul>
+  <li>Unsa man kini alang kanimo?</li>
+  <li>Unsa ang imong dili gusto mahitungod sa kini nga sitwasyon?</li>
+  <li>Unsa ang imong mga kabalaka?</li>
+  <li>Sultihi pa ko labaw pa niini.</li>
+</ul>
+<p>Unya, isip bonus, sulayi ang pagpahayag og pakiuban — isipon kung unsa ang ilang giagi ug kung unsa ang pamati niini:</p>
+<ul>
+  <li>"Wow, ingon ana gyud ka nakalagot."</li>
+  <li>"Makita nako kung ngano nga mailad ka niini."</li>
+  <li>"Makatarunganon ang imong gibati."</li>
+</ul>
+<p>Usahay gusto lang nato nga madungog ug dili mobati og nag-inusara sa atong giagi. Ang "Makatarunganon ang imong gibati" mahimong labihang gamhanan ug nakapaayo.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Huwada ang arte sa pamati. Mohunong og mas dugay kaysa sa imong naandan. Pangutana ang imong kapikas kung nahuman na sila sa pagsulti. Pangutana kung adunay pa. Bisan sultiha, "Nadungog taka."</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 20: How Was Your Day
+  {
+    title: "Kumusta ang Imong Adlaw?",
+    content: `<p>Tanan nato nahibal-an ang pangutana: <strong>"Kumusta ang imong adlaw, mahal?"</strong></p>
+<p>Ang panukiduki nagpakita nga ang mga magtiayon nga makahimo sa malampuson nga pagsangkap sa ilang mga relasyon gikan sa gawas nga mga stressor (sama sa stress sa trabaho) adunay mas lig-on nga mga relasyon sa paglabay sa panahon. Ang mga kapikas gusto nga mobati nga naa sila sa iisang team kaysa ang pag-atubang sa stress sa nag-inusara.</p>
+<p>Busa adunay kahulugan kini nga pangutana. Apan dili igo ang pagpangutana lang — kinahanglan nimong magpresensya ug tinuod nga maminaw. Ang paghimo og pagsulti mahitungod sa nahitabo sa kalibutan sa imong kapikas sa katapusan sa adlaw nga adunay pakiuban usa ka bililhong kahanas.</p>
+<p>Ang pagpamati nga walay paghatag og tambag lisod alang sa kadaghanan nato. Apan nabuhat na nato ang mga lisod nga butang kaniadto.</p>
+<p>Usa ka hinungdanong pangungusap nga mahimong gamiton sa kinabuhi — ug ibutang sa ref ug isulat sa likod sa imong kamot: <strong>Ang pagsabot kinahanglan mag-una sa tambag.</strong></p>
+<p>Kung ang imong kapikas moadto kanimo aron magbahin og kasagmuyo, sa kadaghanan sa mga panahon dili gusto nila nga sulbaron nimo ang problema. Halos kanunay gusto lang nilang maminaw ka og maayo ug masabtan ang ilang kaagi. Gusto nilang mobati og dili nag-inusara. Ang simple lang nga presensya ug pagsaksi nagtabang sa imong kapikas nga mobati og dili nag-inusara sa stress.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pangutana ang imong kapikas mahitungod sa ilang adlaw ug unya magpahigda ug tinuod nga maminaw. Ayaw sulayi nga sulbaron ang problema. Maminaw lang ug makiuban.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 21: Let's Recap (Week 3)
+  {
+    title: "Buod sa Ikatulo nga Semana",
+    content: `<p>Ibuod ta ang imong nakat-unan niini nga semana:</p>
+<ul>
+  <li>Nakat-unan mo ang gahum sa pagsulti og "salamat" alang sa gagmayng mga butang sa imong relasyon.</li>
+  <li>Gihuwad mo ang pagpunting sa mga positibong katangian ug paghiusa sa mga talagsaon nga mga istorya mahitungod sa imong kapikas.</li>
+  <li>Nakat-unan mo nga ang pagpahunong aron magpabilin nga mausisaon ug maluluy-on ngadto sa imong kapikas mao ang kinauyokan sa usa ka kusog nga relasyon.</li>
+  <li>Nakat-unan mo ang tinuod nga pamati ug pakiuban sa imong kapikas. Hinumdumi: <strong>ang pagsabot kinahanglan mag-una sa tambag.</strong></li>
+</ul>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pagninilag sa mosunod nga mga pangutana:</p>
+<ul>
+  <li>Unsa ang usa ka butang nga nakat-unan mo niadtong miaging semana nga miapekto kanimo?</li>
+  <li>Unsa ang imong namatikdan sa imong relasyon sukad sa pagsugod sa hagit?</li>
+  <li>Unsang mga pagbabag-o ang imong namatikdan sa imong kaugalingon?</li>
+</ul></div>
+<p>Ugma mosulod na kita sa katapusang bahin. Magkuha og higayon aron isipa kung unsa kadaghan ang imong naabut. Sa bisan unsang kaso, ugma usa ka bag-ong adlaw, ug ang adlaw-adlaw nga trabaho ang nagtukod og relasyon.</p>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 22: Time to Celebrate
+  {
+    title: "Oras na sa Pagsaulog!",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Pamati!</strong></p>
+<p>Magsaulog ta! Gusto og panahon karon para magpasalamat sa imong kaugalingon tungod sa pagpadayon sa hagit. Naghuwad ka sa mga lakang matag adlaw, ug nagdaug ka og pahunong. Kuha og panahon aron mapasalamatan ang IKAW ug kung unsa kadaghan ang imong nabuhat niini nga buwan.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Tuklasin ang pipila ka libre nga Gottman resources ug pilion ang usa aron ibahin sa imong kapikas. Pipila ka maayong mga video aron tan-awon:</p>
+<ul>
+  <li><em>It's Not About The Nail</em></li>
+  <li><em>Emotional Bank Account</em></li>
+  <li><em>Turning Towards</em></li>
+  <li><em>Making Marriage Work</em></li>
+</ul></div>`
+  },
+  // 23: Big Dreams
+  {
+    title: "Dagkong mga Damgo",
+    content: `<p>Maayong pag-abot sa Adlaw 23! Magkamatinud-anon ta. Maghisgot ta mahitungod sa mga <strong>DAMGO.</strong></p>
+<p>Importante alang sa mga magtiayon nga magbahin sa ilang mga damgo sa usag-usa ug makahimo og paagi sa pagtabang sa tumong sa kinabuhi sa usag-usa. Usa ka hinungdanong aspeto sa bisan unsang relasyon mao ang pagmugna og atmospera nga nagdasig sa matag tawo sa pagsulti og matinuod mahitungod sa ilang mga paglaum ug mga damgo, mga hiyas, ug mga bunhot.</p>
+<p>Sa reyalidad, kanus-a ang katapusan nga higayon nga nagkuha ka og oras sa pagpagninilag sa mga pangutana sama niini:</p>
+<ul>
+  <li>Unsa man ang pipila sa imong mga damgo alang sa imong kinabuhi?</li>
+  <li>Kanus-a ka gibati nga labing natumanan sa imong kinabuhi?</li>
+  <li>Unsa ang imong gusto nga mahinumduman kanimo sa dihang mawala ka na?</li>
+</ul>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>I-block ang mga distraksyon sa usa ka hilom nga dapit sulod sa 20 minuto. Kumuha og blankong piraso sa papel ug ballpen, tinuod nga hunahuna-on kining mga pangutana, ug dungga ang imong mga damgo.</p><p>Kung mahimo, ipaambit ang pipila sa imong mga nabuklatan sa imong kapikas. Pangutana sila mahitungod sa ilang mga damgo. Ug tinuod nga maminaw. Unya hisgotan kung giunsa ninyo pagbuhat og gagmayng mga lakang paingon sa pagtabang sa usag-usa sa pagpamatuod sa imong mga damgo.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 24: Shared Meaning
+  {
+    title: "Gipaambit nga Kahulogan",
+    content: `<p>Tanan kita nanginahanglan og mga damgo ug pagbati sa katuyoan ug kahulogan sa atong kinabuhi. Ug kung ang atong pagbati sa katuyoan nahiuyon sa atong kapikas, talagsaon kana.</p>
+<p>Ang panukiduki nagpakita nga ang labing maayong mga relasyon adunay pagbati sa <strong>gipaambit nga kahulogan.</strong> Usahay ang mga magtiayon napaloran sa ilang gipaambit nga mga hiyas, apan ang tinuod nga mga master miadto sa layo aron pamugnaon kini.</p>
+<p>Ang gipaambit nga kahulogan usa sa labing talagsaon nga mga lebel sa ibabaw sa Sound Relationship House — nagtipon kini sa tanan ug naghimo og mananaog nga relasyon.</p>
+<p>Pareho ba kamong gusto nga manigamot? O basin adunay mas daghang game nights? Adunay ba kamong gipaambit nga damgo sa pagsugod og negosyo? O sa pag-remodel sa itaas nga banyo? Ang gipaambit nga mga damgo, mga hiyas, ug mga ritwal naghimo og talagsaon nga butang: nagpadan-ag sila og talagsaon nga "kami" sa relasyon ug naghimo ug nagpalig-on sa imong pagkakilala isip magtiayon.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pun-a kining mga blangko (magkauban kung mahimo):</p>
+<ul>
+  <li>Pareho kaming ganahan og…</li>
+  <li>Gusto naming moadto sa…</li>
+  <li>Kung mananaog kita sa lottery, among buhaton ang…</li>
+  <li>Gusto naming mahibal-an kung giunsa ang…</li>
+</ul><p>Ang mas daghan nga gipaambit nga kahulogan nga imong makita, mas lawom, mas dato, ug mas makapahimuot ang imong relasyon.</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 25: Creating Rituals
+  {
+    title: "Paghimo og mga Ritwal",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Kahulogan!</strong></p>
+<p>Maghisgot ta mahitungod sa mga <strong>RITWAL.</strong></p>
+<p>Ang mga Ritwal sa Koneksyon mao ang mga gawi ug tradisyon nga imong ug sa imong kapikas gilaraw sulod sa imong relasyon. Kini ang mga butang nga imong giasahan ug nagtabang kanimo sa pagbati og luwas sa imong relasyon ug pamilya. <strong>Ang mga ritwal nagtukod sa imong pagkakilala isip magtiayon ug pamilya.</strong></p>
+<p>Basin naghimo mo og mga kalabasa matag tingdagdag, o nagluto ang imong kapikas sa imong paboritong panihapon sa imong adlaw sa pagkatawo. Basin hinungdanon ang mga panihapon sa pamilya sa Dominggo, o ganahan kang molakaw uban sa kape matag buntag.</p>
+<p>Ang mga ritwal nagtabang kanato sa pagmarkahan sa panahon ug paghimo og kahulogan. Ang pipila pormal ug matagna, sama sa mga pangunahong holiday o taunan nga bakasyon. Ang pipila mas kaswal, sama sa kamatuoran nga ang Lunes pasta night, o naghimo og crossword sa kabuntagon sa Dominggo.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Paghinumdom mahitungod sa mga klase sa mga tradisyon ug ritwal sa pamilya nga natagamtam ninyong duha sa dihang nagdako kamo. Isulat ang usa ka konsistente apan talagsaon nga butang mahitungod sa:</p>
+<ul>
+  <li>Ang mga holiday</li>
+  <li>Ang imong adlaw sa pagkatawo</li>
+  <li>Ang mga oras sa pagkaon</li>
+  <li>Ang mga katapusan sa semana</li>
+</ul><p>Makigsulti sa usag-usa mahitungod sa unsa ang nakapahimong may kahulogan kanimo kining mga ritwal. Mag-imagine og kusog kung giunsa mo gustong hitsura nila karon — unsa ang imong iapil? Unsa ang imong ibiya?</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 26: Rituals of Appreciation
+  {
+    title: "Ritwal sa Pagpasalamat",
+    content: `<p>Nahinumdom ba kamo pipila ka semana na ang milabay sa dihang gisuwayan naton ang pasalamat? Karon, magkuha kita og mas lawom nga pagtutok ug <strong>maghimo og aktwal nga ritwal mahitungod sa pagdayeg</strong> ug makita kung giunsa pagbabag-o sa imong kinabuhi.</p>
+<p>Kung nakapagtukod ka na og pormal nga ritwal, tapik ang imong kaugalingon sa likod. Nanghinaut kami nga kini usa ka bililhong kaagi sa pagmatikod ug pagpaambit kung unsa ang nagmalampuson sa imong relasyon ug sa imong kinabuhi.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pilia ang usa sa mosunod (o imbentaron ang imong kaugalingon) ug magpugos sa paghimo niini sulod sa sunod nga buwan. Ang pasalamat nagbabag-o sa tanan. Ania ang pipila ka mga ideya:</p>
+<ul>
+  <li><strong>Taunang mga text sa pagdayeg.</strong> Sa tibuok adlaw, mag-text sa imong kapikas og usa ka butang nga imong gidayeg mahitungod kanila ug usa ka talagsaon nga pananglitan. "Kaayo ka mapag-ampo. Tinuod nga gidayeg ko ikaw sa paghimo og kape para sa aton duha karong buntag sa wala pa ako makamata."</li>
+  <li><strong>Journal sa pasalamat.</strong> Gusto og pipila ka minuto sa wala pa matulog matag gabii para isulat ang tulo ka butang nga imong ginapasalamatan. Ibahin sila sa imong kapikas — o paghimo og imong listahan magkauban.</li>
+  <li><strong>Adlaw-adlaw nga salamat.</strong> Buhata nga punto ang pagsulti og salamat alang sa usa ka butang matag adlaw, apan pilion ang usa ka butang nga dili nimo naandan ang pagpasalamat. "Salamat sa pag-organisar sa ref" o "Salamat sa pagmatikod nga nag-ubos ug gana ako karon."</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 27: Magic Question
+  {
+    title: "Ang Magic nga Pangutana",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa mga Ritwal!</strong></p>
+<p>Maayong pag-abot sa Adlaw 27! Andam ka na ba alang sa <strong>USA KA PANGUTANA</strong> nga magbabag-o sa imong relasyon alang sa mas maayo?</p>
+<p>Siyempre, mas maayo kini kung adunay ka niadtong ubang maayong mga himan nga puno nga nagfunksyon sama sa pagdayeg, Love Maps, ug pamati.</p>
+<div class="task-box"><span class="task-label">Ang Magic nga Pangutana</span><p style="font-size:1.25rem; font-style:italic; color: var(--rose-dark);">"Unsa ang mahimo ko para malabsan ka og gugma niini nga semana?"</p><p>Ug unya, maminaw lang. Ipahibalo sa imong kapikas nga nadungog mo sila (paglingi ngadto sa kana nga bid).</p></div>
+<p>Gamhanan kini nga pangutana tungod kay gikuha niini ang hulam sa gugma sa imong kapikas. Nagdapit kini og resipe sa kalampusan ug eksakto kung giunsa ka nimo mahimong nindot alang kanila.</p>
+<p>Basin mobati kini og kasal-anan ug wala sa lugar. Apan okay lang kung dili kini natural sa sinugdan — nagatun-an ka og bag-o. Nakatuon ka na ba og pagtugma sa usa ka instrumento sa musika? Mihunong ka ba tungod kay dili kini natural? O nagpadayon ka ba tungod kay nahibal-an mo nga kung matun-an mo ang paghimo og talagsaon nga porma sa imong mga tudlo, mahimong resulta kini sa usa ka matahum nga tunog?</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Pangutana ug hinumdumi ang tubag sa kini nga pangutana. Nanghinaut kami nga dili kini kinahanglan pang sultihin nga kinahanglan mo usab nga sulayi ang buhaton ang butang nga isugyot sa imong kapikas. Sa paglabay sa panahon, ang mga pangutana sama niini mahimong mas natural. Ug sa gamay nga panahon ug praktis, ang tubag basin, "Nabuhat na nimo kini."</p></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 28: A Look Back (Full month)
+  {
+    title: "Pagtan-aw sa Tibuok Buwan",
+    content: `<p>Wow, daghan ka nakat-unan niini nga buwan! Ania ang pipila ka mga highlights:</p>
+<ul>
+  <li>Nakat-unan mo ang importansya sa positibong panan-aw sa imong mga relasyon ug sa paagi sa imong pagtan-aw sa kalibutan.</li>
+  <li>Nakat-unan mo nga ang yawe sa bisan unsang kusog nga relasyon mao ang klaro nga Love Map ug pagpangutana og mga bukas nga pangutana.</li>
+  <li>Nakat-unan mo ang importansya sa pagmatikod sa gagmayng mga bid sa imong kapikas ug paglingi ngadto niining mga bid.</li>
+  <li>Nakat-unan mo ang gahum sa pagsulti og "salamat" alang sa gagmayng mga butang sa imong relasyon.</li>
+  <li>Nakat-unan mo nga ang pagpahunong aron magpabilin nga mausisaon ug maluluy-on ngadto sa imong kapikas mao ang kinauyokan sa usa ka kusog nga relasyon.</li>
+  <li>Nakat-unan mo kung giunsa ang pagpangutana og "Kumusta ang imong adlaw, mahal?" ug ang tinuod nga pamati ug pakiuban sa imong kapikas.</li>
+  <li>Nakat-unan mo ang importansya sa paghisgot mahitungod sa imong mga damgo ug paghimo og gipaambit nga kahulogan.</li>
+  <li>Nakat-unan mo kung giunsa ang paghimo og mga ritwal aron mapagtukod ang kinabuhi nga gusto nimo isip magtiayon.</li>
+</ul>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Isulat ang imong kaugalingon nga mga pagninilag:</p>
+<ul>
+  <li>Unsa pa ang imong nahinumduman?</li>
+  <li>Unsa ang nanguna sa labing dako?</li>
+  <li>Unsa ang imong hunahuna nga makahimog labing dakong epekto sa imong relasyon?</li>
+</ul></div>
+<div class="bonus"><span class="bonus-label">Bonus — Apila ang Imong Kapikas</span><p>Sultihi sila unsa ang imong gisulat karon.</p></div>`
+  },
+  // 29: Reflections
+  {
+    title: "Mga Pagninilag",
+    content: `<p>Magkuha tag panahon karon sa pagpagninilag.</p>
+<div class="task-box"><span class="task-label">Buluhaton Karon</span><p>Hunahuna-on kining mga pangutana:</p>
+<ul>
+  <li>Unsay imong gibati sa imong relasyon?</li>
+  <li>Gikan sa unsa ka labing nakaganansya?</li>
+  <li>Kung nakita mo ang pipila ka mga bahin nga maalisud, asa ka nakurog? Matikdi kini ug maghatag sa imong kaugalingon og kalooy.</li>
+</ul></div>
+<p>Usab, aduna bay mga pagpamatuod nga imong napasagdan sa tibuok buwan? Aduna bay bisan unsa nga namugnang espesyal nga may kalabot o gamhanan? Gusto mo bang buhaton kini pag-usab?</p>
+<p>Ang Gottman Institute adunay printable nga listahan sa mga pagpamatuod nga magamit sa ilang website — usa ka hapsay nga sheet nga adunay tanang mga pagpamatuod aron ma-download ug mapuno bisan kanus-a gusto nimo og pagtuboy sa positibidad. Maghimo og ritwal mahitungod niini. Apila ang imong kapikas usab!</p>
+<div class="bonus"><span class="bonus-label">Hapit Na!</span><p>Usa na lang ka adlaw. Gamiti ang usa ka higayon aron ipasalamat kung unsa ka layo na ang imong naabut.</p></div>`
+  },
+  // 30: You Did It
+  {
+    title: "Nahimo Nimo! 🎉",
+    content: `<p><strong>Congratulations! Nahuman na nimo ang seksyon sa Magic nga Pangutana — ug ang tibuok hagit!</strong></p>
+<p>Uy, nahimo nimo! Usa ka bug-os nga 30 ka adlaw sa pagmugna og mas maayong relasyon!</p>
+<p>Naglaum kami nga mobati ka og pagbabag-o — usa ka gitukod pinaagi sa mga piraso sa impormasyon, nagpakita og gagmayng mga butang kanunay sa praktis.</p>
+<p>Sa tinuod, <strong>kini usa ka sinugdanan, dili usa ka katapusan.</strong> Kini ang pagsugod sa usa ka bag-ong kapitulo sa imong relasyon — usa nga gipagana sa imong nakat-unan sa miaging 30 ka adlaw.</p>
+<p>Ayaw pagduha-duha sa pagbalik sa kining mga pangutana kung mobati kang nahapit. Maayo nilang paagi sa pagpahinumdom kanimo sa mga basic bisan samtang nagtukod ka og usa ka butang nga komplikado ug matahum.</p>
+<div class="task-box"><span class="task-label">Unsa ang Sunod?</span><p>Ania ang pipila ka dagdag nga mga paagi aron magpabilin nga naapil ug padayon nga pagpalig-on sa imong mga relasyon:</p>
+<ul>
+  <li>The Gottman Relationship Adviser</li>
+  <li>Gottman Connect para sa mga Magtiayon</li>
   <li>Marriage Minute (libreng newsletter)</li>
   <li>The Gottman Blog</li>
   <li>Love Maps Relationship Quiz</li>
@@ -1965,8 +2414,10 @@ function setLang(lang) {
   currentLang = lang;
   const btnEn = document.getElementById('btn-en');
   const btnBis = document.getElementById('btn-bis');
+  const btnCeb = document.getElementById('btn-ceb');
   if (btnEn) btnEn.classList.toggle('active', lang === 'en');
   if (btnBis) btnBis.classList.toggle('active', lang === 'bis');
+  if (btnCeb) btnCeb.classList.toggle('active', lang === 'ceb');
   if (currentDay !== null) showDay(currentDay);
 }
 
@@ -1994,10 +2445,12 @@ function showDay(n) {
 
   const ill = illustrations[n];
   const bis = bisayaTranslations[n];
+  const ceb = cebuanoTranslations[n];
   const isBis = currentLang === 'bis' && bis;
-  const displayTitle = isBis ? bis.title : d.title;
-  const displayContent = isBis ? bis.content : d.content;
-  const seriesLabel = isBis ? '30 Adlaw ngadto sa Mas Maayong Relasyon' : '30 Days to a Better Relationship';
+  const isCeb = currentLang === 'ceb' && ceb;
+  const displayTitle = isBis ? bis.title : (isCeb ? ceb.title : d.title);
+  const displayContent = isBis ? bis.content : (isCeb ? ceb.content : d.content);
+  const seriesLabel = isBis ? '30 Adlaw ngadto sa Mas Maayong Relasyon' : (isCeb ? '30 ka Adlaw alang sa Mas Maayong Relasyon' : '30 Days to a Better Relationship');
   document.getElementById('detail-body').innerHTML = `
     <div class="detail-eyebrow">${d.label} \u00b7 ${seriesLabel}</div>
     <h2 class="detail-title">${displayTitle}</h2>
