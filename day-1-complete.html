@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 1 Complete · 30 Days to a Better Relationship</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F9F4EC;
+    --parchment: #EDE4D3;
+    --rose: #9B4E63;
+    --rose-dark: #6E2E42;
+    --rose-light: #C8899A;
+    --sage: #5E7F6B;
+    --brown: #2A1A12;
+    --tan: #B89A7A;
+    --gold: #C4933F;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--cream);
+    color: var(--brown);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--rose-dark);
+    color: var(--cream);
+    padding: 3rem 2rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; right: -40px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .header-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--rose-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .header-title {
+    font-size: 2.4rem;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+
+  .header-subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(249,244,236,0.6);
+  }
+
+  .complete-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 99px;
+    padding: 0.35rem 1rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-top: 1.25rem;
+  }
+
+  .complete-badge .check {
+    color: #a8e6b8;
+    font-size: 0.85rem;
+  }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 2rem 2rem;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: var(--parchment);
+    margin: 2.5rem 0;
+  }
+
+  /* ── IMAGE PROMPT CARD ── */
+  .prompt-card {
+    background: white;
+    border: 1.5px dashed var(--parchment);
+    border-radius: 8px;
+    padding: 1.75rem 1.75rem 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .prompt-card-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--rose-light);
+    margin-bottom: 0.85rem;
+  }
+
+  .prompt-card-title {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--brown);
+    margin-bottom: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .prompt-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--tan);
+    background: var(--cream);
+    border-radius: 5px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--rose-light);
+  }
+
+  .prompt-note {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    color: var(--tan);
+    letter-spacing: 0.05em;
+    font-style: italic;
+  }
+
+  .copy-btn {
+    margin-top: 1rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--rose);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .copy-btn:hover { background: var(--rose-dark); }
+
+  .copied-msg {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.65rem;
+    color: var(--rose);
+    margin-left: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .copied-msg.show { opacity: 1; }
+
+  /* ── RESPONSE CARDS ── */
+  .response-card {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid var(--parchment);
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .response-card-header {
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid var(--parchment);
+  }
+
+  .response-card-header.him { background: #fdf8f3; }
+  .response-card-header.her { background: #fdf6f8; }
+
+  .response-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .him .response-dot { background: var(--tan); }
+  .her .response-dot { background: var(--rose-light); }
+
+  .response-name {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brown);
+    font-weight: 500;
+  }
+
+  .response-day-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    color: var(--tan);
+    margin-left: auto;
+  }
+
+  .response-body {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+
+  .response-text {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--brown);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── ENCOURAGEMENT ── */
+  .encouragement {
+    border-top: 1px solid var(--parchment);
+    padding: 1.25rem 1.5rem 1.5rem;
+    background: var(--cream);
+  }
+
+  .encouragement-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--rose-light);
+    margin-bottom: 0.65rem;
+  }
+
+  .encouragement-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--brown);
+  }
+
+  /* ── COMPLETION BUTTON ── */
+  .completion-section {
+    text-align: center;
+    padding: 2rem 0 4rem;
+  }
+
+  .completion-btn {
+    display: inline-block;
+    background: var(--rose-dark);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    padding: 1.1rem 2.5rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 20px rgba(110,46,66,0.25);
+  }
+
+  .completion-btn:hover {
+    background: var(--rose);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba(110,46,66,0.3);
+  }
+
+  .completion-note {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-top: 1rem;
+  }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 1.25rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-eyebrow">30 Days to a Better Relationship · Day 1</div>
+  <h1 class="header-title">What Is Positive Perspective?</h1>
+  <div class="header-subtitle">December 12, 2023</div>
+  <div class="complete-badge"><span class="check">✓</span> Day 1 Complete</div>
+</header>
+
+<main>
+
+  <!-- IMAGE PROMPT -->
+  <div class="prompt-card">
+    <div class="prompt-card-label">Today's Couple Illustration Prompt</div>
+    <h2 class="prompt-card-title">Generate your Day 1 image</h2>
+    <div class="prompt-text" id="prompt-text">Simple flat cartoon illustration — warm cream background, dusty rose and sage color palette — a couple at home in a quiet morning moment, one partner bringing the other a warm cup of coffee with a gentle caring smile, a small child playing peacefully nearby, the mood radiating quiet teamwork, deep appreciation, and choosing to see the best in each other — use the two attached reference photos of the boy and the girl to match their likeness, geometric style, soft warm tones, no text</div>
+    <p class="prompt-note">Paste this prompt into your AI image tool and attach Justin.png and Kate.png as reference photos.</p>
+    <div style="display:flex; align-items:center;">
+      <button class="copy-btn" onclick="copyPrompt()">Copy Prompt</button>
+      <span class="copied-msg" id="copied-msg">Copied ✓</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- RESPONSES -->
+  <div class="section-title">Your Responses</div>
+
+  <!-- Kate -->
+  <div class="response-card">
+    <div class="response-card-header her">
+      <span class="response-dot"></span>
+      <span class="response-name">Kate</span>
+      <span class="response-day-label">Day 1 · What Is Positive Perspective?</span>
+    </div>
+    <div class="response-body">
+      <p class="response-text">"Ang among relasyon ni Justin kalma ug tinabangay — dili lang isip partners o parents, isip team. Buhaton namo tanan para ma-organise ug planado kami, dili mag-away sa mga dili masabtan. Kay gusto ni Justin nga tinabangay mi ug fair sa usag usa, mao nang dili mi magkagulo. Nagmahigugmaon mi dili para sa amo kaugalingon, kondili para kang Austin — aron mahatagan namo siya og maayong pamilya. Ang among positibo naggikan sa amo pag-estoryahanay. Kung naay away, amo kini ginaestoryahan dayon — dili ipa-ugma. Honest mi sa usag usa. Mao kana ang nagpapositive sa amo pag-uban."</p>
+    </div>
+    <div class="encouragement">
+      <div class="encouragement-label">A note for Kate</div>
+      <p class="encouragement-text">Kate, what you wrote is quietly remarkable. You see your relationship clearly — not through rose-coloured glasses, but through the lens of real commitment. The fact that you name <em>teamwork</em>, <em>fairness</em>, and <em>talking things through</em> as the foundation of your positivity shows how deeply you understand what makes love last. The way you centre Austin in this — choosing to build something good for him — speaks to the kind of mother and partner you are. Justin is lucky to be loved by someone who pays attention to the small things that hold a relationship together.</p>
+    </div>
+  </div>
+
+  <!-- Justin -->
+  <div class="response-card">
+    <div class="response-card-header him">
+      <span class="response-dot"></span>
+      <span class="response-name">Justin</span>
+      <span class="response-day-label">Day 1 · What Is Positive Perspective?</span>
+    </div>
+    <div class="response-body">
+      <p class="response-text">"Sometimes when Kate wakes up and looks so cranky, I need to understand that she isn't really a morning person. I will admit when she complains I get a bit dysregulated — but I need to understand that she has a lot going on in her mind. She does a lot, and the biggest one is looking after Austin. It takes a lot to look after him, especially when I am at work, and I am very appreciative. I know Kate always tries, and I am very blessed to have her. She has improved and adjusted for me, and she should always be seen in a positive perspective."</p>
+    </div>
+    <div class="encouragement">
+      <div class="encouragement-label">A note for Justin</div>
+      <p class="encouragement-text">Justin, this is exactly what positive perspective looks like in everyday life — and you described it perfectly. The fact that you can catch yourself getting dysregulated and then consciously choose understanding over reaction? That takes real self-awareness and real love. Recognising how much Kate carries, especially while you're at work, and naming her as someone who <em>always tries</em> — that is a husband who truly sees his wife. Kate feels that. Keep choosing that perspective. It is one of the most powerful things you bring to your relationship.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- COMPLETION BUTTON -->
+  <div class="completion-section">
+    <a class="completion-btn" href="index.html">Day 1 Complete · See All Days</a>
+    <p class="completion-note">30 days · one small step at a time</p>
+  </div>
+
+</main>
+
+<script>
+function copyPrompt() {
+  const text = document.getElementById('prompt-text').textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const msg = document.getElementById('copied-msg');
+    msg.classList.add('show');
+    setTimeout(() => msg.classList.remove('show'), 2500);
+  });
+}
+</script>
+
+</body>
+</html>
