@@ -104,7 +104,7 @@
 
   /* ── MAIN ── */
   main {
-    max-width: 680px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 3rem 2rem 2rem;
   }
@@ -308,6 +308,151 @@
     margin-top: 1rem;
   }
 
+  /* ── RESPONSE IMAGE PLACEHOLDER ── */
+  .response-image-section {
+    border-top: 1px solid var(--parchment);
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .response-image-section.him { background: #fdf8f3; }
+  .response-image-section.her { background: #fdf6f8; }
+
+  .response-image-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 0.85rem;
+  }
+
+  .resp-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1.5px dashed var(--parchment);
+    border-radius: 6px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 0.9rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .resp-photo:hover { border-color: var(--rose-light); background: #fdf9f6; }
+
+  .resp-photo input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%; height: 100%;
+  }
+
+  .resp-photo .rp-icon {
+    width: 26px; height: 26px;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .resp-photo .rp-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--tan);
+    pointer-events: none;
+  }
+
+  .resp-photo img.rp-preview {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .resp-photo.has-image .rp-icon,
+  .resp-photo.has-image .rp-text { display: none; }
+  .resp-photo.has-image input[type="file"] { opacity: 0; cursor: pointer; }
+
+  .resp-prompt-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.65;
+    color: var(--tan);
+    background: white;
+    border-radius: 4px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.75rem;
+    border-left: 3px solid var(--parchment);
+  }
+
+  .resp-copy-row {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .resp-copy-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--rose);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .resp-copy-btn:hover { background: var(--rose-dark); }
+
+  .resp-copied {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.63rem;
+    color: var(--rose);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .resp-copied.show { opacity: 1; }
+
+  /* ── RESPONSE GRID ── */
+  .response-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 0 1.25rem;
+  }
+
+  .response-grid .response-card {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 700px) {
+    .response-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: unset;
+    }
+    .response-grid .response-card {
+      grid-row: span 1;
+      grid-template-rows: unset;
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+  }
+
   /* ── SECTION TITLE ── */
   .section-title {
     font-family: 'Jost', sans-serif;
@@ -330,22 +475,10 @@
 
 <main>
 
-  <!-- IMAGE PROMPT -->
-  <div class="prompt-card">
-    <div class="prompt-card-label">Today's Couple Illustration Prompt</div>
-    <h2 class="prompt-card-title">Generate your Day 1 image</h2>
-    <div class="prompt-text" id="prompt-text">Simple flat cartoon illustration — warm cream background, dusty rose and sage color palette — a couple at home in a quiet morning moment, one partner bringing the other a warm cup of coffee with a gentle caring smile, a small child playing peacefully nearby, the mood radiating quiet teamwork, deep appreciation, and choosing to see the best in each other — use the two attached reference photos of the boy and the girl to match their likeness, geometric style, soft warm tones, no text</div>
-    <p class="prompt-note">Paste this prompt into your AI image tool and attach Justin.png and Kate.png as reference photos.</p>
-    <div style="display:flex; align-items:center;">
-      <button class="copy-btn" onclick="copyPrompt()">Copy Prompt</button>
-      <span class="copied-msg" id="copied-msg">Copied ✓</span>
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
   <!-- RESPONSES -->
   <div class="section-title">Your Responses</div>
+
+  <div class="response-grid">
 
   <!-- Kate -->
   <div class="response-card">
@@ -360,6 +493,13 @@
     <div class="encouragement">
       <div class="encouragement-label">A note for Kate</div>
       <p class="encouragement-text">Kate, what you wrote is quietly remarkable. You see your relationship clearly — not through rose-coloured glasses, but through the lens of real commitment. The fact that you name <em>teamwork</em>, <em>fairness</em>, and <em>talking things through</em> as the foundation of your positivity shows how deeply you understand what makes love last. The way you centre Austin in this — choosing to build something good for him — speaks to the kind of mother and partner you are. Justin is lucky to be loved by someone who pays attention to the small things that hold a relationship together.</p>
+    </div>
+    <div class="response-image-section her">
+      <div class="response-image-label">Kate's Illustration</div>
+      <div class="resp-photo has-image" id="photo-kate">
+        <img class="rp-preview" src="images/day-1-kate.png" alt="Kate's Day 1 illustration">
+        <input type="file" accept="image/*" onchange="loadRespImage(event, 'photo-kate')">
+      </div>
     </div>
   </div>
 
@@ -377,7 +517,16 @@
       <div class="encouragement-label">A note for Justin</div>
       <p class="encouragement-text">Justin, this is exactly what positive perspective looks like in everyday life — and you described it perfectly. The fact that you can catch yourself getting dysregulated and then consciously choose understanding over reaction? That takes real self-awareness and real love. Recognising how much Kate carries, especially while you're at work, and naming her as someone who <em>always tries</em> — that is a husband who truly sees his wife. Kate feels that. Keep choosing that perspective. It is one of the most powerful things you bring to your relationship.</p>
     </div>
+    <div class="response-image-section him">
+      <div class="response-image-label">Justin's Illustration</div>
+      <div class="resp-photo has-image" id="photo-justin">
+        <img class="rp-preview" src="images/day-1-justin.png" alt="Justin's Day 1 illustration">
+        <input type="file" accept="image/*" onchange="loadRespImage(event, 'photo-justin')">
+      </div>
+    </div>
   </div>
+
+  </div><!-- end response-grid -->
 
   <div class="divider"></div>
 
@@ -397,6 +546,33 @@ function copyPrompt() {
     msg.classList.add('show');
     setTimeout(() => msg.classList.remove('show'), 2500);
   });
+}
+
+function copyRespPrompt(promptId, badgeId) {
+  const text = document.getElementById(promptId).textContent.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const badge = document.getElementById(badgeId);
+    badge.classList.add('show');
+    setTimeout(() => badge.classList.remove('show'), 2500);
+  });
+}
+
+function loadRespImage(e, photoId) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(ev) {
+    const ph = document.getElementById(photoId);
+    if (!ph) return;
+    const existing = ph.querySelector('img.rp-preview');
+    if (existing) existing.remove();
+    const img = document.createElement('img');
+    img.src = ev.target.result;
+    img.className = 'rp-preview';
+    ph.appendChild(img);
+    ph.classList.add('has-image');
+  };
+  reader.readAsDataURL(file);
 }
 </script>
 
