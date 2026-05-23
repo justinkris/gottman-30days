@@ -688,6 +688,32 @@
     opacity: 0.75;
   }
 
+/* ── COMPLETE LINK ──────────────────────────── */
+  .complete-link-wrap {
+    text-align: center;
+    padding: 2rem 0 0.5rem;
+  }
+
+  .complete-link-btn {
+    display: inline-block;
+    background: var(--rose-dark);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 18px rgba(110,46,66,0.2);
+  }
+
+  .complete-link-btn:hover {
+    background: var(--rose);
+    transform: translateY(-2px);
+  }
+
 /* ── COUPLE PHOTO / PROMPT ──────────────────── */
   .couple-photo-section {
     margin-bottom: 1.5rem;
@@ -2648,6 +2674,7 @@ function showDay(n) {
         </div>
       </div>
     </div>
+  ${n > 0 ? `<div class="complete-link-wrap"><a class="complete-link-btn" href="day-${n}-complete.html">Day ${n} Complete — See Responses →</a></div>` : ''}
   `;
 
   document.getElementById('grid-view').style.display = 'none';
