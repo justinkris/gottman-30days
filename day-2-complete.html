@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Day 1 Complete · 30 Days to a Better Relationship</title>
+<title>Day 2 Complete · 30 Days to a Better Relationship</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -97,10 +97,7 @@
     margin-top: 1.25rem;
   }
 
-  .complete-badge .check {
-    color: #a8e6b8;
-    font-size: 0.85rem;
-  }
+  .complete-badge .check { color: #a8e6b8; font-size: 0.85rem; }
 
   /* ── MAIN ── */
   main {
@@ -115,80 +112,6 @@
     background: var(--parchment);
     margin: 2.5rem 0;
   }
-
-  /* ── IMAGE PROMPT CARD ── */
-  .prompt-card {
-    background: white;
-    border: 1.5px dashed var(--parchment);
-    border-radius: 8px;
-    padding: 1.75rem 1.75rem 1.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .prompt-card-label {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.62rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--rose-light);
-    margin-bottom: 0.85rem;
-  }
-
-  .prompt-card-title {
-    font-size: 1.35rem;
-    font-weight: 400;
-    color: var(--brown);
-    margin-bottom: 0.85rem;
-    line-height: 1.3;
-  }
-
-  .prompt-text {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.8rem;
-    line-height: 1.7;
-    color: var(--tan);
-    background: var(--cream);
-    border-radius: 5px;
-    padding: 1rem 1.1rem;
-    margin-bottom: 1rem;
-    border-left: 3px solid var(--rose-light);
-  }
-
-  .prompt-note {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
-    color: var(--tan);
-    letter-spacing: 0.05em;
-    font-style: italic;
-  }
-
-  .copy-btn {
-    margin-top: 1rem;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    background: var(--rose);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .copy-btn:hover { background: var(--rose-dark); }
-
-  .copied-msg {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.65rem;
-    color: var(--rose);
-    margin-left: 0.75rem;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .copied-msg.show { opacity: 1; }
 
   /* ── RESPONSE CARDS ── */
   .response-card {
@@ -270,45 +193,7 @@
     color: var(--brown);
   }
 
-  /* ── COMPLETION BUTTON ── */
-  .completion-section {
-    text-align: center;
-    padding: 2rem 0 4rem;
-  }
-
-  .completion-btn {
-    display: inline-block;
-    background: var(--rose-dark);
-    color: var(--cream);
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.35rem;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    padding: 1.1rem 2.5rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
-    box-shadow: 0 4px 20px rgba(110,46,66,0.25);
-  }
-
-  .completion-btn:hover {
-    background: var(--rose);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 28px rgba(110,46,66,0.3);
-  }
-
-  .completion-note {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--tan);
-    margin-top: 1rem;
-  }
-
-  /* ── RESPONSE IMAGE PLACEHOLDER ── */
+  /* ── RESPONSE IMAGE ── */
   .response-image-section {
     border-top: 1px solid var(--parchment);
     padding: 1.25rem 1.5rem 1.5rem;
@@ -340,7 +225,6 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    margin-bottom: 0.9rem;
     transition: border-color 0.2s, background 0.2s;
   }
 
@@ -354,11 +238,7 @@
     width: 100%; height: 100%;
   }
 
-  .resp-photo .rp-icon {
-    width: 26px; height: 26px;
-    opacity: 0.2;
-    pointer-events: none;
-  }
+  .resp-photo .rp-icon { width: 26px; height: 26px; opacity: 0.2; pointer-events: none; }
 
   .resp-photo .rp-text {
     font-family: 'Jost', sans-serif;
@@ -380,50 +260,6 @@
   .resp-photo.has-image .rp-icon,
   .resp-photo.has-image .rp-text { display: none; }
   .resp-photo.has-image input[type="file"] { opacity: 0; cursor: pointer; }
-
-  .resp-prompt-text {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.75rem;
-    line-height: 1.65;
-    color: var(--tan);
-    background: white;
-    border-radius: 4px;
-    padding: 0.85rem 1rem;
-    margin-bottom: 0.75rem;
-    border-left: 3px solid var(--parchment);
-  }
-
-  .resp-copy-row {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-  }
-
-  .resp-copy-btn {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    background: var(--rose);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 0.4rem 0.85rem;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .resp-copy-btn:hover { background: var(--rose-dark); }
-
-  .resp-copied {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.63rem;
-    color: var(--rose);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .resp-copied.show { opacity: 1; }
 
   /* ── RESPONSE GRID ── */
   .response-grid {
@@ -492,20 +328,55 @@
     color: var(--tan);
     margin-bottom: 1.25rem;
   }
+
+  /* ── COMPLETION BUTTON ── */
+  .completion-section {
+    text-align: center;
+    padding: 2rem 0 4rem;
+  }
+
+  .completion-btn {
+    display: inline-block;
+    background: var(--rose-dark);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    padding: 1.1rem 2.5rem;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 20px rgba(110,46,66,0.25);
+  }
+
+  .completion-btn:hover {
+    background: var(--rose);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba(110,46,66,0.3);
+  }
+
+  .completion-note {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-top: 1rem;
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="header-eyebrow">30 Days to a Better Relationship · Day 1</div>
-  <h1 class="header-title">What Is Positive Perspective?</h1>
-  <div class="header-subtitle">December 12, 2023</div>
-  <div class="complete-badge"><span class="check">✓</span> Day 1 Complete</div>
+  <div class="header-eyebrow">30 Days to a Better Relationship · Day 2</div>
+  <h1 class="header-title">Shifting Positive</h1>
+  <div class="header-subtitle">December 13, 2023</div>
+  <div class="complete-badge"><span class="check">✓</span> Day 2 Complete</div>
 </header>
 
 <main>
 
-  <!-- RESPONSES -->
   <div class="section-title">Your Responses</div>
 
   <div class="response-grid">
@@ -516,22 +387,23 @@
       <span class="response-dot"></span>
       <span class="response-name">Kate</span>
       <div class="lang-toggle">
-        <button class="lang-btn active" onclick="setLang('kate-d1','ceb',this)">Ceb</button>
-        <button class="lang-btn" onclick="setLang('kate-d1','en',this)">EN</button>
+        <button class="lang-btn active" onclick="setLang('kate-d2','ceb',this)">Ceb</button>
+        <button class="lang-btn" onclick="setLang('kate-d2','en',this)">EN</button>
       </div>
     </div>
     <div class="response-body">
-      <p class="response-text lang-text visible" id="kate-d1-ceb">"Ang among relasyon ni Justin kalma ug tinabangay — dili lang isip partners o parents, isip team. Buhaton namo tanan para ma-organise ug planado kami, dili mag-away sa mga dili masabtan. Kay gusto ni Justin nga tinabangay mi ug fair sa usag usa, mao nang dili mi magkagulo. Nagmahigugmaon mi dili para sa amo kaugalingon, kondili para kang Austin — aron mahatagan namo siya og maayong pamilya. Ang among positibo naggikan sa amo pag-estoryahanay. Kung naay away, amo kini ginaestoryahan dayon — dili ipa-ugma. Honest mi sa usag usa. Mao kana ang nagpapositive sa amo pag-uban."</p>
-      <p class="response-text lang-text" id="kate-d1-en">"Our relationship with Justin is calm and built on teamwork — not just as partners or parents, but as a team. We do everything to stay organised and planned so neither of us gets overwhelmed and we don't fight over misunderstandings. Justin is the reason we don't fight — because he wants us to work together and be fair with each other. We love each other not just for ourselves but for Austin — so we can give him a good family. The reason our relationship is more positive is because we talk things through. When there's a conflict, we sort it out straight away — we don't let it carry over. We're honest with each other so we can keep improving. That honesty is what makes our time together more positive."</p>
+      <p class="response-text lang-text visible" id="kate-d2-ceb">"Naka-relate ko ani na butang kay nahitabo kanamo kadaghan. Si Justin, permi ko mag-negative ug hunahuna sa iyang lihok — sama sa pag-hilom kaayo niya, dili kaayo siya makig-estorya kanako. Ako dayong hunahunaan ug negative na mga butang. Dapat dili ko mag-hunahuna ug negative kaniya — akong hunahunaon is nagkinahanglan lang siya og support ug comfort gikan kanako."</p>
+      <p class="response-text lang-text" id="kate-d2-en">"I can relate to this topic because it happens a lot with Justin. When he goes very quiet and doesn't really talk to me, I tend to immediately think negative thoughts. I should not be thinking negatively about him — what I should think is that he just needs support and comfort from me."</p>
     </div>
     <div class="encouragement">
       <div class="encouragement-label">A note for Kate</div>
-      <p class="encouragement-text">Kate, what you wrote is quietly remarkable. You see your relationship clearly — not through rose-coloured glasses, but through the lens of real commitment. The fact that you name <em>teamwork</em>, <em>fairness</em>, and <em>talking things through</em> as the foundation of your positivity shows how deeply you understand what makes love last. The way you centre Austin in this — choosing to build something good for him — speaks to the kind of mother and partner you are. Justin is lucky to be loved by someone who pays attention to the small things that hold a relationship together.</p>
+      <p class="encouragement-text">Kate, what you noticed about yourself today is something most people never catch. When Justin goes quiet, the easy thing is to fill that silence with fear — to decide it means something is wrong, or that he is pulling away. You felt that pull, and then you stopped yourself and asked a better question: <em>what does he need from me?</em> That reframe — from judgment to curiosity, from "what's wrong" to "how can I support him" — is one of the most loving things a partner can do. Justin is lucky to be with someone who fights for the generous interpretation, even when it doesn't come naturally.</p>
     </div>
     <div class="response-image-section her">
       <div class="response-image-label">Kate's Illustration</div>
-      <div class="resp-photo has-image" id="photo-kate">
-        <img class="rp-preview" src="images/day-1-kate.png" alt="Kate's Day 1 illustration">
+      <div class="resp-photo" id="photo-kate">
+        <svg class="rp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span class="rp-text">Upload generated image</span>
         <input type="file" accept="image/*" onchange="loadRespImage(event, 'photo-kate')">
       </div>
     </div>
@@ -543,22 +415,23 @@
       <span class="response-dot"></span>
       <span class="response-name">Justin</span>
       <div class="lang-toggle">
-        <button class="lang-btn active" onclick="setLang('justin-d1','en',this)">EN</button>
-        <button class="lang-btn" onclick="setLang('justin-d1','ceb',this)">Ceb</button>
+        <button class="lang-btn active" onclick="setLang('justin-d2','en',this)">EN</button>
+        <button class="lang-btn" onclick="setLang('justin-d2','ceb',this)">Ceb</button>
       </div>
     </div>
     <div class="response-body">
-      <p class="response-text lang-text visible" id="justin-d1-en">"Sometimes when Kate wakes up and looks so cranky, I need to understand that she isn't really a morning person. I will admit when she complains I get a bit dysregulated — but I need to understand that she has a lot going on in her mind. She does a lot, and the biggest one is looking after Austin. It takes a lot to look after him, especially when I am at work, and I am very appreciative. I know Kate always tries, and I am very blessed to have her. She has improved and adjusted for me, and she should always be seen in a positive perspective."</p>
-      <p class="response-text lang-text" id="justin-d1-ceb">"Usahay kung magmata si Kate ug tan-awon kaayong grabe ang iyang pagkasubo, kinahanglan nako masabtan nga dili siya tinuod nga morning person. Moangkon ko nga kung mag-reklamo siya, morag mabalda ko gamay — apan kinahanglan nako masabtan nga daghan kaayo ang naa sa iyang hunahuna. Daghan kaayo ang iyang ginabuhat, ug ang pinakadako niini mao ang pag-atiman kang Austin. Daghan kaayo ang paningkamot sa pag-atiman kaniya, labi na kung naa ko sa trabaho, ug dako kaayo akong pagpahalipay. Nahibal-an ko nga pirmi nagtingkamot si Kate, ug panalangin ko nga naa siya kanako. Nag-improve siya ug nag-adjust alang kanako, ug kinahanglan siyang makita pirmi sa positibong panan-aw."</p>
+      <p class="response-text lang-text visible" id="justin-d2-en">"This morning while I was looking after Austin I tend to look at my wife negatively while she is sleeping, but I need to understand that she wakes up during the night and is very tired. This morning I have seen her put Austin back to sleep, play with Austin, and continue to do laundry. I liked when she said, 'this is what we will do today' and planned ahead in the day. I have communicated I want to see more of that and she has improved. I know my loving wife has good intentions always and I should always see her that way."</p>
+      <p class="response-text lang-text" id="justin-d2-ceb">"Karong buntag, samtang nag-atiman ko kang Austin, namatikdan nako nga nagtan-aw ko sa akong asawa ug negatibo samtang natulog siya — apan kinahanglan nako masabtan nga magmata siya sa gabii ug hilabihan kaayo ang iyang kapoy. Karong buntag nakita nako siya nga gipatulog balik si Austin, naglaro kang Austin, ug nagpadayon sa paglaba. Nalipay ko niadtong miingon siya, 'Mao kini ang atong buhaton karong adlaw' ug nagplano sayo sa adlaw. Gisultihan ko siya nga gusto nako makita pa niana ug nag-improve na siya. Nahibal-an ko nga ang akong hinigugmang asawa adunay maayong tuyo kanunay ug kinahanglan nako siyang makita sa ingon."</p>
     </div>
     <div class="encouragement">
       <div class="encouragement-label">A note for Justin</div>
-      <p class="encouragement-text">Justin, this is exactly what positive perspective looks like in everyday life — and you described it perfectly. The fact that you can catch yourself getting dysregulated and then consciously choose understanding over reaction? That takes real self-awareness and real love. Recognising how much Kate carries, especially while you're at work, and naming her as someone who <em>always tries</em> — that is a husband who truly sees his wife. Kate feels that. Keep choosing that perspective. It is one of the most powerful things you bring to your relationship.</p>
+      <p class="encouragement-text">Justin, you caught yourself mid-thought — and that is genuinely rare. Most people don't notice the negative lens until it's already shaped their mood and their words. You noticed it, and then you deliberately looked for evidence of the opposite: Kate putting Austin back to sleep, playing with him, doing laundry. You built your own case for the positive perspective in real time. Ending with "I know my loving wife has good intentions always and I should always see her that way" is not just a nice thought — it's a commitment. Kate feels the difference when you see her that way. Keep going.</p>
     </div>
     <div class="response-image-section him">
       <div class="response-image-label">Justin's Illustration</div>
-      <div class="resp-photo has-image" id="photo-justin">
-        <img class="rp-preview" src="images/day-1-justin.png" alt="Justin's Day 1 illustration">
+      <div class="resp-photo" id="photo-justin">
+        <svg class="rp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span class="rp-text">Upload generated image</span>
         <input type="file" accept="image/*" onchange="loadRespImage(event, 'photo-justin')">
       </div>
     </div>
@@ -568,33 +441,14 @@
 
   <div class="divider"></div>
 
-  <!-- COMPLETION BUTTON -->
   <div class="completion-section">
-    <a class="completion-btn" href="index.html">Day 1 Complete · See All Days</a>
+    <a class="completion-btn" href="index.html">Day 2 Complete · See All Days</a>
     <p class="completion-note">30 days · one small step at a time</p>
   </div>
 
 </main>
 
 <script>
-function copyPrompt() {
-  const text = document.getElementById('prompt-text').textContent.trim();
-  navigator.clipboard.writeText(text).then(() => {
-    const msg = document.getElementById('copied-msg');
-    msg.classList.add('show');
-    setTimeout(() => msg.classList.remove('show'), 2500);
-  });
-}
-
-function copyRespPrompt(promptId, badgeId) {
-  const text = document.getElementById(promptId).textContent.trim();
-  navigator.clipboard.writeText(text).then(() => {
-    const badge = document.getElementById(badgeId);
-    badge.classList.add('show');
-    setTimeout(() => badge.classList.remove('show'), 2500);
-  });
-}
-
 function setLang(person, lang, btn) {
   document.getElementById(person + '-en').classList.toggle('visible', lang === 'en');
   document.getElementById(person + '-ceb').classList.toggle('visible', lang === 'ceb');
