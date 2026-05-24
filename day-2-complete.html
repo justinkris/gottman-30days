@@ -260,6 +260,28 @@
   .resp-photo.has-image .rp-icon,
   .resp-photo.has-image .rp-text { display: none; }
   .resp-photo.has-image input[type="file"] { opacity: 0; cursor: pointer; }
+  .resp-photo.has-image { cursor: zoom-in; }
+
+  /* ── LIGHTBOX ── */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 95vw;
+    max-height: 95vh;
+    width: auto;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 8px 48px rgba(0,0,0,0.5);
+  }
 
   /* ── RESPONSE GRID ── */
   .response-grid {
@@ -401,9 +423,8 @@
     </div>
     <div class="response-image-section her">
       <div class="response-image-label">Kate's Illustration</div>
-      <div class="resp-photo" id="photo-kate">
-        <svg class="rp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span class="rp-text">Upload generated image</span>
+      <div class="resp-photo has-image" id="photo-kate">
+        <img class="rp-preview" src="images/day-2-kate.png" alt="Kate's Day 2 illustration">
         <input type="file" accept="image/*" onchange="loadRespImage(event, 'photo-kate')">
       </div>
     </div>
@@ -429,9 +450,8 @@
     </div>
     <div class="response-image-section him">
       <div class="response-image-label">Justin's Illustration</div>
-      <div class="resp-photo" id="photo-justin">
-        <svg class="rp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span class="rp-text">Upload generated image</span>
+      <div class="resp-photo has-image" id="photo-justin">
+        <img class="rp-preview" src="images/day-2-justin.png" alt="Justin's Day 2 illustration">
         <input type="file" accept="image/*" onchange="loadRespImage(event, 'photo-justin')">
       </div>
     </div>
@@ -449,6 +469,26 @@
 </main>
 
 <script>
+// Lightbox
+const lb = document.createElement('div');
+lb.className = 'lightbox';
+const lbImg = document.createElement('img');
+lb.appendChild(lbImg);
+document.body.appendChild(lb);
+lb.addEventListener('click', () => lb.classList.remove('open'));
+
+document.addEventListener('click', e => {
+  const photo = e.target.closest('.resp-photo.has-image');
+  if (photo && !e.target.matches('input')) {
+    const img = photo.querySelector('img.rp-preview');
+    if (img) { lbImg.src = img.src; lb.classList.add('open'); }
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') lb.classList.remove('open');
+});
+
 function setLang(person, lang, btn) {
   document.getElementById(person + '-en').classList.toggle('visible', lang === 'en');
   document.getElementById(person + '-ceb').classList.toggle('visible', lang === 'ceb');
